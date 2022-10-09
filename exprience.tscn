@@ -1,0 +1,311 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://UI/side_bar/experience.png" type="Texture" id=1]
+[ext_resource path="res://EFECTIVE/level_up/75830-1.png" type="Texture" id=2]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/skill_icon/js/19768-4.png" type="Texture" id=4]
+[ext_resource path="res://assets/skill_icon/js/19770-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/skill_icon/js/19768-3.png" type="Texture" id=6]
+[ext_resource path="res://assets/skill_icon/js/19772-3.png" type="Texture" id=7]
+[ext_resource path="res://assets/skill_icon/js/19768-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/skill_icon/js/19769-1.png" type="Texture" id=9]
+[ext_resource path="res://assets/skill_icon/js/19773-2.png" type="Texture" id=10]
+[ext_resource path="res://assets/skill_icon/js/19768-2.png" type="Texture" id=11]
+[ext_resource path="res://assets/skill_icon/js/19771-3.png" type="Texture" id=12]
+[ext_resource path="res://assets/skill_icon/js/19773-1.png" type="Texture" id=13]
+[ext_resource path="res://assets/skill_icon/js/19771-2.png" type="Texture" id=14]
+[ext_resource path="res://assets/skill_icon/js/19772-2.png" type="Texture" id=15]
+[ext_resource path="res://assets/skill_icon/js/19771-4.png" type="Texture" id=16]
+[ext_resource path="res://assets/skill_icon/js/19771-1.png" type="Texture" id=17]
+[ext_resource path="res://assets/skill_icon/js/19770-4.png" type="Texture" id=18]
+[ext_resource path="res://assets/skill_icon/js/19770-3.png" type="Texture" id=19]
+[ext_resource path="res://assets/skill_icon/js/19772-4.png" type="Texture" id=20]
+[ext_resource path="res://assets/skill_icon/js/19770-2.png" type="Texture" id=21]
+[ext_resource path="res://assets/skill_icon/js/19769-3.png" type="Texture" id=22]
+[ext_resource path="res://assets/skill_icon/js/19769-4.png" type="Texture" id=23]
+[ext_resource path="res://assets/skill_icon/js/19772-1.png" type="Texture" id=24]
+[ext_resource path="res://assets/skill_icon/js/19773-4.png" type="Texture" id=25]
+[ext_resource path="res://assets/skill_icon/js/19769-2.png" type="Texture" id=26]
+[ext_resource path="res://assets/skill_icon/js/19773-3.png" type="Texture" id=27]
+[ext_resource path="res://exprience.gd" type="Script" id=28]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 65
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[sub_resource type="InputEventKey" id=4]
+scancode = 83
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[sub_resource type="InputEventKey" id=6]
+scancode = 68
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
+
+[sub_resource type="InputEventKey" id=8]
+scancode = 70
+
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 8 )
+
+[sub_resource type="InputEventKey" id=10]
+scancode = 81
+
+[sub_resource type="ShortCut" id=11]
+shortcut = SubResource( 10 )
+
+[sub_resource type="InputEventKey" id=12]
+scancode = 87
+
+[sub_resource type="ShortCut" id=13]
+shortcut = SubResource( 12 )
+
+[sub_resource type="InputEventKey" id=14]
+scancode = 69
+
+[sub_resource type="ShortCut" id=15]
+shortcut = SubResource( 14 )
+
+[sub_resource type="InputEventKey" id=16]
+scancode = 82
+
+[sub_resource type="ShortCut" id=17]
+shortcut = SubResource( 16 )
+
+[node name="exprience" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -544.0
+script = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -32.8721
+margin_top = -33.782
+margin_right = 767.128
+margin_bottom = 21.218
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+modulate = Color( 1, 1, 1, 0.580392 )
+margin_left = 50.0142
+margin_top = 10.3071
+margin_right = 683.014
+margin_bottom = 18.3071
+rounded = true
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 12.6088
+margin_top = 2.3024
+margin_right = 45.6088
+margin_bottom = 25.3024
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.976471, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 381.0
+margin_top = -34.0
+margin_right = 644.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shortcut1" type="TextureButton" parent="HBoxContainer"]
+margin_right = 29.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+focus_mode = 0
+shortcut = SubResource( 3 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 4 )
+
+[node name="shortcut2" type="TextureButton" parent="HBoxContainer"]
+margin_left = 33.0
+margin_right = 62.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 5 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 23 )
+
+[node name="shortcut3" type="TextureButton" parent="HBoxContainer"]
+margin_left = 66.0
+margin_right = 95.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 7 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 21 )
+texture_disabled = ExtResource( 18 )
+
+[node name="shortcut4" type="TextureButton" parent="HBoxContainer"]
+margin_left = 99.0
+margin_right = 128.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 9 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 16 )
+
+[node name="shortcut5" type="TextureButton" parent="HBoxContainer"]
+margin_left = 132.0
+margin_right = 161.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 11 )
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 15 )
+texture_disabled = ExtResource( 20 )
+
+[node name="shortcut6" type="TextureButton" parent="HBoxContainer"]
+margin_left = 165.0
+margin_right = 194.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 25 )
+
+[node name="shortcut7" type="TextureButton" parent="HBoxContainer"]
+margin_left = 198.0
+margin_right = 227.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 15 )
+
+[node name="shortcut8" type="TextureButton" parent="HBoxContainer"]
+margin_left = 231.0
+margin_right = 260.9
+margin_bottom = 30.0
+rect_min_size = Vector2( 29.9, 29 )
+shortcut = SubResource( 17 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 390.651
+margin_top = -11.7218
+margin_right = 401.651
+margin_bottom = 11.2782
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 424.742
+margin_top = -11.7218
+margin_right = 435.742
+margin_bottom = 11.2782
+text = "S"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 457.681
+margin_top = -11.7218
+margin_right = 468.681
+margin_bottom = 11.2782
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 491.016
+margin_top = -11.7218
+margin_right = 502.016
+margin_bottom = 11.2782
+text = "F"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 523.558
+margin_top = -11.7218
+margin_right = 534.558
+margin_bottom = 11.2782
+text = "Q"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 556.893
+margin_top = -11.7218
+margin_right = 567.893
+margin_bottom = 11.2782
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 589.038
+margin_top = -11.7218
+margin_right = 600.038
+margin_bottom = 11.2782
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="."]
+margin_left = 622.374
+margin_top = -11.7218
+margin_right = 633.374
+margin_bottom = 11.2782
+text = "R"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 50.0
+margin_top = 10.0
+margin_right = 683.0
+margin_bottom = 18.0
+
+[connection signal="pressed" from="HBoxContainer/shortcut1" to="." method="_on_shortcut1_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut2" to="." method="_on_shortcut2_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut3" to="." method="_on_shortcut3_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut4" to="." method="_on_shortcut4_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut5" to="." method="_on_shortcut5_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut6" to="." method="_on_shortcut6_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut7" to="." method="_on_shortcut7_pressed"]
+[connection signal="pressed" from="HBoxContainer/shortcut8" to="." method="_on_shortcut8_pressed"]

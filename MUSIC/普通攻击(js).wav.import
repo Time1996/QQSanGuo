@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/普通攻击(js).wav-fbbef339ac89d2101d24cc36582cd20a.sample"
+
+[deps]
+
+source_file="res://MUSIC/普通攻击(js).wav"
+dest_files=[ "res://.import/普通攻击(js).wav-fbbef339ac89d2101d24cc36582cd20a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

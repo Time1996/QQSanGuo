@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/ui/a1.png" type="Texture" id=1]
+[ext_resource path="res://assets/ui/a2.png" type="Texture" id=2]
+[ext_resource path="res://69896-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/a7.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/a6.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/a5.png" type="Texture" id=6]
+[ext_resource path="res://UI/ObjectUI.gd" type="Script" id=7]
+[ext_resource path="res://19470-1.png" type="Texture" id=8]
+
+[sub_resource type="Theme" id=1]
+
+[node name="ObjectUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+object_image = ExtResource( 8 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+margin_right = 221.0
+margin_bottom = 80.0
+texture = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer"]
+margin_right = 221.0
+margin_bottom = 80.0
+texture = ExtResource( 3 )
+
+[node name="Bar" type="Control" parent="."]
+
+[node name="HealthBar" type="TextureProgress" parent="Bar"]
+margin_left = 100.0
+margin_top = 24.0
+margin_right = 228.0
+margin_bottom = 64.0
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaigcBar" type="TextureProgress" parent="Bar"]
+margin_left = 100.0
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 62.0
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 24.0
+margin_right = 216.0
+margin_bottom = 46.0
+text = "100/100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Magic" type="Label" parent="."]
+margin_left = 120.0
+margin_top = 48.0
+margin_right = 192.0
+margin_bottom = 62.0
+text = "100/100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 328.0
+margin_top = 136.0
+margin_right = 368.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 100, 100 )
+theme = SubResource( 1 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+object_image = ExtResource( 3 )

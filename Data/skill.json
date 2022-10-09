@@ -1,0 +1,29 @@
+{
+  "横击剑": {
+    "need_level": 0,
+    "damage": 10,
+    "attack_range": 75,
+    "description": "普通攻击",
+    "consume": 0,
+    "state": null,
+    "time": null
+  },
+  "饮血剑舞": {
+    "need_level": 1,
+    "damage": 12,
+    "attack_range": 75,
+    "description": null,
+    "consume": 10,
+    "state": "追魂",
+    "time": 25
+  },
+  "回风拂柳": {
+    "need_level": 1,
+    "damage": 20,
+    "attack_range": 75,
+    "description": "月夜空寂晚回风，杨柳轻拂剑影现",
+    "consume": 12,
+    "state": null,
+    "time": null
+  }
+}

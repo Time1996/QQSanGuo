@@ -1,0 +1,123 @@
+{
+	"textures": [
+		{
+			"image": "attack2.png",
+			"size": {
+				"w": 383,
+				"h": 497
+			},
+			"sprites": [
+				{
+					"filename": "Sprite_6.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 198,
+						"h": 157
+					},
+					"margin": {
+						"x": 102,
+						"y": 72,
+						"w": 102,
+						"h": 143
+					}
+				},
+				{
+					"filename": "Sprite_7.png",
+					"region": {
+						"x": 201,
+						"y": 1,
+						"w": 174,
+						"h": 162
+					},
+					"margin": {
+						"x": 87,
+						"y": 67,
+						"w": 126,
+						"h": 138
+					}
+				},
+				{
+					"filename": "Sprite_5.png",
+					"region": {
+						"x": 1,
+						"y": 160,
+						"w": 191,
+						"h": 159
+					},
+					"margin": {
+						"x": 109,
+						"y": 70,
+						"w": 109,
+						"h": 141
+					}
+				},
+				{
+					"filename": "Sprite_4.png",
+					"region": {
+						"x": 194,
+						"y": 165,
+						"w": 188,
+						"h": 159
+					},
+					"margin": {
+						"x": 105,
+						"y": 70,
+						"w": 112,
+						"h": 141
+					}
+				},
+				{
+					"filename": "Sprite_1.png",
+					"region": {
+						"x": 1,
+						"y": 326,
+						"w": 112,
+						"h": 170
+					},
+					"margin": {
+						"x": 77,
+						"y": 59,
+						"w": 188,
+						"h": 130
+					}
+				},
+				{
+					"filename": "Sprite_2.png",
+					"region": {
+						"x": 115,
+						"y": 326,
+						"w": 123,
+						"h": 169
+					},
+					"margin": {
+						"x": 78,
+						"y": 60,
+						"w": 177,
+						"h": 131
+					}
+				},
+				{
+					"filename": "Sprite_3.png",
+					"region": {
+						"x": 240,
+						"y": 326,
+						"w": 122,
+						"h": 167
+					},
+					"margin": {
+						"x": 77,
+						"y": 62,
+						"w": 178,
+						"h": 133
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:40b62e2238621e4b28c3f14606133fe4:b0eda0220f9285661fb7027ecc17505d:d28532a9cb18c89f11fb00cb362933da$"
+	}
+}

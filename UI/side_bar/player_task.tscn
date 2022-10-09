@@ -1,0 +1,123 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://UI/side_bar/75616-4.png" type="Texture" id=1]
+[ext_resource path="res://UI/player_task/74323-2.png" type="Texture" id=2]
+[ext_resource path="res://UI/player_task/74321-2.png" type="Texture" id=3]
+[ext_resource path="res://UI/player_task/74317-2.png" type="Texture" id=4]
+[ext_resource path="res://UI/player_task/74323-1.png" type="Texture" id=5]
+[ext_resource path="res://UI/player_task/74342-2.png" type="Texture" id=6]
+[ext_resource path="res://UI/player_task/74317-3.png" type="Texture" id=7]
+[ext_resource path="res://UI/player_task/74337-1.png" type="Texture" id=8]
+[ext_resource path="res://UI/side_bar/75606-2.png" type="Texture" id=9]
+[ext_resource path="res://UI/side_bar/75606-4.png" type="Texture" id=10]
+[ext_resource path="res://UI/side_bar/75606-3.png" type="Texture" id=11]
+[ext_resource path="res://UI/side_bar/75606-1.png" type="Texture" id=12]
+[ext_resource path="res://UI/player_task/74337-2.png" type="Texture" id=13]
+[ext_resource path="res://UI/player_task/74332-1.png" type="Texture" id=14]
+[ext_resource path="res://UI/side_bar/player_task.gd" type="Script" id=15]
+[ext_resource path="res://UI/player_task/74317-1.png" type="Texture" id=16]
+[ext_resource path="res://UI/player_task/74336-1.png" type="Texture" id=17]
+[ext_resource path="res://UI/player_task/74321-1.png" type="Texture" id=18]
+[ext_resource path="res://UI/player_task/74321-3.png" type="Texture" id=19]
+[ext_resource path="res://UI/player_task/74342-1.png" type="Texture" id=20]
+
+[node name="player_task" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -221.0
+margin_bottom = -83.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="current_task" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="main_task" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 17 )
+
+[node name="remain_task" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 17 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 15.0
+margin_top = 55.0
+margin_right = 100.0
+margin_bottom = 84.0
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 2 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 55.0
+margin_right = 185.0
+margin_bottom = 84.0
+texture_normal = ExtResource( 8 )
+texture_focused = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 185.0
+margin_top = 55.0
+margin_right = 270.0
+margin_bottom = 84.0
+texture_normal = ExtResource( 20 )
+texture_focused = ExtResource( 6 )
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 167.411
+margin_top = 470.351
+margin_right = 253.411
+margin_bottom = 495.351
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 3 )
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+margin_left = 323.0
+margin_top = 470.0
+margin_right = 409.0
+margin_bottom = 495.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 4 )
+
+[node name="TextureButton6" type="TextureButton" parent="."]
+margin_left = 524.603
+margin_top = 26.3969
+margin_right = 540.603
+margin_bottom = 42.3969
+texture_normal = ExtResource( 1 )
+
+[node name="TextureButton7" type="TextureButton" parent="."]
+margin_left = 545.191
+margin_top = 25.8094
+margin_right = 560.191
+margin_bottom = 40.8094
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+
+[connection signal="gui_input" from="current_task" to="." method="_on_current_task_gui_input"]
+[connection signal="gui_input" from="main_task" to="." method="_on_current_task_gui_input"]
+[connection signal="gui_input" from="remain_task" to="." method="_on_current_task_gui_input"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="TextureButton7" to="." method="_on_TextureButton7_pressed"]

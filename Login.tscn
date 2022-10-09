@@ -1,0 +1,248 @@
+[gd_scene load_steps=107 format=2]
+
+[ext_resource path="res://8543-1.png" type="Texture" id=1]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Login.gd" type="Script" id=3]
+[ext_resource path="res://MUSIC/guyidaoqianduan(shu).ogg" type="AudioStream" id=4]
+[ext_resource path="res://UI/main_menu/7736-1.png" type="Texture" id=5]
+[ext_resource path="res://UI/main_menu/7737-1.png" type="Texture" id=6]
+[ext_resource path="res://7847-1.png" type="Texture" id=7]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-3.png" type="Texture" id=8]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-5.png" type="Texture" id=9]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-2.png" type="Texture" id=10]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-2.png" type="Texture" id=11]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-4.png" type="Texture" id=12]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-3.png" type="Texture" id=13]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-7.png" type="Texture" id=14]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-7.png" type="Texture" id=15]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-11.png" type="Texture" id=16]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-6.png" type="Texture" id=17]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-9.png" type="Texture" id=18]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-6.png" type="Texture" id=19]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-14.png" type="Texture" id=20]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-16.png" type="Texture" id=21]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-8.png" type="Texture" id=22]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-1.png" type="Texture" id=23]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-3.png" type="Texture" id=24]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-5.png" type="Texture" id=25]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-4.png" type="Texture" id=26]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-12.png" type="Texture" id=27]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-13.png" type="Texture" id=28]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-15.png" type="Texture" id=29]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-4.png" type="Texture" id=30]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-2.png" type="Texture" id=31]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-3.png" type="Texture" id=32]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-8.png" type="Texture" id=33]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-10.png" type="Texture" id=34]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-17.png" type="Texture" id=35]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-1.png" type="Texture" id=36]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-4.png" type="Texture" id=37]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-7.png" type="Texture" id=38]
+[ext_resource path="res://ANIMATION/other/guanyu/4214-8.png" type="Texture" id=39]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-6.png" type="Texture" id=40]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-1.png" type="Texture" id=41]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-5.png" type="Texture" id=42]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-18.png" type="Texture" id=43]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-2.png" type="Texture" id=44]
+[ext_resource path="res://ANIMATION/other/guanyu/4213-7.png" type="Texture" id=45]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-5.png" type="Texture" id=46]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-8.png" type="Texture" id=47]
+[ext_resource path="res://ANIMATION/other/guanyu/4216-1.png" type="Texture" id=48]
+[ext_resource path="res://ANIMATION/other/guanyu/4215-6.png" type="Texture" id=49]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-5.png" type="Texture" id=50]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-1.png" type="Texture" id=51]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-2.png" type="Texture" id=52]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-3.png" type="Texture" id=53]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-3.png" type="Texture" id=54]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-4.png" type="Texture" id=55]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-5.png" type="Texture" id=56]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-7.png" type="Texture" id=57]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-8.png" type="Texture" id=58]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-6.png" type="Texture" id=59]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-8.png" type="Texture" id=60]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-3.png" type="Texture" id=61]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-4.png" type="Texture" id=62]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-5.png" type="Texture" id=63]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-1.png" type="Texture" id=64]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-2.png" type="Texture" id=65]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-6.png" type="Texture" id=66]
+[ext_resource path="res://ANIMATION/other/guanyu/4217-6.png" type="Texture" id=67]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-1.png" type="Texture" id=68]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-2.png" type="Texture" id=69]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-4.png" type="Texture" id=70]
+[ext_resource path="res://ANIMATION/other/guanyu/4218-7.png" type="Texture" id=71]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-14.png" type="Texture" id=72]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-10.png" type="Texture" id=73]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-3.png" type="Texture" id=74]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-15.png" type="Texture" id=75]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-16.png" type="Texture" id=76]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-8.png" type="Texture" id=77]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-11.png" type="Texture" id=78]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-6.png" type="Texture" id=79]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-1.png" type="Texture" id=80]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-5.png" type="Texture" id=81]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-8.png" type="Texture" id=82]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-9.png" type="Texture" id=83]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-13.png" type="Texture" id=84]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-17.png" type="Texture" id=85]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-18.png" type="Texture" id=86]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-12.png" type="Texture" id=87]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-7.png" type="Texture" id=88]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-4.png" type="Texture" id=89]
+[ext_resource path="res://ANIMATION/other/guanyu/4219-7.png" type="Texture" id=90]
+[ext_resource path="res://ANIMATION/other/guanyu/4220-2.png" type="Texture" id=91]
+[ext_resource path="res://UI/main_menu/7711-4.png" type="Texture" id=92]
+[ext_resource path="res://UI/main_menu/7711-9.png" type="Texture" id=93]
+[ext_resource path="res://UI/main_menu/7711-1.png" type="Texture" id=94]
+[ext_resource path="res://UI/main_menu/7711-6.png" type="Texture" id=95]
+[ext_resource path="res://UI/main_menu/7711-2.png" type="Texture" id=96]
+[ext_resource path="res://UI/main_menu/7711-8.png" type="Texture" id=97]
+[ext_resource path="res://UI/main_menu/7711-10.png" type="Texture" id=98]
+[ext_resource path="res://UI/main_menu/7711-5.png" type="Texture" id=99]
+[ext_resource path="res://UI/main_menu/7711-3.png" type="Texture" id=100]
+[ext_resource path="res://UI/main_menu/7711-11.png" type="Texture" id=101]
+[ext_resource path="res://UI/main_menu/7711-12.png" type="Texture" id=102]
+[ext_resource path="res://UI/main_menu/7711-7.png" type="Texture" id=103]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 44 ), ExtResource( 8 ), ExtResource( 37 ), ExtResource( 9 ), ExtResource( 40 ), ExtResource( 45 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 11 ), ExtResource( 24 ), ExtResource( 12 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 46 ), ExtResource( 49 ), ExtResource( 14 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 26 ), ExtResource( 42 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 33 ), ExtResource( 18 ), ExtResource( 34 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 35 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 67 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 53 ), ExtResource( 70 ), ExtResource( 63 ), ExtResource( 59 ), ExtResource( 71 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 50 ), ExtResource( 66 ), ExtResource( 90 ), ExtResource( 77 ), ExtResource( 80 ), ExtResource( 91 ), ExtResource( 74 ), ExtResource( 89 ), ExtResource( 81 ), ExtResource( 79 ), ExtResource( 88 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 73 ), ExtResource( 78 ), ExtResource( 87 ), ExtResource( 84 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 85 ), ExtResource( 86 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 94 ), ExtResource( 96 ), ExtResource( 100 ), ExtResource( 92 ), ExtResource( 99 ), ExtResource( 95 ), ExtResource( 103 ), ExtResource( 97 ), ExtResource( 93 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 102 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[node name="Login" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -300.0
+margin_right = 400.0
+margin_bottom = 300.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -47.5
+margin_right = 38.0
+margin_bottom = 47.5
+custom_constants/separation = 30
+
+[node name="7847-1" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 30, -108.5 )
+texture = ExtResource( 7 )
+
+[node name="Login" type="Button" parent="VBoxContainer"]
+margin_right = 76.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 2 )
+text = "江湖启航"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Load" type="Button" parent="VBoxContainer"]
+margin_top = 59.0
+margin_right = 76.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 2 )
+text = "回忆往事"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 118.0
+margin_right = 76.0
+margin_bottom = 147.0
+custom_fonts/font = ExtResource( 2 )
+text = "退隐江湖"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -136, -76 )
+frames = SubResource( 1 )
+frame = 10
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 120, 100 )
+frames = SubResource( 2 )
+frame = 20
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 424, -252 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 3 )
+frame = 8
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 504, -204 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 3 )
+frame = 8
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( 536, -276 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 3 )
+frame = 7
+playing = true
+flip_h = true
+
+[node name="9023-1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.764706 )
+position = Vector2( 344, -204 )
+scale = Vector2( 0.741449, 0.639535 )
+texture = ExtResource( 6 )
+
+[node name="9024-1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.67451 )
+position = Vector2( -240, -140 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="VBoxContainer/Login" to="." method="_on_Login_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

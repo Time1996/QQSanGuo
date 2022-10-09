@@ -1,0 +1,13 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/attack2.tpsheet-9f428407ef67120b627a3941110772d7.res"
+
+[deps]
+
+source_file="res://assets/attack2.tpsheet"
+dest_files=[ "res://.import/attack2.tpsheet-9f428407ef67120b627a3941110772d7.res" ]
+
+[params]
+

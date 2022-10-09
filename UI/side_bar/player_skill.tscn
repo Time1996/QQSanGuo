@@ -1,0 +1,290 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://UI/player_skill/75610-1.png" type="Texture" id=1]
+[ext_resource path="res://UI/player_skill/75629-1.png" type="Texture" id=2]
+[ext_resource path="res://UI/player_skill/75634-1.png" type="Texture" id=3]
+[ext_resource path="res://UI/player_skill/75635-1.png" type="Texture" id=4]
+[ext_resource path="res://UI/player_skill/75632-1.png" type="Texture" id=5]
+[ext_resource path="res://UI/player_skill/75631-1.png" type="Texture" id=6]
+[ext_resource path="res://UI/player_skill/75637-1.png" type="Texture" id=7]
+[ext_resource path="res://UI/player_skill/75638-1.png" type="Texture" id=8]
+[ext_resource path="res://UI/player_skill/75647-1.png" type="Texture" id=9]
+[ext_resource path="res://UI/player_skill/75658-1.png" type="Texture" id=10]
+[ext_resource path="res://UI/player_skill/75615-1.png" type="Texture" id=11]
+[ext_resource path="res://UI/player_skill/75678-1.png" type="Texture" id=12]
+[ext_resource path="res://UI/side_bar/75606-2.png" type="Texture" id=13]
+[ext_resource path="res://UI/side_bar/75606-4.png" type="Texture" id=14]
+[ext_resource path="res://UI/side_bar/75606-3.png" type="Texture" id=15]
+[ext_resource path="res://UI/side_bar/75606-1.png" type="Texture" id=16]
+[ext_resource path="res://UI/side_bar/75616-4.png" type="Texture" id=17]
+[ext_resource path="res://UI/side_bar/player_skill.gd" type="Script" id=18]
+
+[node name="player_skill" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -22.0
+margin_bottom = -156.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+margin_left = 28.0
+margin_right = 525.0
+margin_bottom = 422.0
+grow_horizontal = 0
+rect_clip_content = true
+custom_constants/separation = 120
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="elementry" type="Control" parent="TextureRect/VBoxContainer"]
+margin_right = 497.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="75629-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 51.7864, 119.823 )
+texture = ExtResource( 2 )
+
+[node name="75632-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 246.332, 119.777 )
+texture = ExtResource( 5 )
+
+[node name="75634-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 246.237, 176.266 )
+texture = ExtResource( 3 )
+
+[node name="75631-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 51.8066, 176.266 )
+texture = ExtResource( 6 )
+
+[node name="75635-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 431.331, 119.83 )
+texture = ExtResource( 4 )
+
+[node name="75637-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry"]
+position = Vector2( 431.174, 176.275 )
+texture = ExtResource( 7 )
+
+[node name="elementry2" type="Control" parent="TextureRect/VBoxContainer"]
+margin_top = 120.0
+margin_right = 497.0
+margin_bottom = 120.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="75629-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 51.7864, 119.823 )
+texture = ExtResource( 8 )
+
+[node name="75632-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 246.332, 119.777 )
+texture = ExtResource( 5 )
+
+[node name="75634-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 246.237, 176.266 )
+texture = ExtResource( 3 )
+
+[node name="75631-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 51.8066, 176.266 )
+texture = ExtResource( 6 )
+
+[node name="75635-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 431.331, 119.83 )
+texture = ExtResource( 4 )
+
+[node name="75637-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry2"]
+position = Vector2( 431.174, 176.275 )
+texture = ExtResource( 7 )
+
+[node name="elementry3" type="Control" parent="TextureRect/VBoxContainer"]
+margin_top = 240.0
+margin_right = 497.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="75629-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 51.7864, 119.823 )
+texture = ExtResource( 9 )
+
+[node name="75632-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 246.332, 119.777 )
+texture = ExtResource( 5 )
+
+[node name="75634-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 246.237, 176.266 )
+texture = ExtResource( 3 )
+
+[node name="75631-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 51.8066, 176.266 )
+texture = ExtResource( 6 )
+
+[node name="75635-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 431.331, 119.83 )
+texture = ExtResource( 4 )
+
+[node name="75637-1" type="Sprite" parent="TextureRect/VBoxContainer/elementry3"]
+position = Vector2( 431.174, 176.275 )
+texture = ExtResource( 7 )
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="TextureRect"]
+margin_left = 548.0
+margin_top = 83.0
+margin_right = 625.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_right = 77.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="Control2" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_top = 50.0
+margin_right = 77.0
+margin_bottom = 50.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control2"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control2"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="Control3" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_top = 100.0
+margin_right = 77.0
+margin_bottom = 100.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control3"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control3"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="Control4" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_top = 150.0
+margin_right = 77.0
+margin_bottom = 150.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control4"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control4"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="Control5" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_top = 200.0
+margin_right = 77.0
+margin_bottom = 200.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control5"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control5"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="Control6" type="Control" parent="TextureRect/VBoxContainer1"]
+margin_top = 250.0
+margin_right = 77.0
+margin_bottom = 250.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer1/Control6"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="TextureRect/VBoxContainer1/Control6"]
+position = Vector2( 33, 22 )
+texture = ExtResource( 10 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
+margin_left = 646.0
+margin_top = 83.0
+margin_right = 752.0
+margin_bottom = 422.0
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="TextureRect/VBoxContainer2"]
+margin_right = 106.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer2/Control"]
+position = Vector2( 45.3572, 42.8373 )
+texture = ExtResource( 12 )
+
+[node name="Control2" type="Control" parent="TextureRect/VBoxContainer2"]
+margin_top = 100.0
+margin_right = 106.0
+margin_bottom = 100.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer2/Control2"]
+position = Vector2( 45.3572, 42.8373 )
+texture = ExtResource( 12 )
+
+[node name="Control3" type="Control" parent="TextureRect/VBoxContainer2"]
+margin_top = 200.0
+margin_right = 106.0
+margin_bottom = 200.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect/VBoxContainer2/Control3"]
+position = Vector2( 45.3572, 42.8373 )
+texture = ExtResource( 12 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 724.939
+margin_top = 26.1631
+margin_right = 740.939
+margin_bottom = 42.1631
+texture_normal = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 744.939
+margin_top = 25.7071
+margin_right = 760.939
+margin_bottom = 41.7071
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]

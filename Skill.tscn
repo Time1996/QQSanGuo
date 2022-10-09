@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SkillBase.gd" type="Script" id=1]
+
+[node name="Skill" type="Node2D"]
+script = ExtResource( 1 )
+skill_name = "回风拂柳"
+input_key = "R"
+job_name = "js"
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )

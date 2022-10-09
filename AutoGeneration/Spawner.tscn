@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spawner.gd" type="Script" id=1]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="2_1" type="Position2D" parent="."]
+position = Vector2( -272, -64 )
+
+[node name="2_2" type="Position2D" parent="."]
+position = Vector2( -80, -64 )
+
+[node name="2_3" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_4" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_5" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_6" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_7" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_8" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_9" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="2_10" type="Position2D" parent="."]
+position = Vector2( -184, -64 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="monster_die" from="." to="." method="_on_Spawner_monster_die"]

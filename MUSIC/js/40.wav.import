@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/40.wav-6e803c598384f5c2149f859fcc4215c6.sample"
+
+[deps]
+
+source_file="res://MUSIC/js/40.wav"
+dest_files=[ "res://.import/40.wav-6e803c598384f5c2149f859fcc4215c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

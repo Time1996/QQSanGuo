@@ -1,0 +1,140 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Inventory.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Control.gd" type="Script" id=2]
+[ext_resource path="res://UI/side_bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Character_UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/map/bajun/14823-1.png" type="Texture" id=5]
+[ext_resource path="res://SaveAndLoad.tscn" type="PackedScene" id=6]
+[ext_resource path="res://exprience.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/side_bar/player_task.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/side_bar/player_state.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/side_bar/player_skill.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/buy_and_sell.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/item_drop/show_item/show_item.tscn" type="PackedScene" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "shade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Map_Name/14823-1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "shade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Map_Name/14823-1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="UserInterFace" type="CanvasLayer"]
+layer = 0
+script = ExtResource( 2 )
+
+[node name="Map_Name" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -300.0
+margin_right = 400.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="14823-1" type="Sprite" parent="Map_Name"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 379.041, 148.088 )
+texture = ExtResource( 5 )
+
+[node name="Character" parent="." instance=ExtResource( 4 )]
+
+[node name="side_bar" parent="." instance=ExtResource( 3 )]
+margin_left = -8.0
+margin_top = 176.0
+margin_right = -8.0
+margin_bottom = 88.0
+
+[node name="Inventory" parent="." instance=ExtResource( 1 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.701
+margin_top = -339.742
+margin_right = 297.299
+margin_bottom = 260.258
+
+[node name="SaveAndLoad" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="exprience" parent="." instance=ExtResource( 7 )]
+anchor_top = 1.0
+anchor_right = 0.0
+margin_left = 32.7134
+margin_top = -19.902
+margin_right = 832.713
+margin_bottom = 36.0979
+
+[node name="player_skill" parent="." instance=ExtResource( 10 )]
+visible = false
+margin_left = 40.6785
+margin_top = 87.0031
+margin_right = 18.6785
+margin_bottom = -69.9963
+rect_scale = Vector2( 0.9, 0.9 )
+
+[node name="player_state" parent="." instance=ExtResource( 9 )]
+visible = false
+margin_left = 212.868
+margin_top = 61.8387
+margin_right = -220.132
+margin_bottom = -112.161
+
+[node name="player_task" parent="." instance=ExtResource( 8 )]
+visible = false
+margin_left = 117.244
+margin_top = 30.9194
+margin_right = -106.756
+margin_bottom = -50.0806
+
+[node name="buy_and_sell" parent="." instance=ExtResource( 11 )]
+visible = false
+margin_left = 123.421
+margin_top = 33.1878
+margin_right = 163.421
+margin_bottom = 73.1878
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/shade_in = SubResource( 1 )
+anims/shade_out = SubResource( 2 )
+
+[node name="show_item" parent="." instance=ExtResource( 12 )]
+margin_top = 94.753
+margin_bottom = -452.247
+
+[connection signal="health_updated" from="." to="." method="_on_UserInterFace_health_updated"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

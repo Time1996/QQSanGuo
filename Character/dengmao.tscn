@@ -1,0 +1,520 @@
+[gd_scene load_steps=93 format=2]
+
+[ext_resource path="res://Monster_ui/dengmao/闲置/53331-3.png" type="Texture" id=1]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53330-4.png" type="Texture" id=2]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_1.png" type="Texture" id=3]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_2.png" type="Texture" id=4]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53330-2.png" type="Texture" id=5]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_3.png" type="Texture" id=6]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_4.png" type="Texture" id=7]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_5.png" type="Texture" id=8]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_6.png" type="Texture" id=9]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_7.png" type="Texture" id=10]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_8.png" type="Texture" id=11]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53331-4.png" type="Texture" id=12]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53330-3.png" type="Texture" id=13]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53331-1.png" type="Texture" id=14]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53331-2.png" type="Texture" id=15]
+[ext_resource path="res://Monster_ui/dengmao/闲置/53330-1.png" type="Texture" id=16]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-4.png" type="Texture" id=17]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-3.png" type="Texture" id=18]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-6.png" type="Texture" id=19]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_9.png" type="Texture" id=20]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_10.png" type="Texture" id=21]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_13.png" type="Texture" id=22]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-2.png" type="Texture" id=23]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-7.png" type="Texture" id=24]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_11.png" type="Texture" id=25]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_14.png" type="Texture" id=26]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-1.png" type="Texture" id=27]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-5.png" type="Texture" id=28]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_15.png" type="Texture" id=29]
+[ext_resource path="res://Monster_ui/dengmao/走路/53332-8.png" type="Texture" id=30]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_16.png" type="Texture" id=31]
+[ext_resource path="res://Monster_ui/dengmao/锤子砸地/Sprite_12.png" type="Texture" id=32]
+[ext_resource path="res://Character/dengmao.gd" type="Script" id=33]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_1.png" type="Texture" id=34]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_3.png" type="Texture" id=35]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_2.png" type="Texture" id=36]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_4.png" type="Texture" id=37]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_7.png" type="Texture" id=38]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_9.png" type="Texture" id=39]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_5.png" type="Texture" id=40]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_10.png" type="Texture" id=41]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_8.png" type="Texture" id=42]
+[ext_resource path="res://Monster_ui/dengmao/死亡/Sprite_6.png" type="Texture" id=43]
+[ext_resource path="res://UI/HealthBar.tscn" type="PackedScene" id=44]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=45]
+[ext_resource path="res://UI/name/name_left.png" type="Texture" id=46]
+[ext_resource path="res://UI/name/name_right.png" type="Texture" id=47]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=48]
+[ext_resource path="res://FCTmgr.tscn" type="PackedScene" id=50]
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 52, 71.5 )
+
+[sub_resource type="Shader" id=39]
+code = "shader_type canvas_item;
+
+uniform bool active = false;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE, UV);
+	vec4 white_color = vec4(1.0, 1.0, 1.0, previous_color.a);
+	vec4 new_color = previous_color;
+	if (active == true){
+		new_color = white_color;
+	}
+	COLOR = new_color;
+}"
+
+[sub_resource type="ShaderMaterial" id=40]
+shader = SubResource( 39 )
+shader_param/active = false
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "attack1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 38 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "die",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle_attack",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 19 ), ExtResource( 24 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "move",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "attack1"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "attack1" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "die"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "die" ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "idle_attack"
+length = 0.01
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle_attack" ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "injury"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.68, 1.38401 ), Vector2( 1.08, 0.864013 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "move"
+length = 0.01
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "move" ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "attack1"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "idle_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=41]
+animation = "injury"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "move"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachine" id=6]
+states/attack1/node = SubResource( 10 )
+states/attack1/position = Vector2( -1074.76, 429 )
+states/die/node = SubResource( 11 )
+states/die/position = Vector2( -580.758, 112 )
+states/idle/node = SubResource( 12 )
+states/idle/position = Vector2( -1082.76, 124 )
+states/idle_attack/node = SubResource( 13 )
+states/idle_attack/position = Vector2( -378.758, 421 )
+states/injury/node = SubResource( 41 )
+states/injury/position = Vector2( -896.758, 592 )
+states/move/node = SubResource( 14 )
+states/move/position = Vector2( -806.758, 53 )
+transitions = [ "idle", "move", SubResource( 15 ), "idle", "attack1", SubResource( 16 ), "idle", "die", SubResource( 17 ), "idle", "idle_attack", SubResource( 18 ), "move", "die", SubResource( 20 ), "idle_attack", "die", SubResource( 21 ), "attack1", "die", SubResource( 22 ), "idle_attack", "attack1", SubResource( 28 ), "idle_attack", "move", SubResource( 29 ), "attack1", "idle_attack", SubResource( 30 ), "move", "idle_attack", SubResource( 31 ), "move", "attack1", SubResource( 32 ), "attack1", "move", SubResource( 33 ), "attack1", "idle", SubResource( 34 ), "idle_attack", "idle", SubResource( 35 ), "move", "idle", SubResource( 36 ), "idle", "injury", SubResource( 42 ), "move", "injury", SubResource( 43 ), "idle_attack", "injury", SubResource( 44 ), "injury", "idle_attack", SubResource( 45 ), "attack1", "injury", SubResource( 46 ), "injury", "die", SubResource( 47 ) ]
+start_node = "idle"
+end_node = "die"
+graph_offset = Vector2( -1399.76, -74.2123 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+
+[sub_resource type="DynamicFont" id=25]
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 48 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 655, 87.5 )
+
+[node name="dengmao" type="KinematicBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -5, 4.5 )
+shape = SubResource( 24 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 40 )
+frames = SubResource( 1 )
+animation = "die"
+frame = 9
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 38 )
+anims/attack1 = SubResource( 8 )
+anims/die = SubResource( 5 )
+anims/idle = SubResource( 4 )
+anims/idle_attack = SubResource( 9 )
+anims/injury = SubResource( 37 )
+anims/move = SubResource( 3 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 6 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 7 )
+
+[node name="combat_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="HealthBar" parent="." instance=ExtResource( 44 )]
+margin_left = -35.0
+margin_top = -82.0
+margin_right = -35.0
+margin_bottom = -82.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 78.0
+margin_right = -42.0
+margin_bottom = 78.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Name"]
+margin_right = 80.0
+margin_bottom = 19.0
+custom_constants/separation = 0
+
+[node name="left" type="TextureRect" parent="Name/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 19.0
+texture = ExtResource( 46 )
+
+[node name="middle" type="TextureRect" parent="Name/HBoxContainer"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 10.0
+margin_right = 70.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 19 )
+texture = ExtResource( 45 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Name/HBoxContainer/middle"]
+margin_left = -1.0
+margin_top = -2.0
+margin_right = 61.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 25 )
+text = "邓茂"
+align = 1
+
+[node name="right" type="TextureRect" parent="Name/HBoxContainer"]
+margin_left = 70.0
+margin_right = 80.0
+margin_bottom = 19.0
+texture = ExtResource( 47 )
+
+[node name="player_detect" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detect"]
+position = Vector2( 0, -11.5 )
+shape = SubResource( 23 )
+
+[node name="FCTmgr" parent="." instance=ExtResource( 50 )]
+
+[connection signal="timeout" from="combat_timer" to="." method="_on_combat_timer_timeout"]
+[connection signal="body_entered" from="player_detect" to="." method="_on_player_detect_body_entered"]
+[connection signal="body_exited" from="player_detect" to="." method="_on_player_detect_body_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bajun(shu).ogg-9a8040adc77b8dc888aff2397b935c50.oggstr"
+
+[deps]
+
+source_file="res://MUSIC/bajun(shu).ogg"
+dest_files=[ "res://.import/bajun(shu).ogg-9a8040adc77b8dc888aff2397b935c50.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snake.wav-72ed75f381776157feb00bbc543fed75.sample"
+
+[deps]
+
+source_file="res://MUSIC/snake.wav"
+dest_files=[ "res://.import/snake.wav-72ed75f381776157feb00bbc543fed75.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

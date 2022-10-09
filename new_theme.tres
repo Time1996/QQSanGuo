@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=2]
+
+[resource]
+Button/icons/ = null
+HBoxContainer/constants/separation = 4
+HScrollBar/icons/ = null
+Label/icons/ = null
+VBoxContainer/constants/separation = 4
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null

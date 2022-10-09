@@ -1,0 +1,487 @@
+[gd_scene load_steps=77 format=2]
+
+[ext_resource path="res://assets/map/竹叶青/14363-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/map/竹叶青/14359-8.png" type="Texture" id=2]
+[ext_resource path="res://assets/map/竹叶青/14366-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/map/竹叶青/14365-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/竹叶青/14359-2.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/竹叶青/14359-4.png" type="Texture" id=6]
+[ext_resource path="res://assets/map/竹叶青/14359-5.png" type="Texture" id=7]
+[ext_resource path="res://assets/map/竹叶青/14357-4.png" type="Texture" id=8]
+[ext_resource path="res://assets/map/竹叶青/14357-2.png" type="Texture" id=9]
+[ext_resource path="res://MUSIC/snake.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/map/竹叶青/14363-2.png" type="Texture" id=11]
+[ext_resource path="res://assets/map/竹叶青/14359-1.png" type="Texture" id=12]
+[ext_resource path="res://assets/map/竹叶青/14358-1.png" type="Texture" id=13]
+[ext_resource path="res://assets/map/竹叶青/14365-3.png" type="Texture" id=14]
+[ext_resource path="res://assets/map/竹叶青/14365-1.png" type="Texture" id=15]
+[ext_resource path="res://assets/map/竹叶青/14359-3.png" type="Texture" id=16]
+[ext_resource path="res://MUSIC/3701.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/map/竹叶青/14362-1.png" type="Texture" id=18]
+[ext_resource path="res://EFECTIVE/js/digit/434-1.png" type="Texture" id=19]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=20]
+[ext_resource path="res://assets/map/竹叶青/14359-7.png" type="Texture" id=21]
+[ext_resource path="res://assets/map/竹叶青/14359-6.png" type="Texture" id=22]
+[ext_resource path="res://assets/map/竹叶青/14364-1.png" type="Texture" id=23]
+[ext_resource path="res://assets/map/竹叶青/14357-3.png" type="Texture" id=24]
+[ext_resource path="res://assets/map/竹叶青/14358-2.png" type="Texture" id=25]
+[ext_resource path="res://assets/map/竹叶青/14365-4.png" type="Texture" id=26]
+[ext_resource path="res://Enemy/Snake.gd" type="Script" id=27]
+[ext_resource path="res://UI/HealthBar.tscn" type="PackedScene" id=28]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=29]
+[ext_resource path="res://FCTmgr.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/map/竹叶青/14358-3.png" type="Texture" id=31]
+[ext_resource path="res://assets/map/竹叶青/14358-4.png" type="Texture" id=32]
+[ext_resource path="res://assets/map/竹叶青/14357-1.png" type="Texture" id=33]
+[ext_resource path="res://assets/map/竹叶青/14361-1.png" type="Texture" id=34]
+[ext_resource path="res://UI/name/name_right.png" type="Texture" id=35]
+[ext_resource path="res://UI/name/name_left.png" type="Texture" id=36]
+[ext_resource path="res://Monster_ui/竹叶青/14358-3.png" type="Texture" id=37]
+[ext_resource path="res://Monster_ui/竹叶青/14358-4.png" type="Texture" id=38]
+[ext_resource path="res://Monster_ui/竹叶青/14358-1.png" type="Texture" id=39]
+[ext_resource path="res://Monster_ui/竹叶青/14358-2.png" type="Texture" id=40]
+[ext_resource path="res://Enemy/Enemytarget.tres" type="Animation" id=41]
+[ext_resource path="res://Monster_ui/19613-1.png" type="Texture" id=42]
+[ext_resource path="res://EFECTIVE/injury/407-1.png" type="Texture" id=43]
+[ext_resource path="res://EFECTIVE/injury/472-1.png" type="Texture" id=44]
+[ext_resource path="res://EFECTIVE/injury/472-3.png" type="Texture" id=45]
+[ext_resource path="res://EFECTIVE/injury/472-2.png" type="Texture" id=46]
+[ext_resource path="res://EFECTIVE/injury/472-4.png" type="Texture" id=47]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 32.0
+height = 16.0
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+uniform float width:hint_range(0.0,30.0);
+uniform vec4 outline_color:hint_color;
+
+void fragment(){
+    float size = width * 1.0 / float(textureSize(TEXTURE,0).x);
+    vec4 sprite_color = texture(TEXTURE,UV);
+    float alpha = -8.0 * sprite_color.a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,0)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,0.0)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,-size)).a;
+    vec4 final_color = mix(sprite_color,outline_color,clamp(alpha,0.0,1.0));
+    COLOR = vec4(final_color.rgb,clamp(abs(alpha) + sprite_color.a,0.0,1.0));
+} "
+
+[sub_resource type="ShaderMaterial" id=3]
+render_priority = 1
+shader = SubResource( 2 )
+shader_param/width = 0.0
+shader_param/outline_color = Color( 0.992157, 1, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 1 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 26 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 18 ), ExtResource( 1 ), ExtResource( 11 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "injury",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 25 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "preattack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 24.0
+height = 32.0
+
+[sub_resource type="Animation" id=6]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "attack" ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ null ],
+"method": "attack"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "die" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HealthBar:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "injury" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.12549, 0.172549, 0.133333, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk" ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 296, 40 )
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "injury"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+priority = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+priority = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachine" id=26]
+states/attack/node = SubResource( 12 )
+states/attack/position = Vector2( 913, 47 )
+states/die/node = SubResource( 13 )
+states/die/position = Vector2( 345, 61 )
+states/idle/node = SubResource( 14 )
+states/idle/position = Vector2( 450, 197 )
+states/injury/node = SubResource( 15 )
+states/injury/position = Vector2( 509, 47 )
+states/run/node = SubResource( 16 )
+states/run/position = Vector2( 954, 185 )
+transitions = [ "idle", "die", SubResource( 17 ), "idle", "attack", SubResource( 18 ), "idle", "run", SubResource( 19 ), "injury", "idle", SubResource( 20 ), "attack", "idle", SubResource( 21 ), "run", "idle", SubResource( 22 ), "run", "injury", SubResource( 23 ), "idle", "injury", SubResource( 25 ), "run", "attack", SubResource( 30 ) ]
+start_node = "idle"
+end_node = "die"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=27]
+
+[sub_resource type="CanvasItemMaterial" id=28]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ ExtResource( 44 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Monster" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 0
+input_pickable = true
+script = ExtResource( 27 )
+
+[node name="mouse_event" type="Area2D" parent="."]
+position = Vector2( -12, -49.2 )
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse_event"]
+position = Vector2( 12, 49.2 )
+z_index = 10
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 3 )
+frames = SubResource( 4 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 6 )
+anims/die = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/injury = SubResource( 9 )
+anims/run = SubResource( 10 )
+anims/target = ExtResource( 41 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="HealthBar" parent="." instance=ExtResource( 28 )]
+visible = false
+margin_left = -24.0
+margin_top = -48.0
+margin_right = -24.0
+margin_bottom = -48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = 48.0
+margin_right = -32.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Name"]
+margin_right = 80.0
+margin_bottom = 19.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="TextureRect" parent="Name/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 19.0
+texture = ExtResource( 36 )
+
+[node name="middle" type="TextureRect" parent="Name/HBoxContainer"]
+margin_left = 10.0
+margin_right = 70.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 19 )
+texture = ExtResource( 29 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Name/HBoxContainer/middle"]
+margin_left = 3.53339
+margin_top = -2.22865
+margin_right = 51.5334
+margin_bottom = 20.7714
+custom_fonts/font = ExtResource( 20 )
+text = "小青蛇"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="right" type="TextureRect" parent="Name/HBoxContainer"]
+margin_left = 70.0
+margin_right = 80.0
+margin_bottom = 19.0
+texture = ExtResource( 35 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 11 )
+
+[node name="FCTmgr" parent="." instance=ExtResource( 30 )]
+
+[node name="floor_left" type="RayCast2D" parent="."]
+position = Vector2( -8, -8 )
+enabled = true
+collision_mask = 4
+collide_with_areas = true
+
+[node name="floor_right" type="RayCast2D" parent="."]
+position = Vector2( 8, -8 )
+enabled = true
+collision_mask = 4
+collide_with_areas = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="non-combat" type="Timer" parent="."]
+one_shot = true
+
+[node name="attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="deathAndInjury" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="critical_attack" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -80 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -56 )
+texture = ExtResource( 42 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "Enemytarget"
+anims/Enemytarget = ExtResource( 41 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 26 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+root_motion_track = NodePath("AnimatedSprite:animation")
+parameters/playback = SubResource( 27 )
+
+[node name="407-1" type="Sprite" parent="."]
+visible = false
+material = SubResource( 28 )
+position = Vector2( 8, 8 )
+scale = Vector2( 0.84375, 0.90625 )
+texture = ExtResource( 43 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( -22, -16 )
+frames = SubResource( 29 )
+
+[node name="attack_timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="mouse_entered" from="mouse_event" to="." method="_on_mouse_event_mouse_entered"]
+[connection signal="mouse_exited" from="mouse_event" to="." method="_on_mouse_event_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="non-combat" to="." method="_on_noncombat_timeout"]
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

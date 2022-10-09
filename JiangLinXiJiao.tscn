@@ -1,0 +1,1216 @@
+[gd_scene load_steps=337 format=2]
+
+[ext_resource path="res://assets/map/jianglinxi/10459-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/map/jianglinxi/16884-1.png" type="Texture" id=2]
+[ext_resource path="res://assets/map/jianglinxi/16900-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/map/jianglinxi/16890-1.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/jianglinxi/16885-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/jianglinxi/16886-1.png" type="Texture" id=6]
+[ext_resource path="res://assets/map/jianglinxi/16902-1.png" type="Texture" id=7]
+[ext_resource path="res://assets/map/jianglinxi/16889-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/map/jianglinxi/16901-1.png" type="Texture" id=9]
+[ext_resource path="res://16898-1.png" type="Texture" id=10]
+[ext_resource path="res://assets/map/jianglinxi/16887-1.png" type="Texture" id=11]
+[ext_resource path="res://assets/map/jianglinxi/16888-1.png" type="Texture" id=12]
+[ext_resource path="res://assets/map/jianglinxi/16891-1.png" type="Texture" id=13]
+[ext_resource path="res://JiangLinXiJiao.gd" type="Script" id=14]
+[ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/map/12684-14.png" type="Texture" id=17]
+[ext_resource path="res://assets/map/jianglinxi/16648-1.png" type="Texture" id=18]
+[ext_resource path="res://assets/particle_examples/floaty_64.png" type="Texture" id=19]
+[ext_resource path="res://MUSIC/jianglin.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/map/jianglinxi/16645-1.png" type="Texture" id=21]
+[ext_resource path="res://assets/particle_examples/random_selection.png" type="Texture" id=22]
+[ext_resource path="res://assets/map/jianglinxi/16639-1.png" type="Texture" id=23]
+[ext_resource path="res://assets/map/jianglinxi/16637-1.png" type="Texture" id=24]
+[ext_resource path="res://assets/particle_examples/effect_4.png" type="Texture" id=25]
+[ext_resource path="res://assets/map/jianglinxi/16644-1.png" type="Texture" id=26]
+[ext_resource path="res://assets/map/jianglinxi/16643-1.png" type="Texture" id=27]
+[ext_resource path="res://EFECTIVE/fireworks/7043-10.png" type="Texture" id=28]
+[ext_resource path="res://EFECTIVE/fireworks/7043-11.png" type="Texture" id=29]
+[ext_resource path="res://EFECTIVE/fireworks/7043-12.png" type="Texture" id=30]
+[ext_resource path="res://EFECTIVE/fireworks/7043-14.png" type="Texture" id=31]
+[ext_resource path="res://EFECTIVE/fireworks/7043-19.png" type="Texture" id=32]
+[ext_resource path="res://EFECTIVE/fireworks/7043-20.png" type="Texture" id=33]
+[ext_resource path="res://EFECTIVE/fireworks/7043-22.png" type="Texture" id=34]
+[ext_resource path="res://EFECTIVE/fireworks/7043-26.png" type="Texture" id=35]
+[ext_resource path="res://EFECTIVE/fireworks/7043-21.png" type="Texture" id=36]
+[ext_resource path="res://EFECTIVE/fireworks/7043-17.png" type="Texture" id=37]
+[ext_resource path="res://EFECTIVE/fireworks/7043-23.png" type="Texture" id=38]
+[ext_resource path="res://EFECTIVE/fireworks/7043-4.png" type="Texture" id=39]
+[ext_resource path="res://EFECTIVE/fireworks/7043-7.png" type="Texture" id=40]
+[ext_resource path="res://EFECTIVE/fireworks/7043-24.png" type="Texture" id=41]
+[ext_resource path="res://EFECTIVE/fireworks/7043-5.png" type="Texture" id=42]
+[ext_resource path="res://EFECTIVE/fireworks/7043-25.png" type="Texture" id=43]
+[ext_resource path="res://EFECTIVE/fireworks/7043-27.png" type="Texture" id=44]
+[ext_resource path="res://EFECTIVE/fireworks/7043-9.png" type="Texture" id=45]
+[ext_resource path="res://EFECTIVE/fireworks/7043-16.png" type="Texture" id=46]
+[ext_resource path="res://EFECTIVE/fireworks/7043-13.png" type="Texture" id=47]
+[ext_resource path="res://EFECTIVE/fireworks/7043-15.png" type="Texture" id=48]
+[ext_resource path="res://EFECTIVE/fireworks/7043-18.png" type="Texture" id=49]
+[ext_resource path="res://EFECTIVE/fireworks/7043-28.png" type="Texture" id=50]
+[ext_resource path="res://EFECTIVE/fireworks/7043-29.png" type="Texture" id=51]
+[ext_resource path="res://EFECTIVE/fireworks/7043-30.png" type="Texture" id=52]
+[ext_resource path="res://EFECTIVE/fireworks/7043-31.png" type="Texture" id=53]
+[ext_resource path="res://EFECTIVE/fireworks/7043-32.png" type="Texture" id=54]
+[ext_resource path="res://EFECTIVE/fireworks/7043-33.png" type="Texture" id=55]
+[ext_resource path="res://EFECTIVE/fireworks/7043-34.png" type="Texture" id=56]
+[ext_resource path="res://EFECTIVE/fireworks/7043-36.png" type="Texture" id=57]
+[ext_resource path="res://EFECTIVE/fireworks/7043-35.png" type="Texture" id=58]
+[ext_resource path="res://EFECTIVE/fireworks/7043-3.png" type="Texture" id=59]
+[ext_resource path="res://EFECTIVE/fireworks/7043-1.png" type="Texture" id=60]
+[ext_resource path="res://EFECTIVE/fireworks/7043-2.png" type="Texture" id=61]
+[ext_resource path="res://EFECTIVE/fireworks/7043-6.png" type="Texture" id=62]
+[ext_resource path="res://EFECTIVE/fireworks/7043-8.png" type="Texture" id=63]
+[ext_resource path="res://EFECTIVE/fireworks/7043-41.png" type="Texture" id=64]
+[ext_resource path="res://EFECTIVE/fireworks/7043-39.png" type="Texture" id=65]
+[ext_resource path="res://EFECTIVE/fireworks/7043-42.png" type="Texture" id=66]
+[ext_resource path="res://EFECTIVE/fireworks/7043-44.png" type="Texture" id=67]
+[ext_resource path="res://EFECTIVE/fireworks/7043-43.png" type="Texture" id=68]
+[ext_resource path="res://EFECTIVE/fireworks/7043-38.png" type="Texture" id=69]
+[ext_resource path="res://EFECTIVE/fireworks/7043-40.png" type="Texture" id=70]
+[ext_resource path="res://EFECTIVE/fireworks/7043-37.png" type="Texture" id=71]
+[ext_resource path="res://EFECTIVE/firefly/16655-29.png" type="Texture" id=72]
+[ext_resource path="res://EFECTIVE/firefly/16654-3.png" type="Texture" id=73]
+[ext_resource path="res://EFECTIVE/firefly/16654-15.png" type="Texture" id=74]
+[ext_resource path="res://EFECTIVE/firefly/16655-3.png" type="Texture" id=75]
+[ext_resource path="res://EFECTIVE/firefly/16655-21.png" type="Texture" id=76]
+[ext_resource path="res://EFECTIVE/firefly/16655-26.png" type="Texture" id=77]
+[ext_resource path="res://EFECTIVE/firefly/16654-17.png" type="Texture" id=78]
+[ext_resource path="res://EFECTIVE/firefly/16654-19.png" type="Texture" id=79]
+[ext_resource path="res://EFECTIVE/firefly/16655-5.png" type="Texture" id=80]
+[ext_resource path="res://EFECTIVE/firefly/16654-11.png" type="Texture" id=81]
+[ext_resource path="res://EFECTIVE/firefly/16654-20.png" type="Texture" id=82]
+[ext_resource path="res://EFECTIVE/firefly/16654-18.png" type="Texture" id=83]
+[ext_resource path="res://EFECTIVE/firefly/16655-12.png" type="Texture" id=84]
+[ext_resource path="res://EFECTIVE/firefly/16654-4.png" type="Texture" id=85]
+[ext_resource path="res://EFECTIVE/firefly/16654-21.png" type="Texture" id=86]
+[ext_resource path="res://EFECTIVE/firefly/16654-22.png" type="Texture" id=87]
+[ext_resource path="res://EFECTIVE/firefly/16655-11.png" type="Texture" id=88]
+[ext_resource path="res://EFECTIVE/firefly/16654-23.png" type="Texture" id=89]
+[ext_resource path="res://EFECTIVE/firefly/16655-1.png" type="Texture" id=90]
+[ext_resource path="res://EFECTIVE/firefly/16655-4.png" type="Texture" id=91]
+[ext_resource path="res://EFECTIVE/firefly/16654-2.png" type="Texture" id=92]
+[ext_resource path="res://EFECTIVE/firefly/16655-25.png" type="Texture" id=93]
+[ext_resource path="res://EFECTIVE/firefly/16655-20.png" type="Texture" id=94]
+[ext_resource path="res://EFECTIVE/firefly/16654-6.png" type="Texture" id=95]
+[ext_resource path="res://EFECTIVE/firefly/16655-19.png" type="Texture" id=96]
+[ext_resource path="res://EFECTIVE/firefly/16654-8.png" type="Texture" id=97]
+[ext_resource path="res://EFECTIVE/firefly/16655-7.png" type="Texture" id=98]
+[ext_resource path="res://EFECTIVE/firefly/16654-12.png" type="Texture" id=99]
+[ext_resource path="res://EFECTIVE/firefly/16655-18.png" type="Texture" id=100]
+[ext_resource path="res://EFECTIVE/firefly/16655-8.png" type="Texture" id=101]
+[ext_resource path="res://EFECTIVE/firefly/16655-22.png" type="Texture" id=102]
+[ext_resource path="res://EFECTIVE/firefly/16655-6.png" type="Texture" id=103]
+[ext_resource path="res://EFECTIVE/firefly/16655-10.png" type="Texture" id=104]
+[ext_resource path="res://EFECTIVE/firefly/16655-13.png" type="Texture" id=105]
+[ext_resource path="res://EFECTIVE/firefly/16655-27.png" type="Texture" id=106]
+[ext_resource path="res://EFECTIVE/firefly/16655-17.png" type="Texture" id=107]
+[ext_resource path="res://EFECTIVE/firefly/16654-1.png" type="Texture" id=108]
+[ext_resource path="res://EFECTIVE/firefly/16654-16.png" type="Texture" id=109]
+[ext_resource path="res://EFECTIVE/firefly/16655-2.png" type="Texture" id=110]
+[ext_resource path="res://EFECTIVE/firefly/16655-15.png" type="Texture" id=111]
+[ext_resource path="res://EFECTIVE/firefly/16655-16.png" type="Texture" id=112]
+[ext_resource path="res://EFECTIVE/firefly/16655-24.png" type="Texture" id=113]
+[ext_resource path="res://EFECTIVE/firefly/16655-30.png" type="Texture" id=114]
+[ext_resource path="res://EFECTIVE/firefly/16655-14.png" type="Texture" id=115]
+[ext_resource path="res://EFECTIVE/firefly/16654-5.png" type="Texture" id=116]
+[ext_resource path="res://EFECTIVE/firefly/16654-9.png" type="Texture" id=117]
+[ext_resource path="res://EFECTIVE/firefly/16655-9.png" type="Texture" id=118]
+[ext_resource path="res://EFECTIVE/firefly/16655-23.png" type="Texture" id=119]
+[ext_resource path="res://EFECTIVE/firefly/16654-7.png" type="Texture" id=120]
+[ext_resource path="res://EFECTIVE/firefly/16654-10.png" type="Texture" id=121]
+[ext_resource path="res://EFECTIVE/firefly/16654-14.png" type="Texture" id=122]
+[ext_resource path="res://EFECTIVE/firefly/16655-28.png" type="Texture" id=123]
+[ext_resource path="res://EFECTIVE/firefly/16654-13.png" type="Texture" id=124]
+[ext_resource path="res://EFECTIVE/firefly/16654-29.png" type="Texture" id=125]
+[ext_resource path="res://EFECTIVE/firefly/16654-24.png" type="Texture" id=126]
+[ext_resource path="res://EFECTIVE/firefly/16654-25.png" type="Texture" id=127]
+[ext_resource path="res://EFECTIVE/firefly/16654-27.png" type="Texture" id=128]
+[ext_resource path="res://EFECTIVE/firefly/16654-26.png" type="Texture" id=129]
+[ext_resource path="res://EFECTIVE/firefly/16654-28.png" type="Texture" id=130]
+[ext_resource path="res://EFECTIVE/firefly/16654-30.png" type="Texture" id=131]
+[ext_resource path="res://assets/map/jianglinxi/8709-1.png" type="Texture" id=132]
+[ext_resource path="res://assets/map/jianglinxi/16638-1.png" type="Texture" id=133]
+[ext_resource path="res://assets/map/jianglinxi/18692-14.png" type="Texture" id=134]
+[ext_resource path="res://assets/map/jianglinxi/18692-12.png" type="Texture" id=135]
+[ext_resource path="res://assets/map/jianglinxi/18692-13.png" type="Texture" id=136]
+[ext_resource path="res://assets/map/jianglinxi/18692-11.png" type="Texture" id=137]
+[ext_resource path="res://assets/map/jianglinxi/18692-4.png" type="Texture" id=138]
+[ext_resource path="res://assets/map/jianglinxi/18692-5.png" type="Texture" id=139]
+[ext_resource path="res://assets/map/jianglinxi/18358-1.png" type="Texture" id=140]
+[ext_resource path="res://assets/map/jianglinxi/18692-7.png" type="Texture" id=141]
+[ext_resource path="res://assets/map/jianglinxi/18692-9.png" type="Texture" id=142]
+[ext_resource path="res://assets/map/jianglinxi/18692-1.png" type="Texture" id=143]
+[ext_resource path="res://assets/map/jianglinxi/18692-10.png" type="Texture" id=144]
+[ext_resource path="res://assets/map/jianglinxi/18692-6.png" type="Texture" id=145]
+[ext_resource path="res://assets/map/jianglinxi/18692-8.png" type="Texture" id=146]
+[ext_resource path="res://assets/map/jianglinxi/18692-3.png" type="Texture" id=147]
+[ext_resource path="res://assets/map/jianglinxi/18355-1.png" type="Texture" id=148]
+[ext_resource path="res://assets/map/jianglinxi/18692-2.png" type="Texture" id=149]
+[ext_resource path="res://assets/map/jianglinxi/19175-1.png" type="Texture" id=150]
+[ext_resource path="res://assets/map/jianglinxi/18692-16.png" type="Texture" id=151]
+[ext_resource path="res://assets/map/jianglinxi/18692-15.png" type="Texture" id=152]
+[ext_resource path="res://assets/map/jianglinxi/18692-18.png" type="Texture" id=153]
+[ext_resource path="res://assets/map/jianglinxi/18692-17.png" type="Texture" id=154]
+[ext_resource path="res://assets/map/jianglinxi/19199-1.png" type="Texture" id=155]
+[ext_resource path="res://assets/map/jianglinxi/18692-20.png" type="Texture" id=156]
+[ext_resource path="res://assets/map/jianglinxi/18692-19.png" type="Texture" id=157]
+[ext_resource path="res://assets/map/jianglinxi/9891-20.png" type="Texture" id=158]
+[ext_resource path="res://assets/map/jianglinxi/9891-16.png" type="Texture" id=159]
+[ext_resource path="res://assets/map/jianglinxi/9891-10.png" type="Texture" id=160]
+[ext_resource path="res://assets/map/jianglinxi/9891-14.png" type="Texture" id=161]
+[ext_resource path="res://assets/map/jianglinxi/9891-12.png" type="Texture" id=162]
+[ext_resource path="res://assets/map/jianglinxi/9891-8.png" type="Texture" id=163]
+[ext_resource path="res://assets/map/jianglinxi/9891-7.png" type="Texture" id=164]
+[ext_resource path="res://assets/map/jianglinxi/9891-11.png" type="Texture" id=165]
+[ext_resource path="res://assets/map/jianglinxi/9891-15.png" type="Texture" id=166]
+[ext_resource path="res://assets/map/jianglinxi/9891-13.png" type="Texture" id=167]
+[ext_resource path="res://assets/map/jianglinxi/9891-19.png" type="Texture" id=168]
+[ext_resource path="res://assets/map/jianglinxi/9891-17.png" type="Texture" id=169]
+[ext_resource path="res://assets/map/jianglinxi/9891-18.png" type="Texture" id=170]
+[ext_resource path="res://assets/map/jianglinxi/9891-9.png" type="Texture" id=171]
+[ext_resource path="res://assets/map/jianglinxi/9889-4.png" type="Texture" id=172]
+[ext_resource path="res://assets/map/jianglinxi/9889-10.png" type="Texture" id=173]
+[ext_resource path="res://assets/map/jianglinxi/9889-2.png" type="Texture" id=174]
+[ext_resource path="res://assets/map/jianglinxi/9889-5.png" type="Texture" id=175]
+[ext_resource path="res://assets/map/jianglinxi/9889-9.png" type="Texture" id=176]
+[ext_resource path="res://assets/map/jianglinxi/9889-6.png" type="Texture" id=177]
+[ext_resource path="res://assets/map/jianglinxi/9889-7.png" type="Texture" id=178]
+[ext_resource path="res://assets/map/jianglinxi/9889-3.png" type="Texture" id=179]
+[ext_resource path="res://assets/map/jianglinxi/9889-8.png" type="Texture" id=180]
+[ext_resource path="res://assets/map/jianglinxi/9889-1.png" type="Texture" id=181]
+[ext_resource path="res://assets/map/jianglinxi/9891-3.png" type="Texture" id=182]
+[ext_resource path="res://assets/map/jianglinxi/9891-4.png" type="Texture" id=183]
+[ext_resource path="res://assets/map/jianglinxi/9889-17.png" type="Texture" id=184]
+[ext_resource path="res://assets/map/jianglinxi/9891-2.png" type="Texture" id=185]
+[ext_resource path="res://assets/map/jianglinxi/9889-11.png" type="Texture" id=186]
+[ext_resource path="res://assets/map/jianglinxi/9889-15.png" type="Texture" id=187]
+[ext_resource path="res://assets/map/jianglinxi/9889-16.png" type="Texture" id=188]
+[ext_resource path="res://assets/map/jianglinxi/9891-1.png" type="Texture" id=189]
+[ext_resource path="res://assets/map/jianglinxi/9891-5.png" type="Texture" id=190]
+[ext_resource path="res://assets/map/jianglinxi/9891-6.png" type="Texture" id=191]
+[ext_resource path="res://assets/map/jianglinxi/9889-14.png" type="Texture" id=192]
+[ext_resource path="res://assets/map/jianglinxi/9889-12.png" type="Texture" id=193]
+[ext_resource path="res://assets/map/jianglinxi/9889-13.png" type="Texture" id=194]
+[ext_resource path="res://assets/map/jianglinxi/10647-16.png" type="Texture" id=195]
+[ext_resource path="res://assets/map/jianglinxi/10647-17.png" type="Texture" id=196]
+[ext_resource path="res://assets/map/jianglinxi/10647-19.png" type="Texture" id=197]
+[ext_resource path="res://assets/map/jianglinxi/10647-20.png" type="Texture" id=198]
+[ext_resource path="res://assets/map/jianglinxi/10647-18.png" type="Texture" id=199]
+[ext_resource path="res://assets/map/jianglinxi/10647-9.png" type="Texture" id=200]
+[ext_resource path="res://assets/map/jianglinxi/10647-14.png" type="Texture" id=201]
+[ext_resource path="res://assets/map/jianglinxi/10647-15.png" type="Texture" id=202]
+[ext_resource path="res://assets/map/jianglinxi/10647-4.png" type="Texture" id=203]
+[ext_resource path="res://assets/map/jianglinxi/10647-5.png" type="Texture" id=204]
+[ext_resource path="res://assets/map/jianglinxi/10647-2.png" type="Texture" id=205]
+[ext_resource path="res://assets/map/jianglinxi/10647-7.png" type="Texture" id=206]
+[ext_resource path="res://assets/map/jianglinxi/10647-8.png" type="Texture" id=207]
+[ext_resource path="res://assets/map/jianglinxi/10647-1.png" type="Texture" id=208]
+[ext_resource path="res://assets/map/jianglinxi/10647-3.png" type="Texture" id=209]
+[ext_resource path="res://assets/map/jianglinxi/10647-10.png" type="Texture" id=210]
+[ext_resource path="res://assets/map/jianglinxi/10647-11.png" type="Texture" id=211]
+[ext_resource path="res://assets/map/jianglinxi/10647-13.png" type="Texture" id=212]
+[ext_resource path="res://assets/map/jianglinxi/10647-12.png" type="Texture" id=213]
+[ext_resource path="res://assets/map/jianglinxi/10647-6.png" type="Texture" id=214]
+[ext_resource path="res://assets/map/jianglinxi/13822-31.png" type="Texture" id=215]
+[ext_resource path="res://assets/map/jianglinxi/13822-6.png" type="Texture" id=216]
+[ext_resource path="res://assets/map/jianglinxi/13822-15.png" type="Texture" id=217]
+[ext_resource path="res://assets/map/jianglinxi/13822-24.png" type="Texture" id=218]
+[ext_resource path="res://assets/map/jianglinxi/13822-7.png" type="Texture" id=219]
+[ext_resource path="res://assets/map/jianglinxi/13822-25.png" type="Texture" id=220]
+[ext_resource path="res://assets/map/jianglinxi/13822-12.png" type="Texture" id=221]
+[ext_resource path="res://assets/map/jianglinxi/13822-23.png" type="Texture" id=222]
+[ext_resource path="res://assets/map/jianglinxi/13822-8.png" type="Texture" id=223]
+[ext_resource path="res://assets/map/jianglinxi/13822-14.png" type="Texture" id=224]
+[ext_resource path="res://assets/map/jianglinxi/13822-11.png" type="Texture" id=225]
+[ext_resource path="res://assets/map/jianglinxi/13822-9.png" type="Texture" id=226]
+[ext_resource path="res://assets/map/jianglinxi/13822-27.png" type="Texture" id=227]
+[ext_resource path="res://assets/map/jianglinxi/13822-16.png" type="Texture" id=228]
+[ext_resource path="res://assets/map/jianglinxi/13822-22.png" type="Texture" id=229]
+[ext_resource path="res://assets/map/jianglinxi/13822-29.png" type="Texture" id=230]
+[ext_resource path="res://assets/map/jianglinxi/13822-10.png" type="Texture" id=231]
+[ext_resource path="res://assets/map/jianglinxi/13822-26.png" type="Texture" id=232]
+[ext_resource path="res://assets/map/jianglinxi/13822-5.png" type="Texture" id=233]
+[ext_resource path="res://assets/map/jianglinxi/13822-19.png" type="Texture" id=234]
+[ext_resource path="res://assets/map/jianglinxi/13822-20.png" type="Texture" id=235]
+[ext_resource path="res://assets/map/jianglinxi/13822-2.png" type="Texture" id=236]
+[ext_resource path="res://assets/map/jianglinxi/13822-21.png" type="Texture" id=237]
+[ext_resource path="res://assets/map/jianglinxi/13822-1.png" type="Texture" id=238]
+[ext_resource path="res://assets/map/jianglinxi/13822-3.png" type="Texture" id=239]
+[ext_resource path="res://assets/map/jianglinxi/13822-13.png" type="Texture" id=240]
+[ext_resource path="res://assets/map/jianglinxi/13822-4.png" type="Texture" id=241]
+[ext_resource path="res://assets/map/jianglinxi/13822-28.png" type="Texture" id=242]
+[ext_resource path="res://assets/map/jianglinxi/13822-18.png" type="Texture" id=243]
+[ext_resource path="res://assets/map/jianglinxi/13822-30.png" type="Texture" id=244]
+[ext_resource path="res://assets/map/jianglinxi/13822-17.png" type="Texture" id=245]
+[ext_resource path="res://assets/map/12685-3.png" type="Texture" id=246]
+[ext_resource path="res://assets/map/12684-12.png" type="Texture" id=247]
+[ext_resource path="res://assets/map/12684-15.png" type="Texture" id=248]
+[ext_resource path="res://assets/map/12685-5.png" type="Texture" id=249]
+[ext_resource path="res://assets/map/12684-13.png" type="Texture" id=250]
+[ext_resource path="res://assets/map/12685-9.png" type="Texture" id=251]
+[ext_resource path="res://assets/map/12685-8.png" type="Texture" id=252]
+[ext_resource path="res://assets/map/12684-4.png" type="Texture" id=253]
+[ext_resource path="res://assets/map/12685-14.png" type="Texture" id=254]
+[ext_resource path="res://assets/map/12684-3.png" type="Texture" id=255]
+[ext_resource path="res://assets/map/12684-7.png" type="Texture" id=256]
+[ext_resource path="res://assets/map/12685-13.png" type="Texture" id=257]
+[ext_resource path="res://assets/map/12685-4.png" type="Texture" id=258]
+[ext_resource path="res://assets/map/12684-11.png" type="Texture" id=259]
+[ext_resource path="res://assets/map/12685-15.png" type="Texture" id=260]
+[ext_resource path="res://assets/map/12685-11.png" type="Texture" id=261]
+[ext_resource path="res://assets/map/12685-1.png" type="Texture" id=262]
+[ext_resource path="res://assets/map/12684-5.png" type="Texture" id=263]
+[ext_resource path="res://assets/map/12685-2.png" type="Texture" id=264]
+[ext_resource path="res://assets/map/12684-10.png" type="Texture" id=265]
+[ext_resource path="res://assets/map/12684-1.png" type="Texture" id=266]
+[ext_resource path="res://assets/map/12684-2.png" type="Texture" id=267]
+[ext_resource path="res://assets/map/12684-8.png" type="Texture" id=268]
+[ext_resource path="res://assets/map/12685-7.png" type="Texture" id=269]
+[ext_resource path="res://assets/map/12685-10.png" type="Texture" id=270]
+[ext_resource path="res://assets/map/12685-6.png" type="Texture" id=271]
+[ext_resource path="res://assets/map/12684-9.png" type="Texture" id=272]
+[ext_resource path="res://assets/map/12685-12.png" type="Texture" id=273]
+[ext_resource path="res://assets/map/12684-6.png" type="Texture" id=274]
+[ext_resource path="res://assets/map/jianglinxi/10460-1.png" type="Texture" id=275]
+
+[sub_resource type="TileSet" id=1]
+3/name = "10459-1.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 16, 688, 672 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "16884-1.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 256, 304 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 0
+4/autotile/bitmask_flags = [  ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 16, 16 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "16885-1.png 5"
+5/texture = ExtResource( 5 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 256, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "16886-1.png 6"
+6/texture = ExtResource( 6 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 256, 192 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "16887-1.png 7"
+7/texture = ExtResource( 11 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 256, 368 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "16888-1.png 8"
+8/texture = ExtResource( 12 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 256, 272 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "16889-1.png 9"
+9/texture = ExtResource( 8 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 288, 240 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "16890-1.png 10"
+10/texture = ExtResource( 4 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 288, 352 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "16891-1.png 11"
+11/texture = ExtResource( 13 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 288, 384 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "16900-1.png 12"
+12/texture = ExtResource( 3 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 320, 144 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "16901-1.png 13"
+13/texture = ExtResource( 9 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 208, 160 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "16902-1.png 14"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "16898-1.png 15"
+15/texture = ExtResource( 10 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 160, 80 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "16645-1.png 16"
+16/texture = ExtResource( 21 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 208, 48 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "16648-1.png 17"
+17/texture = ExtResource( 18 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 288, 176 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "16644-1.png 18"
+18/texture = ExtResource( 26 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( -16, 0, 32, 208 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "16643-1.png 19"
+19/texture = ExtResource( 27 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 176, 160 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 62 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 45 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 47 ), ExtResource( 31 ), ExtResource( 48 ), ExtResource( 46 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 35 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 71 ), ExtResource( 69 ), ExtResource( 65 ), ExtResource( 70 ), ExtResource( 64 ), ExtResource( 66 ), ExtResource( 68 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 14.0
+} ]
+
+[sub_resource type="StreamTexture" id=3]
+resource_local_to_scene = true
+flags = 4
+load_path = "res://.import/8997-1.png-fd1728224c722560571a7a4cfe7a53a4.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 16.5 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 266 ), ExtResource( 267 ), ExtResource( 255 ), ExtResource( 253 ), ExtResource( 263 ), ExtResource( 274 ), ExtResource( 256 ), ExtResource( 268 ), ExtResource( 272 ), ExtResource( 265 ), ExtResource( 259 ), ExtResource( 247 ), ExtResource( 250 ), ExtResource( 17 ), ExtResource( 248 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 262 ), ExtResource( 264 ), ExtResource( 246 ), ExtResource( 258 ), ExtResource( 249 ), ExtResource( 271 ), ExtResource( 269 ), ExtResource( 252 ), ExtResource( 251 ), ExtResource( 270 ), ExtResource( 261 ), ExtResource( 273 ), ExtResource( 257 ), ExtResource( 254 ), ExtResource( 260 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "attackLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "attackRight"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "clim"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "injury"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=32]
+resource_local_to_scene = true
+states/attackLeft/node = SubResource( 7 )
+states/attackLeft/position = Vector2( -274, 55 )
+states/attackRight/node = SubResource( 8 )
+states/attackRight/position = Vector2( -274, 206 )
+states/clim/node = SubResource( 9 )
+states/clim/position = Vector2( 710, 39 )
+states/die/node = SubResource( 10 )
+states/die/position = Vector2( 407, -15 )
+states/idle/node = SubResource( 11 )
+states/idle/position = Vector2( 266, 62 )
+states/injury/node = SubResource( 12 )
+states/injury/position = Vector2( 124.96, -32.32 )
+states/jump/node = SubResource( 13 )
+states/jump/position = Vector2( 525, 192 )
+states/run/node = SubResource( 14 )
+states/run/position = Vector2( 252, 212 )
+transitions = [ "idle", "run", SubResource( 15 ), "run", "idle", SubResource( 16 ), "idle", "attackLeft", SubResource( 17 ), "attackLeft", "idle", SubResource( 18 ), "idle", "jump", SubResource( 19 ), "jump", "idle", SubResource( 20 ), "jump", "clim", SubResource( 21 ), "clim", "jump", SubResource( 22 ), "idle", "clim", SubResource( 23 ), "clim", "idle", SubResource( 24 ), "idle", "die", SubResource( 25 ), "run", "attackLeft", SubResource( 26 ), "run", "attackRight", SubResource( 27 ), "idle", "attackRight", SubResource( 28 ), "attackRight", "idle", SubResource( 29 ), "idle", "injury", SubResource( 30 ), "injury", "idle", SubResource( 31 ) ]
+start_node = "idle"
+end_node = "die"
+graph_offset = Vector2( -420.198, -78.9 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=33]
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 153.939, 20.1 )
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 42.2113, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 64, 20.1 )
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 496, 20.1 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 281.36, 20.1 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 432, 16.0001 )
+
+[sub_resource type="SpriteFrames" id=40]
+animations = [ {
+"frames": [ ExtResource( 108 ), ExtResource( 92 ), ExtResource( 73 ), ExtResource( 85 ), ExtResource( 116 ), ExtResource( 95 ), ExtResource( 120 ), ExtResource( 97 ), ExtResource( 117 ), ExtResource( 121 ), ExtResource( 81 ), ExtResource( 99 ), ExtResource( 124 ), ExtResource( 122 ), ExtResource( 74 ), ExtResource( 109 ), ExtResource( 78 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 89 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 128 ), ExtResource( 130 ), ExtResource( 125 ), ExtResource( 131 ) ],
+"loop": true,
+"name": "default",
+"speed": 14.0
+} ]
+
+[sub_resource type="SpriteFrames" id=41]
+animations = [ {
+"frames": [ ExtResource( 90 ), ExtResource( 110 ), ExtResource( 75 ), ExtResource( 91 ), ExtResource( 80 ), ExtResource( 103 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 118 ), ExtResource( 104 ), ExtResource( 88 ), ExtResource( 84 ), ExtResource( 105 ), ExtResource( 115 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 100 ), ExtResource( 96 ), ExtResource( 94 ), ExtResource( 76 ), ExtResource( 102 ), ExtResource( 119 ), ExtResource( 113 ), ExtResource( 93 ), ExtResource( 77 ), ExtResource( 106 ), ExtResource( 123 ), ExtResource( 72 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "default",
+"speed": 14.0
+} ]
+
+[sub_resource type="SpriteFrames" id=42]
+animations = [ {
+"frames": [ ExtResource( 143 ), ExtResource( 149 ), ExtResource( 147 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 145 ), ExtResource( 141 ), ExtResource( 146 ), ExtResource( 142 ), ExtResource( 144 ), ExtResource( 137 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 134 ), ExtResource( 152 ), ExtResource( 151 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 157 ), ExtResource( 156 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ ExtResource( 181 ), ExtResource( 174 ), ExtResource( 179 ), ExtResource( 172 ), ExtResource( 175 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 180 ), ExtResource( 176 ), ExtResource( 173 ), ExtResource( 186 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 192 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ ExtResource( 189 ), ExtResource( 185 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 164 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 160 ), ExtResource( 165 ), ExtResource( 162 ), ExtResource( 167 ), ExtResource( 161 ), ExtResource( 166 ), ExtResource( 159 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 168 ), ExtResource( 158 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=45]
+animations = [ {
+"frames": [ ExtResource( 208 ), ExtResource( 205 ), ExtResource( 209 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 214 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 200 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 213 ), ExtResource( 212 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 199 ), ExtResource( 197 ), ExtResource( 198 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=46]
+animations = [ {
+"frames": [ ExtResource( 238 ), ExtResource( 236 ), ExtResource( 239 ), ExtResource( 241 ), ExtResource( 233 ), ExtResource( 216 ), ExtResource( 219 ), ExtResource( 223 ), ExtResource( 226 ), ExtResource( 231 ), ExtResource( 225 ), ExtResource( 221 ), ExtResource( 240 ), ExtResource( 224 ), ExtResource( 217 ), ExtResource( 228 ), ExtResource( 245 ), ExtResource( 243 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 237 ), ExtResource( 229 ), ExtResource( 222 ), ExtResource( 218 ), ExtResource( 220 ), ExtResource( 232 ), ExtResource( 227 ), ExtResource( 242 ), ExtResource( 230 ), ExtResource( 244 ), ExtResource( 215 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 10, 509.255 )
+
+[sub_resource type="CanvasItemMaterial" id=48]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=49]
+offsets = PoolRealArray( 0, 0.327103, 0.668224, 1 )
+colors = PoolColorArray( 0.199436, 0.459961, 0.455381, 1, 0.115776, 0.592773, 0.584389, 1, 0.286736, 0.749023, 0.491695, 1, 0.377132, 0.885742, 0.423821, 1 )
+
+[sub_resource type="GradientTexture" id=50]
+gradient = SubResource( 49 )
+
+[sub_resource type="ParticlesMaterial" id=51]
+emission_shape = 1
+emission_sphere_radius = 16.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, -100, 0 )
+initial_velocity = 50.0
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 50 )
+hue_variation = 0.01
+hue_variation_random = 0.05
+anim_speed = 1.0
+
+[sub_resource type="CanvasItemMaterial" id=52]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=53]
+offsets = PoolRealArray( 0, 0.509346, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=54]
+gradient = SubResource( 53 )
+
+[sub_resource type="Curve" id=55]
+_data = [ Vector2( 0, 0 ), 0.0, 2.15455, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=56]
+curve = SubResource( 55 )
+
+[sub_resource type="ParticlesMaterial" id=57]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale_random = 0.3
+scale_curve = SubResource( 56 )
+color_ramp = SubResource( 54 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="CanvasItemMaterial" id=58]
+blend_mode = 1
+
+[sub_resource type="Curve" id=59]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.40969, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=60]
+curve = SubResource( 59 )
+
+[sub_resource type="ParticlesMaterial" id=61]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = -100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 60 )
+
+[node name="JiangLinXiJiao" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="UserInterFace" parent="." instance=ExtResource( 15 )]
+unique_name_in_owner = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 14, 16 )
+format = 1
+tile_data = PoolIntArray( 1179717, 11, 0, 1376371, 536870928, 0, 1376385, 536870928, 0, 1376399, 536870928, 0, 1441895, 536870929, 0, 1507450, 536870931, 0, 1507461, 536870931, 0, 1507473, 19, 0, 1638365, 12, 0, 1638380, 12, 0, 1769459, 15, 0, 1703948, 8, 0, 1703985, 10, 0, 1900534, 15, 0, 2031609, 15, 0, 2162684, 15, 0, 2097220, 12, 0, 2097236, 12, 0, 2097252, 12, 0, 2097269, 12, 0, 2097288, 12, 0, 2293759, 15, 0, 2359325, 9, 0, 2490332, 12, 0, 2490342, 12, 0, 2490359, 12, 0, 2424836, 12, 0, 2555918, 13, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 608.613, 447.219 )
+frames = SubResource( 2 )
+frame = 24
+playing = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground"]
+z_index = -99
+texture = SubResource( 3 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 388.299, 45 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -99
+texture = ExtResource( 275 )
+centered = false
+
+[node name="TransPort" type="Area2D" parent="."]
+position = Vector2( -250.439, 0 )
+z_index = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransPort"]
+position = Vector2( -136, 416.5 )
+z_index = 2
+shape = SubResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
+position = Vector2( -136, 352 )
+frames = SubResource( 5 )
+frame = 12
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
+position = Vector2( -136, 416 )
+frames = SubResource( 6 )
+frame = 7
+playing = true
+
+[node name="TransPort2" type="Area2D" parent="."]
+position = Vector2( 2055.75, -62.5535 )
+z_index = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransPort2"]
+position = Vector2( -136, 416.5 )
+z_index = 2
+shape = SubResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
+position = Vector2( -136, 352 )
+frames = SubResource( 5 )
+frame = 12
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
+position = Vector2( -136, 416 )
+frames = SubResource( 6 )
+frame = 7
+playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
+
+[node name="16637-1" type="Sprite" parent="."]
+position = Vector2( 1705.33, 302 )
+texture = ExtResource( 24 )
+
+[node name="16639-1" type="Sprite" parent="16637-1"]
+position = Vector2( -82.3142, -46 )
+z_index = -1
+texture = ExtResource( 23 )
+
+[node name="Steve" parent="." instance=ExtResource( 16 )]
+unique_name_in_owner = true
+position = Vector2( -250.439, 357.165 )
+z_index = 1
+
+[node name="Sprite" parent="Steve/Control" index="0"]
+frame = 2
+
+[node name="AnimatedSprite2" parent="Steve/Control" index="2"]
+frame = 2
+
+[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
+frame = 5
+
+[node name="AnimatedSprite6" parent="Steve/Control" index="8"]
+frame = 8
+
+[node name="AnimatedSprite4" parent="Steve/Control" index="9"]
+frame = 1
+
+[node name="Camera2D" parent="Steve" index="1"]
+limit_left = -495
+limit_top = -1342
+limit_right = 2196
+
+[node name="AnimationTree" parent="Steve" index="2"]
+tree_root = SubResource( 32 )
+parameters/playback = SubResource( 33 )
+
+[node name="fly_left" parent="Steve" index="18"]
+frame = 5
+
+[node name="fly_right" parent="Steve" index="19"]
+frame = 3
+
+[node name="recover" parent="Steve" index="20"]
+frame = 12
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -322.439, 433.6 )
+shape = SubResource( 34 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 228, 438.4 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 352, 447.219 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1024, 318.165 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1183, 317.165 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1699.66, 290 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1649.21, 224.8 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1788.74, 206 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1926.06, 160 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -306.979, 487 )
+polygon = PoolVector2Array( 141.952, -57.1759, 198.648, -15.5985, 276.763, 44.8777, 357.979, 117, 148.979, -37 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 228, 656.253 )
+polygon = PoolVector2Array( 139.929, -30.5281, 194, 19.7473, 361.946, 55.8917, 545.106, 21.2223, 652.04, -42.3607, 731.575, -115.479, 647.16, -66.9722, 561.392, -16.8895, 451.872, 9.88293, 310.131, 23.1121, 200.809, 2.97937 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 256, 600 )
+polygon = PoolVector2Array( 148.146, 1.88513, 183.463, 17.8622, 358.37, 27.9529, 532.435, -7.36469, 656.047, -88.9316, 730.887, -196.566, 657.729, -106.59, 574.48, -52.7731, 481.982, -13.251, 405.46, 10.2941, 313.802, 11.976, 222.985, 11.135 )
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 1040.74, 504.469 )
+polygon = PoolVector2Array( 448.16, 8.26575, 518.085, 6.53928, 621.515, -95.2092, 605.483, -146.06 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -24, 433.6 )
+shape = SubResource( 36 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1456, 560 )
+shape = SubResource( 37 )
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1927.3, 377.571 )
+shape = SubResource( 38 )
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1926.06, 560 )
+shape = SubResource( 38 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -64, 640 )
+shape = SubResource( 39 )
+one_way_collision = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1093.58, 504.469 )
+frames = SubResource( 40 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1611.83, 256 )
+frames = SubResource( 41 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1641.33, 256 )
+frames = SubResource( 41 )
+frame = 21
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1691.02, 256 )
+z_index = -98
+frames = SubResource( 41 )
+frame = 21
+playing = true
+
+[node name="16638-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1976.06, 240 )
+z_index = -98
+texture = ExtResource( 133 )
+flip_h = true
+
+[node name="8709-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1640.86, 115.777 )
+z_index = -1
+texture = ExtResource( 132 )
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1756.75, 40 )
+frames = SubResource( 42 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1926.06, -16.494 )
+frames = SubResource( 42 )
+frame = 11
+playing = true
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 2044.68, -16.494 )
+frames = SubResource( 42 )
+frame = 11
+playing = true
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 2197.41, 40 )
+frames = SubResource( 42 )
+frame = 1
+playing = true
+
+[node name="19175-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -295.689, 357.165 )
+z_index = -98
+texture = ExtResource( 150 )
+
+[node name="19199-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1377.33, 208.161 )
+z_index = -98
+texture = ExtResource( 155 )
+
+[node name="19199-2" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -130.439, 80 )
+z_index = -98
+texture = ExtResource( 155 )
+
+[node name="18355-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1902.22, 180.777 )
+texture = ExtResource( 148 )
+
+[node name="18358-1" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1946.8, 180.777 )
+texture = ExtResource( 140 )
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1817.24, 278 )
+frames = SubResource( 43 )
+playing = true
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 2027.75, 278 )
+frames = SubResource( 43 )
+frame = 11
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite12" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 1789.24, 133.506 )
+frames = SubResource( 44 )
+frame = 18
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite13" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 654, 176 )
+frames = SubResource( 45 )
+frame = 9
+playing = true
+
+[node name="AnimatedSprite14" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 74.811, 570.396 )
+frames = SubResource( 46 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2202.77, 29 )
+shape = SubResource( 47 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -488.058, 113.8 )
+shape = SubResource( 47 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 48 )
+position = Vector2( 1024, 302 )
+z_index = -1
+amount = 40
+lifetime = 1.5
+process_material = SubResource( 51 )
+texture = ExtResource( 19 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+material = SubResource( 48 )
+position = Vector2( 1183, 298 )
+z_index = -1
+amount = 40
+lifetime = 1.5
+process_material = SubResource( 51 )
+texture = ExtResource( 19 )
+
+[node name="Particles2D3" type="Particles2D" parent="."]
+material = SubResource( 48 )
+position = Vector2( -434.939, 640 )
+z_index = -1
+amount = 40
+lifetime = 1.5
+process_material = SubResource( 51 )
+texture = ExtResource( 19 )
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = 917.912
+margin_top = 166.489
+margin_right = 1289.91
+margin_bottom = 211.489
+bbcode_enabled = true
+bbcode_text = "[shake]但愿人长久，[wave]千里共婵娟。"
+text = "但愿人长久，千里共婵娟。"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D4" type="Particles2D" parent="."]
+material = SubResource( 52 )
+position = Vector2( -254.639, 560 )
+scale = Vector2( 0.8, 0.8 )
+amount = 4
+process_material = SubResource( 57 )
+texture = ExtResource( 22 )
+
+[node name="Particles2D5" type="Particles2D" parent="."]
+material = SubResource( 58 )
+position = Vector2( -64, 553.427 )
+scale = Vector2( 0.2, 0.2 )
+amount = 4
+process_material = SubResource( 61 )
+texture = ExtResource( 25 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 1056.99
+margin_top = 211.489
+margin_right = 1250.99
+margin_bottom = 251.489
+bbcode_enabled = true
+bbcode_text = "[shake]海内存知己，[wave amp=50]天涯若比邻。"
+meta_underlined = false
+text = "海内存知己，天涯若比邻。"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="TransPort" to="." method="_on_TransPort_body_entered"]
+
+[editable path="Steve"]

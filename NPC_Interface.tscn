@@ -1,0 +1,129 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://UI/npc_transaction/76767-4.png" type="Texture" id=1]
+[ext_resource path="res://UI/npc_transaction/76765-1.png" type="Texture" id=2]
+[ext_resource path="res://UI/npc_transaction/76764-1.png" type="Texture" id=3]
+[ext_resource path="res://UI/npc_transaction/76764-2.png" type="Texture" id=4]
+[ext_resource path="res://UI/npc_transaction/76766-1.png" type="Texture" id=5]
+[ext_resource path="res://UI/npc_transaction/76766-2.png" type="Texture" id=6]
+[ext_resource path="res://UI/npc_transaction/76769-2.png" type="Texture" id=7]
+[ext_resource path="res://UI/npc_transaction/76767-2.png" type="Texture" id=8]
+[ext_resource path="res://UI/npc_transaction/76767-3.png" type="Texture" id=9]
+[ext_resource path="res://UI/npc_transaction/76774-2.png" type="Texture" id=10]
+[ext_resource path="res://UI/npc_transaction/76769-4.png" type="Texture" id=11]
+[ext_resource path="res://UI/npc_transaction/76775-3.png" type="Texture" id=12]
+[ext_resource path="res://UI/npc_transaction/76775-2.png" type="Texture" id=13]
+[ext_resource path="res://UI/npc_transaction/76769-1.png" type="Texture" id=14]
+[ext_resource path="res://UI/npc_transaction/76769-3.png" type="Texture" id=15]
+[ext_resource path="res://UI/npc_transaction/76775-4.png" type="Texture" id=16]
+[ext_resource path="res://UI/npc_transaction/76774-1.png" type="Texture" id=17]
+[ext_resource path="res://UI/npc_transaction/76775-1.png" type="Texture" id=18]
+[ext_resource path="res://UI/npc_transaction/76767-1.png" type="Texture" id=19]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="buy_and_sell" type="Control" parent="."]
+margin_left = -1.41425
+margin_top = -16.9706
+margin_right = 38.5858
+margin_bottom = 23.0294
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="buy_and_sell"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="buy_and_sell"]
+margin_left = -64.8088
+margin_top = 75.5953
+margin_right = 9.19119
+margin_bottom = 125.595
+focus_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="buy_and_sell"]
+margin_left = -67.0151
+margin_top = 169.897
+margin_right = 8.98492
+margin_bottom = 217.897
+focus_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="buy_and_sell"]
+margin_left = -65.1273
+margin_top = 122.704
+margin_right = 8.87268
+margin_bottom = 172.704
+focus_mode = 0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="buy_and_sell"]
+margin_left = 346.841
+margin_top = 424.291
+margin_right = 408.841
+margin_bottom = 464.291
+focus_mode = 0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="buy_and_sell"]
+margin_left = 460.362
+margin_top = 424.291
+margin_right = 522.362
+margin_bottom = 464.291
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton6" type="TextureButton" parent="buy_and_sell"]
+margin_left = 561.009
+margin_top = 25.6032
+margin_right = 580.009
+margin_bottom = 45.6032
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton7" type="TextureButton" parent="buy_and_sell"]
+margin_left = 542.456
+margin_top = 25.6032
+margin_right = 561.456
+margin_bottom = 45.6032
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

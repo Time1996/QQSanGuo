@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/guyidaoqianduan(shu).ogg-520884582ad962db1ed6f0a207f4ba0c.oggstr"
+
+[deps]
+
+source_file="res://MUSIC/guyidaoqianduan(shu).ogg"
+dest_files=[ "res://.import/guyidaoqianduan(shu).ogg-520884582ad962db1ed6f0a207f4ba0c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

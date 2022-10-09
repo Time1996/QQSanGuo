@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hhfl.wav-828f3a27d094049adc4f5d3497b4ac03.sample"
+
+[deps]
+
+source_file="res://MUSIC/js/hhfl.wav"
+dest_files=[ "res://.import/hhfl.wav-828f3a27d094049adc4f5d3497b4ac03.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

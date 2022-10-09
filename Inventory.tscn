@@ -1,0 +1,429 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://UI/player_inventory/main/67445-1.png" type="Texture" id=1]
+[ext_resource path="res://Inventory.gd" type="Script" id=2]
+[ext_resource path="res://knapsack.gd" type="Script" id=3]
+[ext_resource path="res://Character/Sprite.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/ui/main_item.png" type="Texture" id=5]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://UI/side_bar/75606-3.png" type="Texture" id=7]
+[ext_resource path="res://UI/side_bar/75616-2.png" type="Texture" id=9]
+[ext_resource path="res://UI/side_bar/75616-3.png" type="Texture" id=10]
+[ext_resource path="res://UI/side_bar/75606-2.png" type="Texture" id=11]
+[ext_resource path="res://UI/side_bar/75606-4.png" type="Texture" id=12]
+[ext_resource path="res://UI/side_bar/75606-1.png" type="Texture" id=13]
+[ext_resource path="res://UI/side_bar/75616-4.png" type="Texture" id=14]
+[ext_resource path="res://UI/side_bar/75616-1.png" type="Texture" id=15]
+[ext_resource path="res://UI/67379-1.png" type="Texture" id=16]
+[ext_resource path="res://UI/67378-1.png" type="Texture" id=17]
+[ext_resource path="res://UI/67379-2.png" type="Texture" id=18]
+[ext_resource path="res://UI/67378-2.png" type="Texture" id=19]
+[ext_resource path="res://equipment.gd" type="Script" id=47]
+[ext_resource path="res://slot1.gd" type="Script" id=48]
+[ext_resource path="res://Slot.gd" type="Script" id=49]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 205, 34 )
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -207.561
+margin_top = -213.227
+margin_right = 344.439
+margin_bottom = 213.773
+rect_scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 5 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="Label" parent="."]
+margin_left = 255.752
+margin_top = 500.0
+margin_right = 338.752
+margin_bottom = 523.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 495.0
+margin_top = 227.0
+margin_right = 752.0
+margin_bottom = 473.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 235.0
+margin_bottom = 440.0
+custom_constants/separation = 10
+
+[node name="Panel1" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_right = 235.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel1"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 50.0
+margin_right = 235.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel2"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel3" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 100.0
+margin_right = 235.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel3"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel4" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 150.0
+margin_right = 235.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel4"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel5" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 200.0
+margin_right = 235.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel5"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel6" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 250.0
+margin_right = 235.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel6"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel7" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 300.0
+margin_right = 235.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel7"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel8" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 350.0
+margin_right = 235.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel8"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Panel9" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_top = 400.0
+margin_right = 235.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 49 )
+
+[node name="PopupMenu" type="PopupMenu" parent="ScrollContainer/VBoxContainer/Panel9"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Backpack" type="Label" parent="."]
+margin_left = 501.904
+margin_top = 500.0
+margin_right = 592.904
+margin_bottom = 523.0
+text = "0/50"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Juntuan" type="Label" parent="."]
+margin_left = 378.054
+margin_top = 500.0
+margin_right = 459.054
+margin_bottom = 523.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wugong" type="Label" parent="."]
+margin_left = 360.73
+margin_top = 357.618
+margin_right = 396.73
+margin_bottom = 380.618
+text = "20"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wufang" type="Label" parent="."]
+margin_left = 360.73
+margin_top = 380.0
+margin_right = 396.73
+margin_bottom = 403.0
+text = "10"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shugong" type="Label" parent="."]
+margin_left = 360.73
+margin_top = 403.0
+margin_right = 396.73
+margin_bottom = 426.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shufang" type="Label" parent="."]
+margin_left = 360.73
+margin_top = 426.0
+margin_right = 396.73
+margin_bottom = 449.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" parent="." instance=ExtResource( 4 )]
+position = Vector2( 360.73, 274.618 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="name" type="Label" parent="."]
+margin_left = 262.0
+margin_top = 154.618
+margin_right = 462.0
+margin_bottom = 177.618
+custom_fonts/font = ExtResource( 6 )
+text = "我行我素"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 768.191
+margin_top = 117.317
+margin_right = 785.191
+margin_bottom = 134.317
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 745.583
+margin_top = 117.495
+margin_right = 762.583
+margin_bottom = 134.495
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 532.0
+margin_top = 143.649
+margin_right = 573.0
+margin_bottom = 178.649
+texture_normal = ExtResource( 17 )
+texture_focused = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 491.0
+margin_top = 143.649
+margin_right = 532.0
+margin_bottom = 178.649
+texture_normal = ExtResource( 16 )
+texture_focused = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="equipment" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 47 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="TextureButton" parent="equipment"]
+margin_left = 255.327
+margin_top = 195.931
+margin_right = 287.327
+margin_bottom = 225.931
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up_Body" type="TextureButton" parent="equipment"]
+margin_left = 255.752
+margin_top = 289.036
+margin_right = 287.752
+margin_bottom = 319.036
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Necklace" type="TextureButton" parent="equipment"]
+margin_left = 255.327
+margin_top = 243.075
+margin_right = 287.327
+margin_bottom = 273.075
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hand" type="TextureButton" parent="equipment"]
+margin_left = 255.752
+margin_top = 335.706
+margin_right = 287.752
+margin_bottom = 365.706
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sword" type="TextureButton" parent="equipment"]
+margin_left = 430.658
+margin_top = 380.618
+margin_right = 462.658
+margin_bottom = 410.618
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boot" type="TextureButton" parent="equipment"]
+margin_left = 430.658
+margin_top = 335.706
+margin_right = 462.658
+margin_bottom = 365.706
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Down_Body" type="TextureButton" parent="equipment"]
+margin_left = 430.658
+margin_top = 289.036
+margin_right = 462.658
+margin_bottom = 319.036
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wing" type="TextureButton" parent="equipment"]
+margin_left = 430.658
+margin_top = 243.075
+margin_right = 462.658
+margin_bottom = 273.075
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mask" type="TextureButton" parent="equipment"]
+margin_left = 430.658
+margin_top = 195.931
+margin_right = 462.658
+margin_bottom = 225.931
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ring" type="TextureButton" parent="equipment"]
+margin_left = 255.327
+margin_top = 426.0
+margin_right = 287.327
+margin_bottom = 456.0
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
+[connection signal="id_pressed" from="ScrollContainer/VBoxContainer/Panel1/PopupMenu" to="ScrollContainer/VBoxContainer/Panel1" method="_on_PopupMenu_id_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[editable path="Sprite"]

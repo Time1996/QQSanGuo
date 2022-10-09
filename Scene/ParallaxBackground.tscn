@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/map/9024-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/map/9023-1.png" type="Texture" id=2]
+[ext_resource path="res://assets/map/9010-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/map/9009-1.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/8985-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/9011-1.png" type="Texture" id=6]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_offset = Vector2( 10, 0 )
+
+[node name="sky" type="ParallaxLayer" parent="."]
+show_behind_parent = true
+scale = Vector2( 2, 2 )
+motion_scale = Vector2( 0.2, 0.2 )
+motion_offset = Vector2( 0, -40 )
+motion_mirroring = Vector2( 800, 600 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="sky"]
+z_index = 1
+texture = ExtResource( 5 )
+centered = false
+
+[node name="cloud" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 2236.5, 774 )
+
+[node name="Sprite2" type="Sprite" parent="cloud"]
+position = Vector2( 448, -160 )
+z_index = 1
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="cloud"]
+z_index = 1
+texture = ExtResource( 2 )
+centered = false
+
+[node name="mountain" type="ParallaxLayer" parent="."]
+position = Vector2( 32, 352 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1185, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="mountain"]
+texture = ExtResource( 4 )
+
+[node name="mountain2" type="ParallaxLayer" parent="."]
+position = Vector2( 640, 416 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1543.5, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="mountain2"]
+texture = ExtResource( 6 )
+
+[node name="mountain3" type="ParallaxLayer" parent="."]
+position = Vector2( 80, 384 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1120, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="mountain3"]
+position = Vector2( 0, -106.667 )
+scale = Vector2( 1, 1.73059 )
+texture = ExtResource( 3 )
+centered = false

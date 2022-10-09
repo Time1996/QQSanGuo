@@ -1,0 +1,222 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://UI/side_bar/75616-1.png" type="Texture" id=1]
+[ext_resource path="res://UI/side_bar/75606-2.png" type="Texture" id=2]
+[ext_resource path="res://UI/side_bar/75606-4.png" type="Texture" id=3]
+[ext_resource path="res://UI/side_bar/75606-3.png" type="Texture" id=4]
+[ext_resource path="res://UI/side_bar/75606-1.png" type="Texture" id=5]
+[ext_resource path="res://UI/side_bar/75616-2.png" type="Texture" id=6]
+[ext_resource path="res://UI/side_bar/75616-3.png" type="Texture" id=7]
+[ext_resource path="res://UI/side_bar/player_state.gd" type="Script" id=8]
+[ext_resource path="res://UI/player_state/75874-1.png" type="Texture" id=9]
+[ext_resource path="res://UI/player_state/75874-2.png" type="Texture" id=10]
+[ext_resource path="res://UI/player_state/75859-1.png" type="Texture" id=11]
+[ext_resource path="res://UI/player_state/75865-1.png" type="Texture" id=12]
+[ext_resource path="res://UI/player_state/75856-1.png" type="Texture" id=13]
+[ext_resource path="res://UI/player_state/75860-1.png" type="Texture" id=14]
+[ext_resource path="res://UI/player_state/75865-2.png" type="Texture" id=15]
+
+[node name="player_state" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -433.0
+margin_bottom = -174.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 364.0
+margin_bottom = 88.0
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="75856-1" type="Sprite" parent="TextureRect"]
+position = Vector2( 289.438, 69.4032 )
+texture = ExtResource( 13 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_top = 88.0
+margin_right = 380.0
+margin_bottom = 422.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 132.6
+margin_top = 56.1865
+margin_right = 214.6
+margin_bottom = 96.1865
+texture_normal = ExtResource( 12 )
+texture_focused = ExtResource( 15 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 47.9458
+margin_top = 56.1865
+margin_right = 129.946
+margin_bottom = 96.1865
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 336.0
+margin_top = 27.0
+margin_right = 353.0
+margin_bottom = 43.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 3 )
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 316.0
+margin_top = 27.0
+margin_right = 332.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 225.871
+margin_top = 55.2495
+margin_right = 249.871
+margin_bottom = 86.2495
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Force" type="Label" parent="."]
+margin_left = 86.5746
+margin_top = 235.34
+margin_right = 126.575
+margin_bottom = 258.34
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wisdom" type="Label" parent="."]
+margin_left = 137.41
+margin_top = 226.205
+margin_right = 177.41
+margin_bottom = 249.205
+text = "1"
+align = 1
+
+[node name="Aim" type="Label" parent="."]
+margin_left = 49.0207
+margin_top = 330.343
+margin_right = 89.0207
+margin_bottom = 353.343
+text = "1"
+align = 1
+
+[node name="Agility" type="Label" parent="."]
+margin_left = 41.2724
+margin_top = 223.824
+margin_right = 81.2724
+margin_bottom = 246.824
+text = "1"
+align = 1
+
+[node name="Strong" type="Label" parent="."]
+margin_left = 126.173
+margin_top = 329.247
+margin_right = 166.173
+margin_bottom = 352.247
+text = "1"
+align = 1
+
+[node name="Name" type="Label" parent="."]
+margin_left = 207.0
+margin_top = 91.0
+margin_right = 330.0
+margin_bottom = 114.0
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 207.707
+margin_top = 112.213
+margin_right = 330.707
+margin_bottom = 135.213
+align = 1
+
+[node name="PinJie" type="Label" parent="."]
+margin_left = 205.413
+margin_top = 156.451
+margin_right = 328.413
+margin_bottom = 179.451
+align = 1
+
+[node name="Job" type="Label" parent="."]
+margin_left = 276.0
+margin_top = 134.0
+margin_right = 332.0
+margin_bottom = 157.0
+align = 1
+
+[node name="Contry" type="Label" parent="."]
+margin_left = 207.191
+margin_top = 133.413
+margin_right = 241.191
+margin_bottom = 156.413
+align = 1
+
+[node name="FuZhi" type="Label" parent="."]
+margin_left = 206.206
+margin_top = 177.863
+margin_right = 329.206
+margin_bottom = 200.863
+align = 1
+
+[node name="EXing" type="Label" parent="."]
+margin_left = 207.0
+margin_top = 200.016
+margin_right = 330.0
+margin_bottom = 223.016
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="Label" parent="."]
+margin_left = 202.995
+margin_top = 321.486
+margin_right = 325.995
+margin_bottom = 344.486
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mana" type="Label" parent="."]
+margin_left = 203.217
+margin_top = 341.954
+margin_right = 326.217
+margin_bottom = 364.954
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prestige" type="Label" parent="."]
+margin_left = 207.206
+margin_top = 221.619
+margin_right = 330.206
+margin_bottom = 244.619
+align = 1
+
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]

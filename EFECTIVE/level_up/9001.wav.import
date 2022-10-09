@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/9001.wav-25967f2ba5d593ce257bcb326388e428.sample"
+
+[deps]
+
+source_file="res://EFECTIVE/level_up/9001.wav"
+dest_files=[ "res://.import/9001.wav-25967f2ba5d593ce257bcb326388e428.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
