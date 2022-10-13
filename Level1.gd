@@ -1,34 +1,17 @@
 extends Node2D
 
-
+var load_scene
 
 func _ready():
 	pass
 
 
 
-func _on_Monkey_monster_die():
-	$Steve.gain_money(200, 2)
-	$Steve.gain_experience(2)
-	get_node("Steve/AnimationPlayer").play("experience")
-	print("experience + 2")
-	pass # Replace with function body.
-
-
-func _on_Snake_monster_die():
-	$Steve.gain_money(100, 1)
-	$Steve.gain_experience(1)
-	get_node("Steve/AnimationPlayer").play("experience")
-	print("experience + 1")
-	pass # Replace with function body.
-
-
-func _on_Spawner_monster_die():
-	pass # Replace with function body.
 
 
 func _on_TransPort_body_entered(body):
-	SceneChange.goto_scene("res://JiangLinXiJiao.tscn", self)
+#	load_scene = load("res://JiangLinXiJiao.tscn")
+	SceneChange.goto_scene(load_scene, self)
 #	get_tree().change_scene("res://JiangLinXiJiao.tscn")
 	pass # Replace with function body.
 
@@ -41,6 +24,11 @@ func _on_TransPort_body_entered(body):
 
 
 func _on_TransPort2_body_entered(body):
-	SceneChange.goto_scene("res://Scene/bajun.tscn", self)
+#	load_scene = load("res://Scene/bajun.tscn")
+	SceneChange.goto_scene(load_scene, self)
 #	get_tree().change_scene("res://Scene/bajun.tscn")
 	pass # Replace with function body.
+
+func _exit_tree():
+#	load_scene.free()
+	pass

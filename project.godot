@@ -13,21 +13,15 @@ _global_script_classes=[ {
 "class": "SkillBase",
 "language": "GDScript",
 "path": "res://SkillBase.gd"
-}, {
-"base": "Node",
-"class": "stateMachine",
-"language": "GDScript",
-"path": "res://stateMachine.gd"
 } ]
 _global_script_class_icons={
-"SkillBase": "",
-"stateMachine": ""
+"SkillBase": ""
 }
 
 [application]
 
 config/name="2DPlantform"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://Scene/bajun.tscn"
 
 [autoload]
 
@@ -56,7 +50,6 @@ enabled=PoolStringArray( "codeandweb.texturepacker" )
 
 [gui]
 
-theme/custom="res://new_theme.tres"
 theme/custom_font="res://new_dynamicfont.tres"
 
 [input]

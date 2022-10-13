@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Inventory.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Control.gd" type="Script" id=2]
+[ext_resource path="res://PlayerInformation.gd" type="Script" id=2]
 [ext_resource path="res://UI/side_bar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Character_UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/map/bajun/14823-1.png" type="Texture" id=5]

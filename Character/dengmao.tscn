@@ -178,6 +178,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0 ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack"
+} ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "die"
@@ -238,7 +252,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "idle_attack"
-length = 0.01
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
@@ -367,6 +380,7 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=34]
 switch_mode = 2
@@ -421,6 +435,7 @@ extents = Vector2( 655, 87.5 )
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 33 )
+hp = 1000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -5, 4.5 )
@@ -429,8 +444,8 @@ shape = SubResource( 24 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 40 )
 frames = SubResource( 1 )
-animation = "die"
-frame = 9
+animation = "idle"
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -515,6 +530,11 @@ shape = SubResource( 23 )
 
 [node name="FCTmgr" parent="." instance=ExtResource( 50 )]
 
+[node name="normal_timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="combat_timer" to="." method="_on_combat_timer_timeout"]
 [connection signal="body_entered" from="player_detect" to="." method="_on_player_detect_body_entered"]
 [connection signal="body_exited" from="player_detect" to="." method="_on_player_detect_body_exited"]
+[connection signal="timeout" from="normal_timer" to="." method="_on_normal_timer_timeout"]

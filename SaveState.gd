@@ -50,7 +50,7 @@ func load_game():
 		if flag == 0:
 			var route = str(node_data.parent)
 			print(route)
-			get_tree().change_scene(route + ".tscn")
+			var _d = get_tree().change_scene(route + ".tscn")
 			print(route + ".tscn")
 			yield(get_tree().create_timer(1.0),"timeout")
 			flag = 1

@@ -551,7 +551,6 @@ animations = [ {
 [node name="Monster" type="KinematicBody2D" groups=["enemy"]]
 material = SubResource( 31 )
 collision_layer = 4
-collision_mask = 0
 input_pickable = true
 script = SubResource( 32 )
 
@@ -707,7 +706,6 @@ position = Vector2( 16, -8 )
 scale = Vector2( 0.647059, 0.690529 )
 frames = SubResource( 30 )
 animation = "2"
-frame = 3
 playing = true
 
 [connection signal="monster_die" from="." to="." method="_on_Monster_monster_die"]

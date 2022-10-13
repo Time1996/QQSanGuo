@@ -1,0 +1,142 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Character/NPC.gd" type="Script" id=1]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_3.png" type="Texture" id=2]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_5.png" type="Texture" id=3]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_13.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_20.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_23.png" type="Texture" id=6]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_24.png" type="Texture" id=7]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_10.png" type="Texture" id=8]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_1.png" type="Texture" id=10]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_17.png" type="Texture" id=11]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_22.png" type="Texture" id=12]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_18.png" type="Texture" id=13]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_15.png" type="Texture" id=14]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_14.png" type="Texture" id=15]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_8.png" type="Texture" id=16]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_12.png" type="Texture" id=17]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_28.png" type="Texture" id=18]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_25.png" type="Texture" id=19]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_30.png" type="Texture" id=20]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_16.png" type="Texture" id=21]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_21.png" type="Texture" id=22]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_26.png" type="Texture" id=23]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_29.png" type="Texture" id=24]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_7.png" type="Texture" id=25]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_4.png" type="Texture" id=26]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_11.png" type="Texture" id=27]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_19.png" type="Texture" id=28]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_27.png" type="Texture" id=29]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_6.png" type="Texture" id=30]
+[ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_9.png" type="Texture" id=31]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=32]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=33]
+[ext_resource path="res://UI/name/name_right.png" type="Texture" id=34]
+[ext_resource path="res://UI/name/name_left.png" type="Texture" id=35]
+
+[sub_resource type="DynamicFont" id=65]
+outline_size = 1
+font_data = ExtResource( 32 )
+
+[sub_resource type="Shader" id=66]
+code = "shader_type canvas_item;
+
+uniform float width:hint_range(0.0,30.0);
+uniform vec4 outline_color:hint_color;
+
+void fragment(){
+    float size = width * 1.0 / float(textureSize(TEXTURE,0).x);
+    vec4 sprite_color = texture(TEXTURE,UV);
+    float alpha = -8.0 * sprite_color.a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,0)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,0.0)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,-size)).a;
+    vec4 final_color = mix(sprite_color,outline_color,clamp(alpha,0.0,1.0));
+    COLOR = vec4(final_color.rgb,clamp(abs(alpha) + sprite_color.a,0.0,1.0));
+} "
+
+[sub_resource type="ShaderMaterial" id=67]
+shader = SubResource( 66 )
+shader_param/width = 0.0
+shader_param/outline_color = Color( 0.992157, 1, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 26 ), ExtResource( 3 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 31 ), ExtResource( 8 ), ExtResource( 27 ), ExtResource( 17 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 28 ), ExtResource( 5 ), ExtResource( 22 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 18 ), ExtResource( 24 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[node name="jiguanxiaoyao" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -721.0
+margin_bottom = -498.0
+rect_min_size = Vector2( 79, 102 )
+script = ExtResource( 1 )
+
+[node name="Name" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = 85.0
+margin_right = -82.0
+margin_bottom = 2.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Name"]
+margin_left = 3.0
+margin_top = 20.0
+margin_right = 83.0
+margin_bottom = 39.0
+custom_constants/separation = 0
+
+[node name="left" type="TextureRect" parent="Name/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 19.0
+texture = ExtResource( 35 )
+
+[node name="middle" type="TextureRect" parent="Name/HBoxContainer"]
+self_modulate = Color( 1, 0.823529, 0.454902, 1 )
+margin_left = 10.0
+margin_right = 75.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 65, 19 )
+texture = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Name/HBoxContainer/middle"]
+margin_top = -2.0
+margin_right = 61.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 1, 0.227451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 65 )
+text = "寄管小妖"
+align = 1
+
+[node name="right" type="TextureRect" parent="Name/HBoxContainer"]
+margin_left = 75.0
+margin_right = 85.0
+margin_bottom = 19.0
+texture = ExtResource( 34 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 67 )
+frames = SubResource( 5 )
+frame = 16
+playing = true
+centered = false
+
+[connection signal="mouse_entered" from="." to="." method="_on_NPC_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_NPC_mouse_exited"]

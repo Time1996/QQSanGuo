@@ -1,7 +1,8 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Character/dengmao.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Character/hongdiao.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/map/9023-1.png" type="Texture" id=4]
 [ext_resource path="res://assets/map/9024-1.png" type="Texture" id=5]
 [ext_resource path="res://assets/map/8985-1.png" type="Texture" id=6]
@@ -59,9 +60,10 @@
 [ext_resource path="res://Level1.gd" type="Script" id=58]
 [ext_resource path="res://assets/map/bajun/13311-1.png" type="Texture" id=59]
 [ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=60]
-[ext_resource path="res://Enemy/Monkeyy.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Character/xiaomihou.tscn" type="PackedScene" id=61]
 [ext_resource path="res://MUSIC/fmusic001.ogg" type="AudioStream" id=62]
 [ext_resource path="res://assets/map/bajun/13312-1.png" type="Texture" id=63]
+[ext_resource path="res://monster_spawner.gd" type="Script" id=64]
 [ext_resource path="res://16898-1.png" type="Texture" id=66]
 [ext_resource path="res://19470-1.png" type="Texture" id=67]
 [ext_resource path="res://16899-1.png" type="Texture" id=68]
@@ -377,54 +379,6 @@
 21/shapes = [  ]
 21/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
-
-[sub_resource type="TileSet" id=4]
-0/name = "platformPack_tile001.png 0"
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 2 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "platformPack_tile004.png 1"
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 64 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 3 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 176, 64 )
 
@@ -517,260 +471,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=30]
-
-[sub_resource type="GDScript" id=31]
-script/source = "extends KinematicBody2D
-
-var mouse_shape = preload(\"res://assets/mouse/28158-1.png\")
-var mouse_default = preload(\"res://assets/mouse/28168-1.png\")
-
-signal monster_die
-
-export var attack1 = 2#攻击力
-export var defend = 1#防御力
-export var max_health = 100#初始最大生命
-export var health = 100#血条
-export var attack_range = 100#攻击范围
-
-var attacking = 0
-var injurying = 0
-var time = 0
-onready var Name = get_node(\"Name\").get_node(\"HBoxContainer\").get_node(\"middle/name\").text
-onready var userInterface = get_parent().get_node(\"UserInterFace\")
-var itemDrop = preload(\"res://ItemDrop.tscn\")
-
-enum{
-	IDLE,
-	NEW_DIRECTION,
-	MOVE,
-	DIE,
-	COMBAT,
-	INJURY,
-	PRECOMBAT
-}
-
-var SPEED = 3800
-var velocity = Vector2()
-var state = MOVE
-var direction = Vector2.RIGHT
-var player = null
-var state_machine
-
-func init():
-	state_machine = $AnimationTree.get(\"parameters/playback\")
-	time = 0
-	$HealthBar.visible = true
-	$Name.visible = true
-	$HealthBar/HealthBar.value = max_health
-	$Sprite.visible = false
-	randomize()
-	
-func _ready():
-	init()
-	
-func _process(delta):
-	match state:
-		IDLE:
-			#init()
-			state_machine.travel(\"idle\")
-		NEW_DIRECTION:
-			direction = choose([Vector2.RIGHT, Vector2.LEFT])
-			state = choose([IDLE, MOVE])
-		MOVE:
-			move(delta)
-		DIE:
-			dead()
-		INJURY:
-			pass
-		COMBAT:
-			if player:
-				var dist = player.position.x - position.x
-				velocity.y = 0
-				$Timer.stop()
-				$\"non-combat\".stop()
-				if dist < 0:
-					$AnimatedSprite.flip_h = true
-				else:
-					$AnimatedSprite.flip_h = false
-				if abs(dist) <= attack_range:##玩家在怪物攻击范围内 便开始攻击	
-					attacking = 1
-#					print(\"攻击\")
-					print(\"猴子\")
-					
-					if $Timer.time_left != 0:
-						$Timer.start()
-				else:
-					move_to_player(delta)
-			else:
-				if time == 0:
-					$\"non-combat\".start(5)
-					time = 1
-					print(\"进入非战斗状态 倒计时5秒开始\")
-				
-			
-func move_to_player(delta):
-	state_machine.travel(\"run\")
-	var dist = player.position.x - position.x
-	print(dist)
-	velocity.y = 0
-	if dist < 0:
-		$AnimatedSprite.flip_h = true
-		velocity = Vector2.LEFT * SPEED * delta
-	else:
-		$AnimatedSprite.flip_h = false
-		velocity = Vector2.RIGHT * SPEED * delta
-	velocity = move_and_slide(velocity)
-func attack(player):
-	$attack.play()
-	get_parent().get_node(\"Steve\").emit_signal(\"health_updated\", attack1)
-	state_machine.travel(\"attack\")
-	yield($AnimatedSprite,\"animation_finished\")
-	
-func check_border():##边缘检测 目前是检测左右两边 返回正确方向
-	
-	if !($floor_left.is_colliding()):
-		direction = Vector2.RIGHT
-	if !($floor_right.is_colliding()):
-		direction = Vector2.LEFT
-	return direction
-
-func move(delta):
-	state_machine.travel(\"run\")
-	direction =  check_border()
-	
-	if direction == Vector2.RIGHT:
-		$AnimatedSprite.flip_h = false
-	else:
-		$AnimatedSprite.flip_h = true
-	
-	if injurying == 1:
-		velocity = Vector2(0, 0)
-	else:
-		velocity = direction * SPEED * delta
-	velocity = move_and_slide(velocity)
-
-func injury(damage):
-	var health = $HealthBar/HealthBar.value
-	damage = rand_range(1.1, 2) * damage
-	if $deathAndInjury.playing == false:
-		$deathAndInjury.play()
-	#$Tween.interpolate_property(self, \"modulate\", Color(255,255,255,0), Color(255, 255, 255, 1), 1,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
-	#$Tween.start()
-	
-	state_machine.travel(\"injury\")
-	if health <= 0:
-		state = DIE
-	else:
-		state = COMBAT
-	
-	health -= damage
-	$HealthBar/HealthBar.value = health
-	userInterface.get_node(\"Character\").get_node(\"Target\").visible = true
-	userInterface.get_node(\"Character\").get_node(\"Target\").get_node(\"profile\").texture = load(\"res://Monster_ui/profile/\"+Name+\".png\")
-	userInterface.get_node(\"Character\").get_node(\"Target\").get_node(\"name\").text = Name
-	userInterface.get_node(\"Character\").get_node(\"Target\").get_node(\"health_bar\").value = health
-	
-	var crit = rand_range(0, 1)
-	if crit < 0.5:
-		damage *= 1.5
-		
-		$critical_attack.visible = true
-		$\"407-1\".visible = true
-		$AnimatedSprite2.visible = true
-		$AnimatedSprite2.frame = 0
-		$AnimatedSprite2.play(\"2\")
-		
-		var offset = Vector2()
-		offset.x = rand_range(-15, 15)
-		offset.y = rand_range(-15, 15)
-		var newpos = get_parent().get_node(\"Steve/Camera2D\").get_position()
-		var oldpos = newpos
-		newpos += offset
-		get_parent().get_node(\"Steve/Camera2D\").set_position(newpos)
-		yield(get_tree().create_timer(0.18),\"timeout\")
-		get_parent().get_node(\"Steve/Camera2D\").set_position(oldpos)
-		yield(get_tree().create_timer(0.18),\"timeout\")
-		$critical_attack.visible = false
-		$AnimatedSprite2.stop()
-		$AnimatedSprite2.visible = false
-		$\"407-1\".visible = false
-		
-		$FCTmgr.show_value(damage, true)
-	else:
-		$FCTmgr.show_value(damage, false)
-	
-	
-#		yield($AnimatedSprite, \"animation_finished\")
-	
-		
-func Drop():
-	##死后有概率掉落物品
-	#if randi()%2:
-		
-	var item = itemDrop.instance()
-	item.position = position
-	get_parent().add_child(item)
-	
-func dead():
-	state_machine.travel(\"die\")
-	set_process(false)
-	if $deathAndInjury.playing == false:
-		$deathAndInjury.play()
-	$Tween.interpolate_property(self, \"modulate:a\", 1, 0, 1,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
-	$Tween.start()
-	
-	Drop()
-	userInterface.get_node(\"Character\").get_node(\"Target\").visible = false
-	get_parent().get_node(\"Steve\").enemy_id = null
-	remove_from_group(\"enemy\")
-	yield($AnimatedSprite, \"animation_finished\")
-	
-	queue_free()
-	
-func choose(array):
-	array.shuffle()
-	return array.front()
-
-func _on_Timer_timeout():
-	$Timer.wait_time = choose([1]) #0.5 1 1.5
-	if attacking == 0:
-		state = choose([IDLE, NEW_DIRECTION, MOVE])
-	else:
-		state = COMBAT
-		attack(player)
-		
-func _on_Area2D_body_entered(body):
-	print(\"找到玩家\")
-	player = body
-	pass # Replace with function body.
-
-func _on_Area2D_body_exited(body):
-	print(\"丢失玩家\")
-	player = null
-	pass # Replace with function body.
-
-
-
-func _on_noncombat_timeout():
-	init()
-	$Timer.start(0.1)
-	time = 0
-	attacking = 0
-	pass # Replace with function body.
-
-
-
-func _on_mouse_event_mouse_entered():
-	$AnimatedSprite.material.set(\"shader_param/width\", 1)
-	pass # Replace with function body.
-
-
-func _on_mouse_event_mouse_exited():
-	$AnimatedSprite.material.set(\"shader_param/width\", 0)
-	pass # Replace with function body.
-"
-
 [sub_resource type="GDScript" id=29]
 script/source = "extends Node2D
 
@@ -779,8 +479,9 @@ signal monster_die
 var eneme_set = preload(\"res://Enemy//Snake.tscn\")
 
 
+
 func _ready():
-#	monster_generation(10)
+	monster_generation(10)
 	pass
 
 func monster_generation(num):
@@ -921,157 +622,151 @@ scale = Vector2( 1, 1.73059 )
 texture = ExtResource( 16 )
 centered = false
 
-[node name="Tiles Solid" type="TileMap" parent="."]
-tile_set = SubResource( 4 )
-collision_layer = 4
-collision_mask = 7
-format = 1
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Tiles Solid"]
+[node name="wall_floor" type="StaticBody2D" parent="."]
 collision_layer = 4
 collision_mask = 7
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1008, -384 )
 shape = SubResource( 5 )
 one_way_collision = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -48, 32 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 128, 480 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 800, 480 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2320, 640 )
 shape = SubResource( 6 )
 one_way_collision = true
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1789.89, 640.441 )
 shape = SubResource( 7 )
 one_way_collision = true
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1733.7, 594.743 )
 shape = SubResource( 8 )
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1859.97, 551.674 )
 shape = SubResource( 9 )
 one_way_collision = true
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1568, 96 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2000, -384 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1344, -768 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 800, -768 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -256, -848 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1456, -384 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 288, -424 )
 shape = SubResource( 10 )
 one_way_collision = true
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 272, -848 )
 shape = SubResource( 11 )
 one_way_collision = true
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 752, -424 )
 shape = SubResource( 12 )
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 464, -768 )
 shape = SubResource( 13 )
 one_way_collision = true
 
-[node name="wall" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -232, 200 )
 shape = SubResource( 14 )
 
-[node name="wall2" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall2" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -400, -248 )
 shape = SubResource( 14 )
 
-[node name="wall3" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall3" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -400, -632 )
 shape = SubResource( 14 )
 
-[node name="wall4" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall4" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -552, -1088 )
 shape = SubResource( 14 )
 
-[node name="wall5" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall5" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( -552, -1480 )
 shape = SubResource( 14 )
 
-[node name="wall6" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall6" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2384, -240 )
 shape = SubResource( 14 )
 
-[node name="wall9" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall9" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2637.4, 316.89 )
 shape = SubResource( 15 )
 
-[node name="wall10" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall10" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2493.27, 13.5493 )
 rotation = 1.5708
 shape = SubResource( 16 )
 
-[node name="wall7" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall7" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2384, -672 )
 shape = SubResource( 14 )
 
-[node name="wall8" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="wall8" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2384, -1104 )
 shape = SubResource( 14 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall_floor"]
 position = Vector2( 32, 48 )
 scale = Vector2( 0.980769, 0.9375 )
 polygon = PoolVector2Array( 1800.07, 480.221, 1827.29, 507.273, 1825.25, 532.19, 1650.36, 532.19, 1649.68, 391.231, 1682.35, 401.91, 1723.18, 425.403, 1767.41, 453.168 )
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 2048, -32 )
 shape = SubResource( 17 )
 one_way_collision = true
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tiles Solid/StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall_floor"]
 position = Vector2( 1392, 480 )
 shape = SubResource( 18 )
 
@@ -1125,13 +820,13 @@ shape = SubResource( 23 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 24 )
-frame = 7
+frame = 13
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 25 )
-frame = 2
+frame = 8
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -1147,19 +842,14 @@ shape = SubResource( 26 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 27 )
-frame = 7
+frame = 13
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 28 )
-frame = 2
+frame = 8
 playing = true
-
-[node name="Monkey" parent="." instance=ExtResource( 61 )]
-material = SubResource( 30 )
-position = Vector2( 1440, -16 )
-script = SubResource( 31 )
 
 [node name="Battle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 62 )
@@ -1171,33 +861,44 @@ script = SubResource( 29 )
 
 [node name="2_1" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( -272, -64 )
+script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_2" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( -80, -64 )
+script = ExtResource( 64 )
 
 [node name="2_3" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( -184, -64 )
+script = ExtResource( 64 )
 
 [node name="2_4" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 1609.76, 378.885 )
+script = ExtResource( 64 )
 
 [node name="2_5" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 25.5369, 385.234 )
+script = ExtResource( 64 )
 
 [node name="2_6" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 187.452, 385.234 )
+script = ExtResource( 64 )
 
 [node name="2_7" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2108.21, 550.324 )
+script = ExtResource( 64 )
 
 [node name="2_8" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 1981.21, 550.324 )
+script = ExtResource( 64 )
 
 [node name="2_9" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2258.85, 548.273 )
+script = ExtResource( 64 )
 
 [node name="2_10" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2393.01, 546.063 )
+script = ExtResource( 64 )
 
 [node name="Tween" type="Tween" parent="Spawner_Snake"]
 
@@ -1209,9 +910,6 @@ wait_time = 5.0
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="13311-1" type="Sprite" parent="."]
 position = Vector2( 2854.69, 340.787 )
@@ -1244,13 +942,38 @@ position = Vector2( 1425, 375 )
 
 [node name="dengmao" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2170, 500 )
-collision_mask = 1
+
+[node name="Monster2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 902, -519 )
+
+[node name="Monster3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 632, -517 )
+
+[node name="Monster4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 168, -519 )
+
+[node name="Monster5" parent="." instance=ExtResource( 61 )]
+position = Vector2( 1469, -8 )
+
+[node name="Monster6" parent="." instance=ExtResource( 61 )]
+position = Vector2( 1552, -9 )
+
+[node name="Monster7" parent="." instance=ExtResource( 61 )]
+position = Vector2( 1911, -81 )
+
+[node name="Monster8" parent="." instance=ExtResource( 61 )]
+position = Vector2( 2028, -81 )
+
+[node name="Monster9" parent="." instance=ExtResource( 61 )]
+position = Vector2( 2151, -80 )
+
+[node name="Monster10" parent="." instance=ExtResource( 61 )]
+position = Vector2( 2004, -487 )
 
 [connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
 [connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]
 [connection signal="body_entered" from="TransPort" to="." method="_on_TransPort_body_entered"]
 [connection signal="body_entered" from="TransPort2" to="." method="_on_TransPort2_body_entered"]
-[connection signal="monster_die" from="Monkey" to="." method="_on_Monkey_monster_die"]
 [connection signal="timeout" from="BattleTime" to="Steve" method="_on_BattleTime_timeout"]
 [connection signal="monster_die" from="Spawner_Snake" to="Spawner_Snake" method="_on_Spawner_monster_die"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

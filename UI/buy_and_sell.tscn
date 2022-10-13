@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://UI/npc_transaction/76767-4.png" type="Texture" id=1]
 [ext_resource path="res://UI/npc_transaction/76765-1.png" type="Texture" id=2]
@@ -29,7 +29,7 @@
 [ext_resource path="res://UI/item_icons/回城符.png" type="Texture" id=27]
 [ext_resource path="res://UI/item_icons/神行之卷.png" type="Texture" id=28]
 [ext_resource path="res://UI/item_icons/清心露.png" type="Texture" id=29]
-[ext_resource path="res://UI/OptionButton.gd" type="Script" id=30]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=30]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 21 )
@@ -128,7 +128,8 @@ func get_drag_data(position):
 		data[\"origin_type\"] = \"sell\"
 		data[\"item_name\"] = $Label2.text
 		print($Label2.text)
-		
+	else:
+		data[\"origin_type\"] = null
 	return data
 
 
@@ -331,16 +332,20 @@ func mouse_exit():
 	pass # Replace with function body.
 
 
-func _on_TextureButton_pressed():
-	get_parent().get_parent().money -= price * int(get_node(\"Label\").text.substr(1))
-	get_parent().get_parent().get_parent().get_node(\"Label5\").text = str(get_parent().get_parent().money)
-	get_node(\"TextureRect\").texture = null
-	get_node(\"Label\").text = \"\"
+func _on_TextureButton_pressed():#交易
+#	get_parent().get_parent().money -= price * int(get_node(\"Label\").text.substr(1))
+#	get_parent().get_parent().get_parent().get_node(\"Label5\").text = str(get_parent().get_parent().money)
+#	get_node(\"TextureRect\").texture = null
+#	get_node(\"Label\").text = \"\"
 	find_parent(\"buy_and_sell\").get_node(\"ScrollContainer/VBoxContainer\").get_node(name).mouse_filter = MOUSE_FILTER_STOP
+	find_parent(\"buy_and_sell\").refresh()
 	self.visible = false
 	
 	pass # Replace with function body.
 "
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 30 )
 
 [node name="buy_and_sell" type="Control"]
 margin_left = -1.41425
@@ -348,56 +353,11 @@ margin_top = -16.9706
 margin_right = 38.5858
 margin_bottom = 23.0294
 script = ExtResource( 20 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 595.0
+margin_bottom = 467.0
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="WindowDialog" type="WindowDialog" parent="TextureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -72.0
-margin_top = -20.0
-margin_right = 72.0
-margin_bottom = 20.0
-popup_exclusive = true
-window_title = "选择购买数量"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionButton" type="OptionButton" parent="TextureRect/WindowDialog"]
-margin_left = 58.5
-margin_top = 4.397
-margin_right = 105.5
-margin_bottom = 33.397
-text = "99"
-script = ExtResource( 30 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AcceptDialog" type="AcceptDialog" parent="TextureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -144.0
-margin_top = -38.0
-margin_right = 144.0
-margin_bottom = 38.0
-popup_exclusive = true
-window_title = "警告！"
-dialog_text = "钱不够啊，兄弟，可不兴你这样的奥。"
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = -64.8088
@@ -406,9 +366,6 @@ margin_right = 9.19119
 margin_bottom = 125.595
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 margin_left = -67.0151
@@ -417,9 +374,6 @@ margin_right = 8.98492
 margin_bottom = 217.897
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton3" type="TextureButton" parent="."]
 margin_left = -65.1273
@@ -428,9 +382,6 @@ margin_right = 8.87268
 margin_bottom = 172.704
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton4" type="TextureButton" parent="."]
 margin_left = 347.0
@@ -441,9 +392,6 @@ texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 7 )
 texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton5" type="TextureButton" parent="."]
 margin_left = 460.0
@@ -454,9 +402,6 @@ texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 18 )
 texture_hover = ExtResource( 13 )
 texture_disabled = ExtResource( 16 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton6" type="TextureButton" parent="."]
 margin_left = 561.009
@@ -467,9 +412,6 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton7" type="TextureButton" parent="."]
 margin_left = 542.456
@@ -480,9 +422,6 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 400.0
@@ -490,9 +429,6 @@ margin_top = 66.0607
 margin_right = 502.0
 margin_bottom = 89.0607
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 400.0
@@ -500,9 +436,6 @@ margin_top = 96.006
 margin_right = 502.0
 margin_bottom = 119.006
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 400.0
@@ -510,36 +443,24 @@ margin_top = 123.0
 margin_right = 502.0
 margin_bottom = 146.0
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label4" type="Label" parent="."]
 margin_left = 502.0
 margin_top = 66.0
 margin_right = 561.0
 margin_bottom = 89.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label5" type="Label" parent="."]
 margin_left = 502.0
 margin_top = 96.006
 margin_right = 561.0
 margin_bottom = 119.006
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label6" type="Label" parent="."]
 margin_left = 502.0
 margin_top = 123.0
 margin_right = 561.0
 margin_bottom = 146.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton8" type="TextureButton" parent="."]
 margin_left = 33.9795
@@ -547,9 +468,6 @@ margin_top = 56.006
 margin_right = 74.9795
 margin_bottom = 96.006
 texture_normal = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 visible = false
@@ -876,9 +794,6 @@ margin_left = 33.0
 margin_top = 118.0
 margin_right = 284.0
 margin_bottom = 445.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer3"]
 margin_right = 235.0
@@ -897,18 +812,12 @@ margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
 texture = ExtResource( 25 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel1"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel1"]
 margin_left = 55.2182
@@ -916,9 +825,6 @@ margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
 text = "金疮药"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel2" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 50.0
@@ -933,18 +839,12 @@ margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
 texture = ExtResource( 29 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel2"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel2"]
 margin_left = 55.2182
@@ -952,9 +852,6 @@ margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
 text = "清心露"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel3" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 100.0
@@ -969,18 +866,12 @@ margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
 texture = ExtResource( 28 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel3"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel3"]
 margin_left = 55.2182
@@ -988,9 +879,6 @@ margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
 text = "神行之卷"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel4" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 150.0
@@ -1005,18 +893,12 @@ margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
 texture = ExtResource( 27 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel4"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel4"]
 margin_left = 55.2182
@@ -1024,9 +906,6 @@ margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
 text = "回城符"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel5" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 200.0
@@ -1041,18 +920,12 @@ margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
 texture = ExtResource( 26 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel5"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel5"]
 margin_left = 55.2182
@@ -1060,9 +933,6 @@ margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
 text = "五级翅膀男"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel6" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 250.0
@@ -1076,27 +946,18 @@ script = SubResource( 3 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel6"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel6"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel7" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 300.0
@@ -1110,27 +971,18 @@ script = SubResource( 3 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel7"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel7"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel8" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 350.0
@@ -1144,27 +996,18 @@ script = SubResource( 3 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel8"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel8"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel9" type="Panel" parent="ScrollContainer3/VBoxContainer"]
 margin_top = 400.0
@@ -1178,27 +1021,18 @@ script = SubResource( 3 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer3/VBoxContainer/Panel9"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer3/VBoxContainer/Panel9"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer2" type="ScrollContainer" parent="."]
 margin_left = 310.0
@@ -1206,9 +1040,6 @@ margin_top = 166.0
 margin_right = 561.0
 margin_bottom = 410.0
 script = ExtResource( 24 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
 margin_right = 235.0
@@ -1227,18 +1058,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel1"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel1"]
 margin_left = 205.906
@@ -1249,18 +1074,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel1"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel2" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 50.0
@@ -1274,18 +1093,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel2"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel2"]
 margin_left = 205.906
@@ -1296,18 +1109,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel2"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel3" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 100.0
@@ -1321,18 +1128,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel3"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel3"]
 margin_left = 205.906
@@ -1343,18 +1144,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel3"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel4" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 150.0
@@ -1368,18 +1163,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel4"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel4"]
 margin_left = 205.906
@@ -1390,18 +1179,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel4"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel5" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 200.0
@@ -1415,18 +1198,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel5"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel5"]
 margin_left = 205.906
@@ -1437,18 +1214,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel5"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel6" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 250.0
@@ -1462,18 +1233,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel6"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel6"]
 margin_left = 205.906
@@ -1484,18 +1249,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel6"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel7" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 300.0
@@ -1509,18 +1268,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel7"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel7"]
 margin_left = 205.906
@@ -1531,18 +1284,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel7"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel8" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 350.0
@@ -1556,18 +1303,12 @@ script = SubResource( 4 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel8"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel8"]
 margin_left = 205.906
@@ -1578,18 +1319,12 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel8"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel9" type="Panel" parent="ScrollContainer2/VBoxContainer"]
 margin_top = 400.0
@@ -1603,18 +1338,12 @@ script = SubResource( 2 )
 margin_top = 2.0
 margin_right = 37.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer/Panel9"]
 margin_left = 2.10224
 margin_top = 19.3406
 margin_right = 42.1022
 margin_bottom = 42.3406
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer2/VBoxContainer/Panel9"]
 margin_left = 205.906
@@ -1625,18 +1354,48 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer/Panel9"]
 margin_left = 55.2182
 margin_top = 7.59529
 margin_right = 106.218
 margin_bottom = 34.5953
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 133.5
+margin_top = 175.5
+margin_right = 421.5
+margin_bottom = 251.5
+popup_exclusive = true
+window_title = "警告！"
+dialog_text = "钱不够啊，兄弟，可不兴你这样的奥。"
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 220.0
+margin_top = 207.5
+margin_right = 335.0
+margin_bottom = 219.5
+min_value = 1.0
+max_value = 99.0
+step = 1.0
+value = 1.0
+
+[node name="Button" type="Button" parent="HScrollBar"]
+margin_left = 2.0
+margin_top = 12.0
+margin_right = 113.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 5 )
+text = "确定"
 
 [connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
@@ -1653,3 +1412,5 @@ __meta__ = {
 [connection signal="pressed" from="ScrollContainer2/VBoxContainer/Panel7/TextureButton" to="ScrollContainer2/VBoxContainer/Panel7" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="ScrollContainer2/VBoxContainer/Panel8/TextureButton" to="ScrollContainer2/VBoxContainer/Panel8" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="ScrollContainer2/VBoxContainer/Panel9/TextureButton" to="ScrollContainer2/VBoxContainer/Panel9" method="_on_TextureButton_pressed"]
+[connection signal="value_changed" from="HScrollBar" to="ScrollContainer2" method="_on_HScrollBar_value_changed"]
+[connection signal="pressed" from="HScrollBar/Button" to="." method="_on_Button_pressed"]

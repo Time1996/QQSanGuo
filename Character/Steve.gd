@@ -23,7 +23,7 @@ var state_machine
 
 onready var enemies = get_tree().get_nodes_in_group("enemy")
 
-onready var userInterface = get_parent().get_node("UserInterFace")
+onready var userInterface = get_parent().get_node("UserInterFace") #or get_tree().get_root().get_node("jianglinxijiao/UserInterFace")
 
 var experience = 0
 var experience_pool = 0 #经验池

@@ -3,8 +3,11 @@ extends Label
 ##浮动文本伤害
 
 func show_value(value, travel, duration, spread, crit=false):
-	
-	var value_str = str(value)
+	var value1
+	if value[0] == '-':
+		value1 = value.substr(1, value.length()-1)
+	var value_str = str(value1)
+	print(value_str)
 	for i in value_str.length():
 #		$HBoxContainer/T1.texture = load("res://EFECTIVE/js/digit/"+value_str.substr(i, 1)+".png")
 		get_node("HBoxContainer/"+str(i+1)).texture = load("res://EFECTIVE/js/digit/"+value_str.substr(i, 1)+".png")

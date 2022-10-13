@@ -48,7 +48,16 @@ func _ready():
 func delete_item():
 	item = null
 	get_node("Item").queue_free()
-	PlayerInventory.inventory.erase(slot_index)
+	PlayerInventory.inventory.remove_item(slot_index)
+
+func sub_item(amount):
+	
+	get_node("Item").sub_item_quantity(amount)
+	if PlayerInventory.inventory[slot_index][1] - amount <= 0:
+		print("YES")
+		item = null
+	PlayerInventory.add_item_quantity(self, -amount)
+	
 
 func gui(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == BUTTON_RIGHT:

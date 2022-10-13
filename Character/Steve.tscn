@@ -1,12 +1,10 @@
-[gd_scene load_steps=154 format=2]
+[gd_scene load_steps=185 format=2]
 
 [ext_resource path="res://Character/Steve.gd" type="Script" id=1]
 [ext_resource path="res://Character/Sprite.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ANIMATION/idle.tres" type="Animation" id=3]
-[ext_resource path="res://EFECTIVE/digit/751-1.png" type="Texture" id=4]
 [ext_resource path="res://EFECTIVE/383-1.png" type="Texture" id=5]
 [ext_resource path="res://EFECTIVE/js/digit/435-1.png" type="Texture" id=6]
-[ext_resource path="res://EFECTIVE/js/digit/437-1.png" type="Texture" id=7]
 [ext_resource path="res://EFECTIVE/js/2/232-1.png" type="Texture" id=8]
 [ext_resource path="res://EFECTIVE/level_up/446-1.png" type="Texture" id=9]
 [ext_resource path="res://EFECTIVE/level_up/446-2.png" type="Texture" id=10]
@@ -90,6 +88,38 @@
 [ext_resource path="res://EFECTIVE/js/40/381-12.png" type="Texture" id=88]
 [ext_resource path="res://EFECTIVE/js/40/381-13.png" type="Texture" id=89]
 [ext_resource path="res://EFECTIVE/js/40/381-5.png" type="Texture" id=90]
+[ext_resource path="res://UI/妹妹1/Sprite_3.png" type="Texture" id=91]
+[ext_resource path="res://UI/妹妹1/Sprite_7.png" type="Texture" id=92]
+[ext_resource path="res://UI/妹妹1/Sprite_8.png" type="Texture" id=93]
+[ext_resource path="res://UI/妹妹1/Sprite_9.png" type="Texture" id=94]
+[ext_resource path="res://UI/妹妹1/Sprite_1.png" type="Texture" id=95]
+[ext_resource path="res://UI/妹妹1/Sprite_2.png" type="Texture" id=96]
+[ext_resource path="res://UI/妹妹1/Sprite_4.png" type="Texture" id=97]
+[ext_resource path="res://UI/妹妹1/Sprite_5.png" type="Texture" id=98]
+[ext_resource path="res://UI/妹妹1/Sprite_6.png" type="Texture" id=99]
+[ext_resource path="res://UI/妹妹1/Sprite_19.png" type="Texture" id=100]
+[ext_resource path="res://UI/妹妹1/Sprite_30.png" type="Texture" id=101]
+[ext_resource path="res://UI/妹妹1/Sprite_10.png" type="Texture" id=102]
+[ext_resource path="res://UI/妹妹1/Sprite_28.png" type="Texture" id=103]
+[ext_resource path="res://UI/妹妹1/Sprite_14.png" type="Texture" id=104]
+[ext_resource path="res://UI/妹妹1/Sprite_13.png" type="Texture" id=105]
+[ext_resource path="res://UI/妹妹1/Sprite_27.png" type="Texture" id=106]
+[ext_resource path="res://UI/妹妹1/Sprite_21.png" type="Texture" id=107]
+[ext_resource path="res://UI/妹妹1/Sprite_25.png" type="Texture" id=108]
+[ext_resource path="res://UI/妹妹1/Sprite_15.png" type="Texture" id=109]
+[ext_resource path="res://UI/妹妹1/Sprite_12.png" type="Texture" id=110]
+[ext_resource path="res://UI/妹妹1/Sprite_23.png" type="Texture" id=111]
+[ext_resource path="res://UI/妹妹1/Sprite_24.png" type="Texture" id=112]
+[ext_resource path="res://UI/妹妹1/Sprite_18.png" type="Texture" id=113]
+[ext_resource path="res://UI/妹妹1/Sprite_26.png" type="Texture" id=114]
+[ext_resource path="res://UI/妹妹1/Sprite_16.png" type="Texture" id=115]
+[ext_resource path="res://UI/妹妹1/Sprite_17.png" type="Texture" id=116]
+[ext_resource path="res://UI/妹妹1/Sprite_31.png" type="Texture" id=117]
+[ext_resource path="res://UI/妹妹1/Sprite_22.png" type="Texture" id=118]
+[ext_resource path="res://UI/妹妹1/Sprite_32.png" type="Texture" id=119]
+[ext_resource path="res://UI/妹妹1/Sprite_11.png" type="Texture" id=120]
+[ext_resource path="res://UI/妹妹1/Sprite_20.png" type="Texture" id=121]
+[ext_resource path="res://UI/妹妹1/Sprite_29.png" type="Texture" id=122]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -914,9 +944,16 @@ radial_accel = 100.0
 tangential_accel = 100.0
 damping = 100.0
 
+[sub_resource type="SpriteFrames" id=64]
+animations = [ {
+"frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 102 ), ExtResource( 120 ), ExtResource( 110 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 109 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 100 ), ExtResource( 121 ), ExtResource( 107 ), ExtResource( 118 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 108 ), ExtResource( 114 ), ExtResource( 106 ), ExtResource( 103 ), ExtResource( 122 ), ExtResource( 101 ), ExtResource( 117 ), ExtResource( 119 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
 [node name="Steve" type="KinematicBody2D" groups=["Persist"]]
 collision_layer = 2
-collision_mask = 0
 input_pickable = true
 script = ExtResource( 1 )
 route = NodePath(".")
@@ -927,15 +964,11 @@ margin_top = -20.0
 margin_right = 20.0
 margin_bottom = 20.0
 rect_pivot_offset = Vector2( 26.3874, 28.3064 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Sprite" parent="Control" instance=ExtResource( 2 )]
 material = SubResource( 2 )
 position = Vector2( 20, 12 )
 frames = ExtResource( 60 )
-frame = 1
 
 [node name="HitBox" type="Area2D" parent="Control/Sprite"]
 collision_layer = 2
@@ -961,7 +994,6 @@ position = Vector2( 24, 10 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 6 )
 animation = "accmulate"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
@@ -995,7 +1027,6 @@ material = SubResource( 9 )
 position = Vector2( 169.748, 20.0399 )
 scale = Vector2( 1.85484, 1.2 )
 frames = SubResource( 10 )
-frame = 5
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="Control"]
@@ -1004,7 +1035,7 @@ material = SubResource( 11 )
 position = Vector2( 271.105, 20 )
 scale = Vector2( 0.858924, 1.2 )
 frames = SubResource( 12 )
-frame = 1
+frame = 8
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
@@ -1012,7 +1043,7 @@ modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 13 )
 position = Vector2( 167.066, 19.8214 )
 frames = SubResource( 14 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="4" type="Sprite" parent="Control/AnimatedSprite4"]
@@ -1084,55 +1115,46 @@ texture = ExtResource( 6 )
 margin_left = 62.0
 margin_right = 73.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="2" type="TextureRect" parent="HBoxContainer"]
 margin_left = 74.0
 margin_right = 85.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="3" type="TextureRect" parent="HBoxContainer"]
 margin_left = 86.0
 margin_right = 97.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="4" type="TextureRect" parent="HBoxContainer"]
 margin_left = 98.0
 margin_right = 109.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="5" type="TextureRect" parent="HBoxContainer"]
 margin_left = 110.0
 margin_right = 121.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="6" type="TextureRect" parent="HBoxContainer"]
 margin_left = 122.0
 margin_right = 133.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="7" type="TextureRect" parent="HBoxContainer"]
 margin_left = 134.0
 margin_right = 145.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="8" type="TextureRect" parent="HBoxContainer"]
 margin_left = 146.0
 margin_right = 157.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="9" type="TextureRect" parent="HBoxContainer"]
 margin_left = 158.0
 margin_right = 169.0
 margin_bottom = 40.0
-texture = ExtResource( 7 )
 
 [node name="level_up" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 27 )
@@ -1175,7 +1197,7 @@ material = SubResource( 58 )
 position = Vector2( -32.1353, 48.686 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="fly_right" type="AnimatedSprite" parent="."]
@@ -1184,6 +1206,7 @@ material = SubResource( 58 )
 position = Vector2( 42.9738, 48.6878 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
+frame = 9
 playing = true
 flip_h = true
 
@@ -1192,6 +1215,7 @@ visible = false
 material = SubResource( 59 )
 position = Vector2( 9.51367, 3.56763 )
 frames = SubResource( 60 )
+frame = 10
 playing = true
 
 [node name="BattleSound" type="AudioStreamPlayer" parent="."]
@@ -1205,72 +1229,60 @@ margin_top = -56.0
 margin_right = 168.0
 margin_bottom = -16.0
 custom_constants/separation = -5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="0" type="TextureRect" parent="Cure"]
-margin_right = 16.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="1" type="TextureRect" parent="Cure"]
-margin_left = 11.0
-margin_right = 27.0
+margin_left = -5.0
+margin_right = -5.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="2" type="TextureRect" parent="Cure"]
-margin_left = 22.0
-margin_right = 38.0
+margin_left = -10.0
+margin_right = -10.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="3" type="TextureRect" parent="Cure"]
-margin_left = 33.0
-margin_right = 49.0
+margin_left = -15.0
+margin_right = -15.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="4" type="TextureRect" parent="Cure"]
-margin_left = 44.0
-margin_right = 60.0
+margin_left = -20.0
+margin_right = -20.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="5" type="TextureRect" parent="Cure"]
-margin_left = 55.0
-margin_right = 71.0
+margin_left = -25.0
+margin_right = -25.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="6" type="TextureRect" parent="Cure"]
-margin_left = 66.0
-margin_right = 82.0
+margin_left = -30.0
+margin_right = -30.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="7" type="TextureRect" parent="Cure"]
-margin_left = 77.0
-margin_right = 93.0
+margin_left = -35.0
+margin_right = -35.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="8" type="TextureRect" parent="Cure"]
-margin_left = 88.0
-margin_right = 104.0
+margin_left = -40.0
+margin_right = -40.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="9" type="TextureRect" parent="Cure"]
-margin_left = 99.0
-margin_right = 115.0
+margin_left = -45.0
+margin_right = -45.0
 margin_bottom = 40.0
-texture = ExtResource( 4 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
+visible = false
 material = SubResource( 62 )
 position = Vector2( 8, 0 )
+emitting = false
 amount = 1
 lifetime = 10.0
 fract_delta = false
@@ -1278,13 +1290,21 @@ process_material = SubResource( 63 )
 texture = ExtResource( 5 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
+visible = false
 material = SubResource( 62 )
 position = Vector2( 8, 0 )
+emitting = false
 amount = 1
 lifetime = 10.0
 fract_delta = false
 process_material = SubResource( 63 )
 texture = ExtResource( 77 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 9, -134 )
+frames = SubResource( 64 )
+frame = 17
+playing = true
 
 [connection signal="health_updated" from="." to="." method="_on_Steve_health_updated"]
 [connection signal="body_entered" from="Control/Sprite/HitBox" to="." method="_on_HitBox_body_entered"]

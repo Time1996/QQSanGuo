@@ -1,7 +1,7 @@
 extends Node
 
 
-const NUM_INVENTORY_SLOTS = 9
+const NUM_INVENTORY_SLOTS = 50
 const NUM_HOTBAR_SLOTS = 8
 
 var money = 0
@@ -77,6 +77,9 @@ func add_item_quantity(slot, quantity_to_add, is_hotbar: bool = false):
 		hotbar[slot.slot_index][1] += quantity_to_add
 	else:
 		inventory[slot.slot_index][1] += quantity_to_add
+		if inventory[slot.slot_index][1] <= 0:
+			print("从inventory删除次物品")
+			inventory.erase(slot.slot_index)
 
 func update_slot_visual(slot_index, item_name, new_quantity):
 	var slot
@@ -87,7 +90,7 @@ func update_slot_visual(slot_index, item_name, new_quantity):
 	elif get_tree().get_root().has_node("JiangLinXiJiao"):
 		slot = get_tree().get_root().get_node("JiangLinXiJiao/UserInterFace/Inventory/ScrollContainer/VBoxContainer/Panel" + str(slot_index + 1))
 	
-	if slot.item != null and slot.get_child_count() != 0:
+	if slot.item != null and slot.get_child_count() > 0:
 		slot.item.set_item(item_name, new_quantity)
 	else:
 		slot.initialize_item(item_name, new_quantity)

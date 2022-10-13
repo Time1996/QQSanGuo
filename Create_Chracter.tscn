@@ -39,25 +39,16 @@
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Wei" type="Control" parent="."]
 margin_right = 800.0
 margin_bottom = 600.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="Wei"]
 margin_right = 800.0
 margin_bottom = 600.0
 texture = ExtResource( 1 )
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Shu" type="Control" parent="."]
 margin_right = 40.0
@@ -75,18 +66,12 @@ margin_top = 24.0
 margin_right = -19.0
 margin_bottom = 356.0
 texture = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 608.0
 margin_top = 48.0
 margin_right = 760.0
 margin_bottom = 96.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
 margin_right = 49.0
@@ -122,9 +107,6 @@ margin_left = 271.0
 margin_top = 464.0
 margin_right = 520.0
 margin_bottom = 504.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
 margin_right = 59.0
@@ -160,9 +142,6 @@ margin_right = 671.913
 margin_bottom = 156.0
 texture_normal = ExtResource( 2 )
 texture_focused = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 margin_left = 688.842
@@ -171,9 +150,6 @@ margin_right = 747.842
 margin_bottom = 156.0
 texture_normal = ExtResource( 12 )
 texture_focused = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 1.0
@@ -184,9 +160,6 @@ margin_left = -139.0
 margin_top = -84.7289
 margin_right = -24.0
 margin_bottom = -18.7289
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
 margin_right = 115.0
@@ -214,9 +187,6 @@ texture_normal = ExtResource( 31 )
 texture_pressed = ExtResource( 32 )
 texture_hover = ExtResource( 29 )
 texture_disabled = ExtResource( 33 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton3" type="TextureButton" parent="."]
 margin_left = 196.402
@@ -235,9 +205,6 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "234"
 caret_blink = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="68715-1" type="Sprite" parent="."]
 position = Vector2( 374.711, 582.164 )
@@ -250,9 +217,6 @@ margin_right = 428.377
 margin_bottom = 593.736
 custom_colors/font_color = Color( 0.968627, 1, 0, 1 )
 text = "请创建您的角色"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="68724-1" type="Sprite" parent="."]
 position = Vector2( 89.9136, 48 )

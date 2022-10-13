@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=2]
+[gd_scene load_steps=225 format=2]
 
 [ext_resource path="res://assets/map/bajun/16894-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/map/bajun/16878-1.png" type="Texture" id=2]
@@ -45,6 +45,44 @@
 [ext_resource path="res://assets/map/bajun/13317-1.png" type="Texture" id=43]
 [ext_resource path="res://assets/map/bajun/18325-1.png" type="Texture" id=44]
 [ext_resource path="res://assets/map/bajun/14823-1.png" type="Texture" id=45]
+[ext_resource path="res://Character/NPC.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Character/fazheng.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Character/zhuangbeishangren.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Character/gushushangren.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Character/qintianjian.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Character/jiguanxiaoyao.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Character/machefu.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Character/yingyang.tscn" type="PackedScene" id=53]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_6.png" type="Texture" id=54]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_9.png" type="Texture" id=55]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_18.png" type="Texture" id=56]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_20.png" type="Texture" id=57]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_4.png" type="Texture" id=58]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_15.png" type="Texture" id=59]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_1.png" type="Texture" id=60]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_19.png" type="Texture" id=61]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_10.png" type="Texture" id=62]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_14.png" type="Texture" id=63]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_16.png" type="Texture" id=64]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_8.png" type="Texture" id=65]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_2.png" type="Texture" id=66]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_3.png" type="Texture" id=67]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_5.png" type="Texture" id=68]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_7.png" type="Texture" id=69]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_11.png" type="Texture" id=70]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_12.png" type="Texture" id=71]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_13.png" type="Texture" id=72]
+[ext_resource path="res://assets/map/bajun/npc/简雍/Sprite_17.png" type="Texture" id=73]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=74]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=75]
+[ext_resource path="res://UI/name/name_right.png" type="Texture" id=76]
+[ext_resource path="res://UI/name/name_left.png" type="Texture" id=77]
+[ext_resource path="res://Character/feimaotui.tscn" type="PackedScene" id=78]
+[ext_resource path="res://Character/9527.tscn" type="PackedScene" id=79]
+[ext_resource path="res://Character/bukuai.tscn" type="PackedScene" id=80]
+[ext_resource path="res://Character/zhangsong.tscn" type="PackedScene" id=81]
+[ext_resource path="res://Character/liaofei.tscn" type="PackedScene" id=82]
+[ext_resource path="res://Character/shiyuanyinzhe.tscn" type="PackedScene" id=83]
 [ext_resource path="res://assets/map/bajun/18317-1.png" type="Texture" id=120]
 [ext_resource path="res://assets/map/bajun/18316-1.png" type="Texture" id=121]
 [ext_resource path="res://assets/map/bajun/18340-1.png" type="Texture" id=122]
@@ -118,11 +156,6 @@
 [ext_resource path="res://assets/map/bajun/9865-4.png" type="Texture" id=190]
 [ext_resource path="res://assets/map/bajun/9865-1.png" type="Texture" id=191]
 [ext_resource path="res://assets/map/bajun/9865-2.png" type="Texture" id=192]
-[ext_resource path="res://assets/map/bajun/npc/8733-3.png" type="Texture" id=193]
-[ext_resource path="res://assets/map/bajun/npc/8733-4.png" type="Texture" id=194]
-[ext_resource path="res://assets/map/bajun/npc/8733-2.png" type="Texture" id=195]
-[ext_resource path="res://assets/map/bajun/npc/8733-1.png" type="Texture" id=196]
-[ext_resource path="res://assets/map/bajun/npc/8733-5.png" type="Texture" id=197]
 
 [sub_resource type="TileSet" id=1]
 0/name = "16896-1.png 0"
@@ -584,7 +617,35 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Shader" id=64]
+[sub_resource type="GDScript" id=64]
+script/source = "extends Control
+
+
+
+
+func _ready():
+	pass # Replace with function body.
+
+
+func _on_NPC_mouse_entered():
+	$AnimatedSprite.material.set(\"shader_param/width\", 1)
+
+
+func _on_NPC_mouse_exited():
+	$AnimatedSprite.material.set(\"shader_param/width\", 0)
+
+
+func _on_NPC_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.doubleclick:
+			$DialogPanel.visible = true
+"
+
+[sub_resource type="DynamicFont" id=65]
+outline_size = 1
+font_data = ExtResource( 74 )
+
+[sub_resource type="Shader" id=66]
 code = "shader_type canvas_item;
 
 uniform float width:hint_range(0.0,30.0);
@@ -606,17 +667,17 @@ void fragment(){
     COLOR = vec4(final_color.rgb,clamp(abs(alpha) + sprite_color.a,0.0,1.0));
 } "
 
-[sub_resource type="ShaderMaterial" id=65]
-shader = SubResource( 64 )
+[sub_resource type="ShaderMaterial" id=67]
+shader = SubResource( 66 )
 shader_param/width = 0.0
-shader_param/outline_color = Color( 0.968627, 0.956863, 0.141176, 1 )
+shader_param/outline_color = Color( 0.992157, 1, 0, 1 )
 
-[sub_resource type="SpriteFrames" id=66]
+[sub_resource type="SpriteFrames" id=68]
 animations = [ {
-"frames": [ ExtResource( 196 ), ExtResource( 195 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 197 ) ],
+"frames": [ ExtResource( 60 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 58 ), ExtResource( 68 ), ExtResource( 54 ), ExtResource( 69 ), ExtResource( 65 ), ExtResource( 55 ), ExtResource( 62 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 63 ), ExtResource( 59 ), ExtResource( 64 ), ExtResource( 73 ), ExtResource( 56 ), ExtResource( 61 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 8.0
 } ]
 
 [node name="bajun" type="Node2D"]
@@ -966,16 +1027,16 @@ position = Vector2( -16, -328 )
 z_index = 2
 
 [node name="Sprite" parent="Steve/Control" index="0"]
-frame = 0
+frame = 3
 
 [node name="AnimatedSprite2" parent="Steve/Control" index="2"]
+frame = 5
+
+[node name="AnimatedSprite6" parent="Steve/Control" index="8"]
 frame = 7
 
-[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
-frame = 0
-
-[node name="AnimatedSprite4" parent="Steve/Control" index="8"]
-frame = 0
+[node name="AnimatedSprite4" parent="Steve/Control" index="9"]
+frame = 7
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -690
@@ -997,10 +1058,16 @@ anims/shade_in = SubResource( 33 )
 anims/shade_out = SubResource( 34 )
 
 [node name="fly_left" parent="Steve" index="18"]
-frame = 4
+frame = 2
 
 [node name="fly_right" parent="Steve" index="19"]
+frame = 0
+
+[node name="recover" parent="Steve" index="20"]
 frame = 2
+
+[node name="AnimatedSprite" parent="Steve" index="26"]
+frame = 0
 
 [node name="13314-1" type="Sprite" parent="."]
 position = Vector2( 1794.91, 505.544 )
@@ -1541,12 +1608,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 5
+frame = 8
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
+frame = 3
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -1562,13 +1630,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 14
+frame = 2
 playing = true
 
 [node name="TransPort3" type="Area2D" parent="."]
@@ -1584,13 +1652,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 14
+frame = 2
 playing = true
 
 [node name="18336-1" type="Sprite" parent="."]
@@ -1703,33 +1771,162 @@ autoplay = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 83.3026, -351.236 )
 frames = SubResource( 63 )
-frame = 3
+frame = 1
 playing = true
 
-[node name="Control2" type="Control" parent="."]
-margin_left = 1155.35
-margin_top = -74.0866
-margin_right = 1237.35
-margin_bottom = 50.9134
-rect_min_size = Vector2( 75, 125 )
+[node name="NPC" parent="." instance=ExtResource( 46 )]
+margin_left = 2077.0
+margin_top = 66.0
+margin_right = 2077.0
+margin_bottom = 66.0
+
+[node name="fazheng" parent="." instance=ExtResource( 47 )]
+margin_left = 1160.0
+margin_top = -73.0
+margin_right = 1272.0
+margin_bottom = 52.0
+
+[node name="zhuangbeishangren" parent="." instance=ExtResource( 48 )]
+margin_left = -157.0
+margin_top = 238.0
+margin_right = -41.0
+margin_bottom = 379.0
+
+[node name="qintianjian" parent="." instance=ExtResource( 50 )]
+margin_left = 144.0
+margin_top = 593.0
+margin_right = 219.0
+margin_bottom = 702.0
+
+[node name="gushushangren" parent="." instance=ExtResource( 49 )]
+margin_left = 570.0
+margin_top = -381.0
+margin_right = 658.0
+margin_bottom = -259.0
+
+[node name="jiguanxiaoyao" parent="." instance=ExtResource( 51 )]
+margin_left = 946.0
+margin_top = -365.0
+margin_right = 1025.0
+margin_bottom = -263.0
+
+[node name="machefu" parent="." instance=ExtResource( 52 )]
+margin_left = 143.0
+margin_top = -386.0
+margin_right = 245.0
+margin_bottom = -262.0
+
+[node name="yingyang" parent="." instance=ExtResource( 53 )]
+margin_left = 2492.0
+margin_top = 38.0
+margin_right = 2571.0
+margin_bottom = 149.0
+
+[node name="jianyong" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1620.0
+margin_top = -60.0
+margin_right = 1699.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 79, 111 )
+script = SubResource( 64 )
+
+[node name="Name" type="Control" parent="jianyong"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 112.0
+margin_right = -78.0
+margin_bottom = 29.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="jianyong/Name"]
+margin_right = 80.0
+margin_bottom = 19.0
+custom_constants/separation = 0
+
+[node name="left" type="TextureRect" parent="jianyong/Name/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 19.0
+texture = ExtResource( 77 )
+
+[node name="middle" type="TextureRect" parent="jianyong/Name/HBoxContainer"]
+self_modulate = Color( 1, 0.823529, 0.454902, 1 )
+margin_left = 10.0
+margin_right = 70.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 19 )
+texture = ExtResource( 75 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="npc1" type="AnimatedSprite" parent="Control2"]
-material = SubResource( 65 )
-frames = SubResource( 66 )
-frame = 3
+[node name="name" type="Label" parent="jianyong/Name/HBoxContainer/middle"]
+margin_top = -2.0
+margin_right = 61.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 1, 0.227451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 65 )
+text = "简雍"
+align = 1
+
+[node name="right" type="TextureRect" parent="jianyong/Name/HBoxContainer"]
+margin_left = 70.0
+margin_right = 80.0
+margin_bottom = 19.0
+texture = ExtResource( 76 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="jianyong"]
+material = SubResource( 67 )
+frames = SubResource( 68 )
+frame = 12
 playing = true
 centered = false
+
+[node name="feimaotui" parent="." instance=ExtResource( 78 )]
+margin_left = 828.0
+margin_top = -55.0
+margin_right = 888.0
+margin_bottom = 54.0
+
+[node name="9527" parent="." instance=ExtResource( 79 )]
+margin_left = -509.0
+margin_top = 273.0
+margin_right = -430.0
+margin_bottom = 381.0
+
+[node name="bukuai" parent="." instance=ExtResource( 80 )]
+margin_left = -430.0
+margin_top = -392.0
+margin_right = -328.0
+margin_bottom = -263.0
+
+[node name="liaofei" parent="." instance=ExtResource( 82 )]
+margin_left = 3093.0
+margin_top = 42.0
+margin_right = 3186.0
+margin_bottom = 153.0
+
+[node name="zhangsong" parent="." instance=ExtResource( 81 )]
+margin_left = 1825.0
+margin_top = 46.0
+margin_right = 1894.0
+margin_bottom = 152.0
+
+[node name="shiyuanyinzhe" parent="." instance=ExtResource( 83 )]
+margin_left = 3382.0
+margin_top = 35.0
+margin_right = 3461.0
+margin_bottom = 118.0
 
 [connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
 [connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]
 [connection signal="body_entered" from="TransPort" to="." method="_on_TransPort_body_entered"]
 [connection signal="body_entered" from="TransPort2" to="." method="_on_TransPort2_body_entered"]
 [connection signal="body_entered" from="TransPort3" to="." method="_on_TransPort3_body_entered"]
-[connection signal="gui_input" from="Control2" to="." method="_on_Control2_gui_input"]
-[connection signal="mouse_entered" from="Control2" to="." method="_on_Control2_mouse_entered"]
-[connection signal="mouse_exited" from="Control2" to="." method="_on_Control2_mouse_exited"]
+[connection signal="mouse_entered" from="jianyong" to="jianyong" method="_on_NPC_mouse_entered"]
+[connection signal="mouse_exited" from="jianyong" to="jianyong" method="_on_NPC_mouse_exited"]
 
 [editable path="Steve"]

@@ -30,9 +30,6 @@ region_rect = Rect2( 0, 0, 205, 34 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -46,9 +43,6 @@ margin_bottom = 213.773
 rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 5 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Money" type="Label" parent="."]
 margin_left = 255.752
@@ -57,18 +51,12 @@ margin_right = 338.752
 margin_bottom = 523.0
 text = "0"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 495.0
 margin_top = 227.0
 margin_right = 752.0
 margin_bottom = 473.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 235.0
@@ -200,9 +188,6 @@ margin_right = 459.054
 margin_bottom = 523.0
 text = "0"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Wugong" type="Label" parent="."]
 margin_left = 360.73
@@ -251,6 +236,7 @@ __meta__ = {
 [node name="Sprite" parent="." instance=ExtResource( 4 )]
 position = Vector2( 360.73, 274.618 )
 scale = Vector2( 0.7, 0.7 )
+frame = 1
 
 [node name="name" type="Label" parent="."]
 margin_left = 262.0

@@ -16,14 +16,14 @@ const GoodsPicturePath = "res://assets/texture/skills/"
 
 ## 技能数据
 var skill_data = {}
-
+var file = File.new()
 
 #------------------------------
 #  节点带有的方法
 #------------------------------
 func _ready():
 	## 获取技能json数据
-	var file = File.new()
+	file = File.new()
 	file.open("res://Data/skill.json", File.READ)
 	var skill_json = JSON.parse(file.get_as_text())
 	file.close()
@@ -79,7 +79,7 @@ func get_skills_data(skill_name: String):
 ## 获取物品图片
 ## @picture_name 物品图片名称
 ## @return 返回物品的图片
-var file = File.new()
+
 func get_goods_texture(picture_name: String) -> Texture:
 	var path = GoodsPicturePath + picture_name + ".png"	# 物品图片路径
 	

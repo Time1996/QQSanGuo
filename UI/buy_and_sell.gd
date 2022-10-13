@@ -11,11 +11,10 @@ func _ready():
 
 func refresh():
 	print("refresh")
-	print(PlayerInventory.inventory.size())
-	print(str(PlayerInventory.money))
-#	$Label.text = str(PlayerInventory.juntuan)
-#	$Label2.text = str(PlayerInventory.money)
-	$Label3.text = str(PlayerInventory.inventory.size()) + "+" + str(PlayerInventory.NUM_INVENTORY_SLOTS)
+	$HScrollBar.value = 1
+	$Label.text = str(PlayerInventory.juntuan)
+	$Label2.text = str(PlayerInventory.money)
+	$Label3.text = str(PlayerInventory.inventory.size()) + "/" + str(PlayerInventory.NUM_INVENTORY_SLOTS)
 	clear_pack()
 	
 	var a = 0
@@ -42,16 +41,13 @@ func _on_TextureRect_gui_input(event):
 			drag_position = get_global_mouse_position() - rect_global_position
 		else:
 			drag_position = null
-			
 	if event is InputEventMouseMotion and drag_position:
 		rect_global_position = get_global_mouse_position() - drag_position
 	pass # Replace with function body.
 
-
 func _on_TextureButton6_pressed():
 	self.visible = false
 	pass # Replace with function body.
-
 
 func clear_pack():
 	get_node("ScrollContainer2").money = 0
@@ -68,7 +64,6 @@ func _on_TextureButton4_pressed():
 	clear_pack()
 	pass # Replace with function body.
 
-
 func _on_TextureButton5_pressed():
 	var userInterFace = find_parent("UserInterFace")
 	if $ScrollContainer.visible == true: #卖的界面
@@ -76,7 +71,8 @@ func _on_TextureButton5_pressed():
 			for j in get_node("ScrollContainer2/VBoxContainer").get_children():
 				if i.get_child_count() > 1:##因为自带一个PopupMenu
 					if i.get_node("Item/TextureRect").texture_normal == j.get_node("TextureRect").texture:
-						i.delete_item()
+#						i.sub_item_quantity($HScrollBar.value)
+						i.sub_item($HScrollBar.value)
 						break
 	else:
 		for i in $ScrollContainer2/VBoxContainer.get_children():
@@ -86,9 +82,14 @@ func _on_TextureButton5_pressed():
 	print(get_node("ScrollContainer2").money)
 	find_parent("bajun").get_node("Steve").gain_money(get_node("ScrollContainer2").money, 0)
 	find_parent("bajun").get_node("UserInterFace").update_inventory(PlayerInventory.money, PlayerInventory.juntuan)
-	clear_pack()
+	
+	refresh()
+	pack_refresh()
 	pass # Replace with function body.
 
+func pack_refresh():
+	self.visible = false
+	self.visible = true
 
 func _on_TextureButton3_pressed():
 #	clear_pack()
@@ -97,9 +98,11 @@ func _on_TextureButton3_pressed():
 	
 	pass # Replace with function body.
 
-
 func _on_TextureButton_pressed():
 #	clear_pack()
 	$ScrollContainer.visible = false
 	$ScrollContainer3.visible = true
 	pass # Replace with function body.
+
+func _on_Button_pressed():
+	get_node("HScrollBar").visible = false

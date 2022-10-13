@@ -83,9 +83,6 @@ func _on_TextureButton_pressed():
 	self.visible = !self.visible
 	pass # Replace with function body.
 
-
-
-
 func _on_TextureRect_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:

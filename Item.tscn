@@ -16,9 +16,7 @@ outline_size = 1
 outline_color = Color( 0.945098, 0.952941, 0, 1 )
 font_data = ExtResource( 3 )
 
-[node name="Item" type="Node2D" groups=[
-"Persist",
-]]
+[node name="Item" type="Node2D" groups=["Persist"]]
 position = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 
@@ -29,9 +27,6 @@ mouse_filter = 2
 texture_normal = ExtResource( 1 )
 expand = true
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 0.777946
@@ -53,8 +48,8 @@ margin_left = 1.5
 margin_top = -0.5
 margin_right = 41.5
 margin_bottom = 42.5
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_outline_modulate = Color( 0.168627, 0.694118, 0.0745098, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "213"
 __meta__ = {
 "_edit_use_anchors_": false

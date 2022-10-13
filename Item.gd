@@ -12,24 +12,25 @@ func _ready():
 #	var name_set = jsonData.item_data.keys()
 #	item_name = name_set[int(randi()%name_set.size())]
 #	print(item_name)
-#	item_slot = get_parent().slot_index
-	userInterFace = find_node("UserInterFace")
+	item_slot = get_parent().slot_index
+	userInterFace = find_parent("UserInterFace")
 	$TextureRect.texture_normal = load("res://UI/item_icons/" + item_name + ".png")
 	var stack_size = int(jsonData.item_data[item_name]["StackSize"])
-#	item_quantity = randi() % stack_size + 1
 	
-	if item_quantity == 1:
-		$Label.visible = false
-	else:
-		$Label.text = "X"+String(item_quantity)
-	
+#	if item_quantity == 1:
+#		$Label.visible = false
+#	else:
+#		$Label.text = "X"+String(item_quantity)
+#
 func add_item_quantity(amount):
 	item_quantity += amount
 	$Label.text = "X"+String(item_quantity)
-
+	
 func sub_item_quantity(amount):
 	item_quantity -= amount
 	$Label.text = "X"+String(item_quantity)
+	if item_quantity <= 0:
+		queue_free()
 
 func set_item(nm, qt):
 	item_name = nm
