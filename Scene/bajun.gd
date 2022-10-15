@@ -16,8 +16,8 @@ func _ready():
 
 func _on_TransPort_body_entered(body):#西郊
 #	load_scene = load("res://Level1.tscn").instance()
-	SceneChange.goto_scene(load_scene, self)
-#	get_tree().change_scene("res://Level1.tscn")
+#	SceneChange.goto_scene("res://Level1.tscn", self)
+	get_tree().change_scene("res://Level1.tscn")
 	pass # Replace with function body.
 
 

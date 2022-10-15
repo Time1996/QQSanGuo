@@ -4,23 +4,23 @@
 [ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/DialogPanel.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=7]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=8]
 font_path = "res://assets/font/PuHuiTi-Regular.otf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 3 )
+font_data = SubResource( 8 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=9]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 3 )
+font_data = SubResource( 8 )
 
 [node name="DialogPanel" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -50,21 +50,21 @@ margin_bottom = 146.5
 [node name="Button" type="Button" parent="Control/TextureRect/VBoxContainer"]
 margin_right = 366.0
 margin_bottom = 29.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "对话"
 
 [node name="Button3" type="Button" parent="Control/TextureRect/VBoxContainer"]
 margin_top = 33.0
 margin_right = 366.0
 margin_bottom = 62.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "交易"
 
 [node name="Button2" type="Button" parent="Control/TextureRect/VBoxContainer"]
 margin_top = 66.0
 margin_right = 366.0
 margin_bottom = 95.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "取消"
 
 [node name="Label" type="Label" parent="Control/TextureRect"]
@@ -81,7 +81,7 @@ margin_left = 276.0
 margin_top = 42.0
 margin_right = 401.0
 margin_bottom = 70.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 9 )
 text = "好感度：-100"
 
 [node name="Label3" type="Label" parent="Control/TextureRect"]
@@ -89,7 +89,7 @@ margin_left = 35.0
 margin_top = 93.0
 margin_right = 400.0
 margin_bottom = 236.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 9 )
 text = "我是不想和你多废话的...."
 autowrap = true
 

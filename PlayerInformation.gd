@@ -46,7 +46,7 @@ func update_inventory(m, j):
 	$Inventory/Juntuan.text = str(j)
 	var cnt = 0
 	for i in $Inventory/ScrollContainer/VBoxContainer.get_children():
-		if i.get_children().size()!=0:
+		if i.get_children().size()>1:
 			cnt += 1
 	$Inventory/Backpack.text = str(cnt) + "/" + str(PlayerInventory.NUM_INVENTORY_SLOTS)
 	

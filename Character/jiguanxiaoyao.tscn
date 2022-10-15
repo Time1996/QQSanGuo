@@ -1,6 +1,5 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Character/NPC.gd" type="Script" id=1]
 [ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_3.png" type="Texture" id=2]
 [ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_5.png" type="Texture" id=3]
 [ext_resource path="res://assets/map/bajun/npc/寄管小妖/Sprite_13.png" type="Texture" id=4]
@@ -35,6 +34,33 @@
 [ext_resource path="res://UI/name/name_middle.png" type="Texture" id=33]
 [ext_resource path="res://UI/name/name_right.png" type="Texture" id=34]
 [ext_resource path="res://UI/name/name_left.png" type="Texture" id=35]
+[ext_resource path="res://UI/player_task/80358-1.png" type="Texture" id=37]
+[ext_resource path="res://UI/storage.tscn" type="PackedScene" id=38]
+
+[sub_resource type="GDScript" id=68]
+script/source = "extends Control
+
+
+
+
+func _ready():
+	pass # Replace with function body.
+
+
+func _on_NPC_mouse_entered():
+	$AnimatedSprite.material.set(\"shader_param/width\", 1)
+
+
+func _on_NPC_mouse_exited():
+	$AnimatedSprite.material.set(\"shader_param/width\", 0)
+
+
+func _on_jiguanxiaoyao_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.doubleclick:
+			$DialogPanel.visible = true
+
+"
 
 [sub_resource type="DynamicFont" id=65]
 outline_size = 1
@@ -75,13 +101,69 @@ animations = [ {
 "speed": 8.0
 } ]
 
+[sub_resource type="GDScript" id=69]
+script/source = "extends CanvasLayer
+
+onready var steve = get_tree().get_root().get_node(\"bajun/Steve\")
+onready var userInterface = get_tree().get_root().get_node(\"bajun/UserInterFace\")
+
+export var custom_dialog1 = \"\"
+export var custom_dialog2 = \"\"
+
+func _ready():
+#	$Control/TextureRect/Label.text = get_parent().get_node(\"Name/HBoxContainer/middle/name\").text
+	$Control/TextureRect/Label.text = get_parent().get_node(\"Name/HBoxContainer/middle/name\").text
+	$Control/TextureRect/Label3.text = custom_dialog1
+	init()
+
+func init():
+	$Control/TextureRect/Label3.percent_visible = 0
+	
+func _on_Button2_pressed():
+	visible = false
+	$Control/TextureRect/Label3.text = custom_dialog1
+
+func _process(delta):
+	$Control/TextureRect/Label3.percent_visible += 0.01
+
+
+func _on_Button_pressed():
+	$Control/TextureRect/Label3.text = custom_dialog2
+	init()
+
+
+
+
+func _on_Button3_pressed():
+	visible = false
+	get_parent().get_node(\"storage\").visible = true
+"
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 32 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/font/PuHuiTi-Regular.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
 [node name="jiguanxiaoyao" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -721.0
 margin_bottom = -498.0
 rect_min_size = Vector2( 79, 102 )
-script = ExtResource( 1 )
+script = SubResource( 68 )
 
 [node name="Name" type="Control" parent="."]
 anchor_right = 1.0
@@ -134,9 +216,88 @@ texture = ExtResource( 34 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 67 )
 frames = SubResource( 5 )
-frame = 16
+frame = 22
 playing = true
 centered = false
 
+[node name="DialogPanel" type="CanvasLayer" parent="."]
+visible = false
+script = SubResource( 69 )
+
+[node name="Control" type="Control" parent="DialogPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="DialogPanel/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -210.0
+margin_right = 210.0
+margin_bottom = 369.0
+texture = ExtResource( 37 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogPanel/Control/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.0
+margin_top = 51.5
+margin_right = 190.0
+margin_bottom = 146.5
+
+[node name="Button" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_right = 366.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 1 )
+text = "对话"
+
+[node name="Button3" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_top = 33.0
+margin_right = 366.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 1 )
+text = "寄存/取出"
+
+[node name="Button2" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_top = 66.0
+margin_right = 366.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+text = "取消"
+
+[node name="Label" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 42.0
+margin_right = 75.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "千货商"
+
+[node name="Label2" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 276.0
+margin_top = 42.0
+margin_right = 401.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 4 )
+text = "好感度：-100"
+
+[node name="Label3" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 93.0
+margin_right = 400.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 4 )
+text = "我是不想和你多废话的...."
+autowrap = true
+
+[node name="storage" parent="." instance=ExtResource( 38 )]
+visible = false
+
+[connection signal="gui_input" from="." to="." method="_on_jiguanxiaoyao_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_NPC_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_NPC_mouse_exited"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button" to="DialogPanel" method="_on_Button_pressed"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button3" to="DialogPanel" method="_on_Button3_pressed"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button2" to="DialogPanel" method="_on_Button2_pressed"]

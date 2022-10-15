@@ -8,9 +8,6 @@
 [node name="Item" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Container" type="TextureRect" parent="."]
 margin_left = -64.0
@@ -29,9 +26,6 @@ margin_top = 40.0
 margin_right = 632.0
 margin_bottom = 296.0
 rect_scale = Vector2( 0.4, 0.5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 margin_right = 480.0

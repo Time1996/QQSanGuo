@@ -236,7 +236,7 @@ __meta__ = {
 [node name="Sprite" parent="." instance=ExtResource( 4 )]
 position = Vector2( 360.73, 274.618 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 2
 
 [node name="name" type="Label" parent="."]
 margin_left = 262.0

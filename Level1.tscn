@@ -1,31 +1,15 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Character/dengmao.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Character/hongdiao.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/caodi.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/map/9023-1.png" type="Texture" id=4]
 [ext_resource path="res://assets/map/9024-1.png" type="Texture" id=5]
 [ext_resource path="res://assets/map/8985-1.png" type="Texture" id=6]
-[ext_resource path="res://assets/map/16869-1.png" type="Texture" id=7]
-[ext_resource path="res://assets/map/16868-1.png" type="Texture" id=8]
-[ext_resource path="res://assets/map/12683-1.png" type="Texture" id=9]
-[ext_resource path="res://assets/map/16870-1.png" type="Texture" id=10]
-[ext_resource path="res://assets/map/14476-1.png" type="Texture" id=11]
-[ext_resource path="res://assets/map/14477-1.png" type="Texture" id=12]
 [ext_resource path="res://MUSIC/bajun(shu).ogg" type="AudioStream" id=13]
 [ext_resource path="res://assets/map/9009-1.png" type="Texture" id=14]
 [ext_resource path="res://assets/map/9011-1.png" type="Texture" id=15]
 [ext_resource path="res://assets/map/9010-1.png" type="Texture" id=16]
-[ext_resource path="res://assets/map/19175-1.png" type="Texture" id=17]
-[ext_resource path="res://assets/map/19176-1.png" type="Texture" id=18]
-[ext_resource path="res://assets/map/19177-1.png" type="Texture" id=19]
-[ext_resource path="res://assets/map/19178-1.png" type="Texture" id=20]
-[ext_resource path="res://assets/map/19174-1.png" type="Texture" id=21]
-[ext_resource path="res://assets/map/19194-1.png" type="Texture" id=22]
-[ext_resource path="res://assets/map/19187-1.png" type="Texture" id=23]
-[ext_resource path="res://assets/map/19193-1.png" type="Texture" id=24]
-[ext_resource path="res://assets/map/19195-1.png" type="Texture" id=25]
-[ext_resource path="res://assets/map/19192-1.png" type="Texture" id=26]
 [ext_resource path="res://assets/map/12685-4.png" type="Texture" id=27]
 [ext_resource path="res://assets/map/12685-14.png" type="Texture" id=28]
 [ext_resource path="res://assets/map/12684-14.png" type="Texture" id=29]
@@ -56,328 +40,15 @@
 [ext_resource path="res://assets/map/12684-5.png" type="Texture" id=54]
 [ext_resource path="res://assets/map/12685-7.png" type="Texture" id=55]
 [ext_resource path="res://assets/map/12684-4.png" type="Texture" id=56]
-[ext_resource path="res://Enemy/Snake.tscn" type="PackedScene" id=57]
 [ext_resource path="res://Level1.gd" type="Script" id=58]
 [ext_resource path="res://assets/map/bajun/13311-1.png" type="Texture" id=59]
 [ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=60]
-[ext_resource path="res://Character/xiaomihou.tscn" type="PackedScene" id=61]
 [ext_resource path="res://MUSIC/fmusic001.ogg" type="AudioStream" id=62]
 [ext_resource path="res://assets/map/bajun/13312-1.png" type="Texture" id=63]
 [ext_resource path="res://monster_spawner.gd" type="Script" id=64]
 [ext_resource path="res://16898-1.png" type="Texture" id=66]
-[ext_resource path="res://19470-1.png" type="Texture" id=67]
 [ext_resource path="res://16899-1.png" type="Texture" id=68]
 [ext_resource path="res://Skill.tscn" type="PackedScene" id=69]
-
-[sub_resource type="TileSet" id=1]
-0/name = "16868-1.png 0"
-0/texture = ExtResource( 8 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 320, 160 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "16869-1.png 1"
-1/texture = ExtResource( 7 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 224, 160 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "16870-1.png 2"
-2/texture = ExtResource( 10 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 80, 80 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "12683-1.png 3"
-3/texture = ExtResource( 9 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 64, 320, 32, 32 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "14476-1.png 4"
-4/texture = ExtResource( 11 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 192, 224 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "14477-1.png 5"
-5/texture = ExtResource( 12 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 128, 224, 32, 32 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-6/name = "14477-1.png 6"
-6/texture = ExtResource( 12 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 192, 256 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "12683-1.png 7"
-7/texture = ExtResource( 9 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, -32, 96, 384 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
-8/name = "19174-1.png 8"
-8/texture = ExtResource( 21 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( -32, 0, 96, 32 )
-8/tile_mode = 0
-8/occluder_offset = Vector2( 0, 0 )
-8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
-8/z_index = 0
-9/name = "19175-1.png 9"
-9/texture = ExtResource( 17 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 128, 96 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
-10/name = "19176-1.png 10"
-10/texture = ExtResource( 18 )
-10/tex_offset = Vector2( 0, 0 )
-10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 0, 0, 96, 64 )
-10/tile_mode = 0
-10/occluder_offset = Vector2( 0, 0 )
-10/navigation_offset = Vector2( 0, 0 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape_one_way = false
-10/shape_one_way_margin = 0.0
-10/shapes = [  ]
-10/z_index = 0
-11/name = "19177-1.png 11"
-11/texture = ExtResource( 19 )
-11/tex_offset = Vector2( 0, 0 )
-11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 0, 0, 96, 64 )
-11/tile_mode = 0
-11/occluder_offset = Vector2( 0, 0 )
-11/navigation_offset = Vector2( 0, 0 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
-11/z_index = 0
-12/name = "19178-1.png 12"
-12/texture = ExtResource( 20 )
-12/tex_offset = Vector2( 0, 0 )
-12/modulate = Color( 1, 1, 1, 1 )
-12/region = Rect2( 0, 0, 64, 32 )
-12/tile_mode = 0
-12/occluder_offset = Vector2( 0, 0 )
-12/navigation_offset = Vector2( 0, 0 )
-12/shape_offset = Vector2( 0, 0 )
-12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape_one_way = false
-12/shape_one_way_margin = 0.0
-12/shapes = [  ]
-12/z_index = 0
-13/name = "19187-1.png 13"
-13/texture = ExtResource( 23 )
-13/tex_offset = Vector2( 0, 0 )
-13/modulate = Color( 1, 1, 1, 1 )
-13/region = Rect2( 0, 0, 128, 96 )
-13/tile_mode = 0
-13/occluder_offset = Vector2( 0, 0 )
-13/navigation_offset = Vector2( 0, 0 )
-13/shape_offset = Vector2( 0, 0 )
-13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape_one_way = false
-13/shape_one_way_margin = 0.0
-13/shapes = [  ]
-13/z_index = 0
-14/name = "19192-1.png 14"
-14/texture = ExtResource( 26 )
-14/tex_offset = Vector2( 0, 0 )
-14/modulate = Color( 1, 1, 1, 1 )
-14/region = Rect2( 0, 0, 160, 64 )
-14/tile_mode = 0
-14/occluder_offset = Vector2( 0, 0 )
-14/navigation_offset = Vector2( 0, 0 )
-14/shape_offset = Vector2( 0, 0 )
-14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape_one_way = false
-14/shape_one_way_margin = 0.0
-14/shapes = [  ]
-14/z_index = 0
-15/name = "19193-1.png 15"
-15/texture = ExtResource( 24 )
-15/tex_offset = Vector2( 0, 0 )
-15/modulate = Color( 1, 1, 1, 1 )
-15/region = Rect2( 0, 0, 80, 48 )
-15/tile_mode = 0
-15/occluder_offset = Vector2( 0, 0 )
-15/navigation_offset = Vector2( 0, 0 )
-15/shape_offset = Vector2( 0, 0 )
-15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-15/shape_one_way = false
-15/shape_one_way_margin = 0.0
-15/shapes = [  ]
-15/z_index = 0
-16/name = "19194-1.png 16"
-16/texture = ExtResource( 22 )
-16/tex_offset = Vector2( 0, 0 )
-16/modulate = Color( 1, 1, 1, 1 )
-16/region = Rect2( 0, 0, 112, 64 )
-16/tile_mode = 0
-16/occluder_offset = Vector2( 0, 0 )
-16/navigation_offset = Vector2( 0, 0 )
-16/shape_offset = Vector2( 0, 0 )
-16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-16/shape_one_way = false
-16/shape_one_way_margin = 0.0
-16/shapes = [  ]
-16/z_index = 0
-17/name = "19195-1.png 17"
-17/texture = ExtResource( 25 )
-17/tex_offset = Vector2( 0, 0 )
-17/modulate = Color( 1, 1, 1, 1 )
-17/region = Rect2( 0, 0, 80, 64 )
-17/tile_mode = 0
-17/occluder_offset = Vector2( 0, 0 )
-17/navigation_offset = Vector2( 0, 0 )
-17/shape_offset = Vector2( 0, 0 )
-17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape_one_way = false
-17/shape_one_way_margin = 0.0
-17/shapes = [  ]
-17/z_index = 0
-18/name = "16898-1.png 18"
-18/texture = ExtResource( 66 )
-18/tex_offset = Vector2( 0, 0 )
-18/modulate = Color( 1, 1, 1, 1 )
-18/region = Rect2( 0, 0, 160, 80 )
-18/tile_mode = 0
-18/occluder_offset = Vector2( 0, 0 )
-18/navigation_offset = Vector2( 0, 0 )
-18/shape_offset = Vector2( 0, 0 )
-18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape_one_way = false
-18/shape_one_way_margin = 0.0
-18/shapes = [  ]
-18/z_index = 0
-19/name = "16899-1.png 19"
-19/texture = ExtResource( 68 )
-19/tex_offset = Vector2( 0, 0 )
-19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 0, 0, 128, 48 )
-19/tile_mode = 0
-19/occluder_offset = Vector2( 0, 0 )
-19/navigation_offset = Vector2( 0, 0 )
-19/shape_offset = Vector2( 0, 0 )
-19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape_one_way = false
-19/shape_one_way_margin = 0.0
-19/shapes = [  ]
-19/z_index = 0
-20/name = "19470-1.png 20"
-20/texture = ExtResource( 67 )
-20/tex_offset = Vector2( 0, 0 )
-20/modulate = Color( 1, 1, 1, 1 )
-20/region = Rect2( 0, 0, 64, 144 )
-20/tile_mode = 0
-20/occluder_offset = Vector2( 0, 0 )
-20/navigation_offset = Vector2( 0, 0 )
-20/shape_offset = Vector2( 0, 0 )
-20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-20/shape_one_way = false
-20/shape_one_way_margin = 0.0
-20/shapes = [  ]
-20/z_index = 0
-21/name = "19470-1.png 21"
-21/texture = ExtResource( 67 )
-21/tex_offset = Vector2( 0, 0 )
-21/modulate = Color( 1, 1, 1, 1 )
-21/region = Rect2( -16, 0, 16, 16 )
-21/tile_mode = 0
-21/occluder_offset = Vector2( 0, 0 )
-21/navigation_offset = Vector2( 0, 0 )
-21/shape_offset = Vector2( 0, 0 )
-21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-21/shape_one_way = false
-21/shape_one_way_margin = 0.0
-21/shapes = [  ]
-21/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 176, 64 )
@@ -398,7 +69,7 @@ extents = Vector2( 56.2872, 25.4355 )
 extents = Vector2( 272, 64 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 256, 64 )
+extents = Vector2( 256, 9 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 192, 64 )
@@ -476,20 +147,28 @@ script/source = "extends Node2D
 
 signal monster_die
 
-var eneme_set = preload(\"res://Enemy//Snake.tscn\")
+var snake = preload(\"res://Enemy//Snake.tscn\")
+var xiaomihou = preload(\"res://Character/xiaomihou.tscn\")
+var hongdiao = preload(\"res://Character/hongdiao.tscn\")
 
-
+var e1
 
 func _ready():
-	monster_generation(10)
+	monster_generation(24)
 	pass
 
 func monster_generation(num):
 	yield(get_tree(), \"idle_frame\")
 	
 	for i in range(1, num+1):
-		var e1 = eneme_set.instance()
+		
 		var s =\"2_\"+str(i)
+		if get_node(s).monster == \"Snake\":
+			e1 = snake.instance()
+		elif get_node(s).monster == \"xiaomihou\":
+			e1 = xiaomihou.instance()
+		elif get_node(s).monster == \"hongdiao\":
+			e1 = hongdiao.instance()
 		e1.position = get_node(s).position
 		e1.add_to_group(\"enemy\")
 		e1.set_collision_layer_bit(1,1)
@@ -500,23 +179,31 @@ func monster_generation(num):
 		$Tween.interpolate_property(e1, \"modulate\", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1,Tween.TRANS_LINEAR)
 		
 		$Tween.start()
-		yield($Tween,\"tween_completed\")
+#		yield($Tween,\"tween_completed\")
 
 func monster_specify_place(num):
-	var e1 = eneme_set.instance()
 	var s = num
+	if get_node(s).monster == \"Snake\":
+		e1 = snake.instance()
+	elif get_node(s).monster == \"xiaomihou\":
+		e1 = xiaomihou.instance()
+	elif get_node(s).monster == \"hongdiao\":
+		e1 = hongdiao.instance()
 	e1.position = get_node(s).position
 	e1.add_to_group(\"enemy\")
 	e1.set_collision_layer_bit(1,1)
 	e1.set_collision_layer_bit(0,0)
 	e1.set_collision_mask_bit(0,0)
 	e1.connect(\"monster_die\", self, \"_on_Spawner_monster_die\", [s])
+#
+#	$Tween.interpolate_property(e1, \"modulate\", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1,Tween.TRANS_LINEAR)
+##
+#	$Tween.start()
+#	yield($Tween,\"tween_completed\")
+	
 	get_node(\"/root/Level1\").add_child(e1)
-	$Tween.interpolate_property(e1, \"modulate\", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1,Tween.TRANS_LINEAR)
 	
-	$Tween.start()
-	yield($Tween,\"tween_completed\")
-	
+
 func respawn():
 	monster_generation((randi()%3)+1)
 
@@ -534,17 +221,8 @@ script = ExtResource( 58 )
 [node name="UserInterFace" parent="." instance=ExtResource( 60 )]
 unique_name_in_owner = true
 
-[node name="Tile OneWay" type="TileMap" parent="."]
-position = Vector2( 64, 0 )
-tile_set = SubResource( 1 )
-cell_size = Vector2( 32, 32 )
-cell_quadrant_size = 4
-format = 1
-tile_data = PoolIntArray( -2293758, 4, 0, -2228185, 6, 0, -1900554, 16, 0, -1900545, 15, 0, -1966080, 7, 0, -1966072, 16, 0, -1835028, 8, 0, -1835027, 0, 0, -1835019, 1, 0, -1835015, 0, 0, -1900544, 1, 0, -1900539, 0, 0, -1834991, 16, 0, -1834974, 15, 0, -1834970, 14, 0, -1834963, 16, 0, -1703947, 2, 0, -1769467, 2, 0, -1769462, 0, 0, -1769454, 0, 0, -1769446, 0, 0, -1769438, 1, 0, -1769433, 0, 0, -1769429, 7, 0, -1638361, 2, 0, -1507321, 6, 0, -1507318, 6, 0, -1441780, 4, 0, -1441740, 6, 0, -1441733, 6, 0, -1376195, 4, 0, -1179626, 13, 0, -1114106, 14, 0, -1114099, 14, 0, -1114073, 13, 0, -983043, 8, 0, -983042, 0, 0, -1048573, 7, 0, -1048570, 1, 0, -1048566, 0, 0, -1048558, 0, 0, -1048519, 17, 0, -983026, 1, 0, -983024, 8, 0, -983016, 0, 0, -983008, 0, 0, -982999, 0, 0, -982991, 1, 0, -982986, 0, 0, -982981, 0, 0, -982979, 7, 0, -982974, 8, 0, -917494, 2, 0, -917467, 1, 0, -851949, 2, 0, -851914, 2, 0, -786390, 2, 0, -131082, 10, 0, -65551, 8, 0, -65550, 0, 0, -65543, 1, 0, -65539, 0, 0, -131071, 7, 0, -131020, 0, 0, -131013, 1, 0, -131010, 0, 0, -131003, 8, 0, -65483, 11, 0, 65534, 2, 0, 38, 0, 0, 40, 7, 0, 46, 0, 0, 65580, 1, 0, 131124, 2, 0, 327689, 6, 0, 655368, 13, 0, 655392, 9, 0, 720900, 11, 0, 720901, 12, 0, 720905, 10, 0, 720906, 12, 0, 720926, 11, 0, 720928, 8, 0, 851959, 0, 0, 851967, 0, 0, 786439, 1, 0, 786444, 0, 0, 786452, 1, 0, 786457, 0, 0, 786464, 1, 0, 786468, 0, 0, 786474, 0, 0, 852026, 20, 0, 917515, 2, 0, 917536, 2, 0, 983099, 13, 0, 1114166, 0, 0, 1114168, 0, 0, 1114176, 0, 0, 1114183, 0, 0, 1114191, 12, 0, 1179712, 12, 0 )
-
-[node name="16898-1" type="Sprite" parent="Tile OneWay"]
-position = Vector2( 1648.69, 440.224 )
-texture = ExtResource( 66 )
+[node name="Tile OneWay" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -2293758, 4, 0, -2228185, 6, 0, -1900554, 16, 0, -1900545, 15, 0, -1966080, 7, 0, -1966072, 16, 0, -1835028, 8, 0, -1835027, 0, 0, -1835019, 1, 0, -1835015, 0, 0, -1900544, 1, 0, -1900539, 0, 0, -1834991, 16, 0, -1834974, 15, 0, -1834970, 14, 0, -1834963, 16, 0, -1703947, 2, 0, -1769467, 2, 0, -1769462, 0, 0, -1769454, 0, 0, -1769446, 0, 0, -1769438, 1, 0, -1769433, 0, 0, -1769429, 7, 0, -1638361, 2, 0, -1507321, 6, 0, -1507318, 6, 0, -1441780, 4, 0, -1441740, 6, 0, -1441733, 6, 0, -1376195, 4, 0, -1179626, 13, 0, -1114106, 14, 0, -1114099, 14, 0, -1114073, 13, 0, -983043, 8, 0, -983042, 0, 0, -1048573, 7, 0, -1048570, 1, 0, -1048566, 0, 0, -1048558, 0, 0, -1048519, 17, 0, -983026, 1, 0, -983024, 8, 0, -983016, 0, 0, -983008, 0, 0, -982999, 0, 0, -982991, 1, 0, -982986, 0, 0, -982981, 0, 0, -982979, 7, 0, -982974, 8, 0, -917494, 2, 0, -917467, 1, 0, -851949, 2, 0, -851914, 2, 0, -786390, 2, 0, -262126, 3, 0, -131082, 10, 0, -65551, 8, 0, -65550, 0, 0, -65543, 1, 0, -65539, 0, 0, -131071, 7, 0, -131020, 0, 0, -131013, 1, 0, -131010, 0, 0, -131003, 8, 0, -65483, 11, 0, 65534, 2, 0, 38, 0, 0, 40, 7, 0, 46, 0, 0, 65580, 1, 0, 131124, 2, 0, 327689, 6, 0, 655368, 13, 0, 655392, 9, 0, 720900, 11, 0, 720901, 12, 0, 720905, 10, 0, 720906, 12, 0, 720926, 11, 0, 720928, 8, 0, 851959, 0, 0, 851967, 0, 0, 786439, 1, 0, 786444, 0, 0, 786452, 1, 0, 786457, 0, 0, 786464, 1, 0, 786468, 0, 0, 786474, 0, 0, 852026, 20, 0, 917515, 2, 0, 917536, 2, 0, 983099, 13, 0, 1114166, 0, 0, 1114168, 0, 0, 1114176, 0, 0, 1114183, 0, 0, 1114191, 12, 0, 1179712, 12, 0 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2( 10, 0 )
@@ -701,7 +379,7 @@ shape = SubResource( 10 )
 one_way_collision = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="wall_floor"]
-position = Vector2( 272, -848 )
+position = Vector2( 272, -903 )
 shape = SubResource( 11 )
 one_way_collision = true
 
@@ -867,38 +545,117 @@ monster = "Snake"
 [node name="2_2" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( -80, -64 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_3" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( -184, -64 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_4" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 1609.76, 378.885 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_5" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 25.5369, 385.234 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_6" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 187.452, 385.234 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_7" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2108.21, 550.324 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_8" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 1981.21, 550.324 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_9" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2258.85, 548.273 )
 script = ExtResource( 64 )
+monster = "Snake"
 
 [node name="2_10" type="Position2D" parent="Spawner_Snake"]
 position = Vector2( 2393.01, 546.063 )
 script = ExtResource( 64 )
+monster = "Snake"
+
+[node name="2_11" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1911, -82 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_14" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1552, -9 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_15" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1471, -9 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_16" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 902, -519 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_17" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 632, -517 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_18" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 168, -517 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_19" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 658, -864 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_20" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 833, -864 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_21" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1392, -864 )
+script = ExtResource( 64 )
+monster = "Snake"
+
+[node name="2_22" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1637, -487 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_23" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1271, -487 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_24" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 1505, -487 )
+script = ExtResource( 64 )
+monster = "hongdiao"
+
+[node name="2_12" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 2027, -82 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
+
+[node name="2_13" type="Position2D" parent="Spawner_Snake"]
+position = Vector2( 2150, -80 )
+script = ExtResource( 64 )
+monster = "xiaomihou"
 
 [node name="Tween" type="Tween" parent="Spawner_Snake"]
 
@@ -937,38 +694,8 @@ texture = ExtResource( 66 )
 position = Vector2( 1859.6, 546.166 )
 texture = ExtResource( 68 )
 
-[node name="Monster" parent="." groups=["enemy"] instance=ExtResource( 57 )]
-position = Vector2( 1425, 375 )
-
 [node name="dengmao" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2170, 500 )
-
-[node name="Monster2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 902, -519 )
-
-[node name="Monster3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 632, -517 )
-
-[node name="Monster4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 168, -519 )
-
-[node name="Monster5" parent="." instance=ExtResource( 61 )]
-position = Vector2( 1469, -8 )
-
-[node name="Monster6" parent="." instance=ExtResource( 61 )]
-position = Vector2( 1552, -9 )
-
-[node name="Monster7" parent="." instance=ExtResource( 61 )]
-position = Vector2( 1911, -81 )
-
-[node name="Monster8" parent="." instance=ExtResource( 61 )]
-position = Vector2( 2028, -81 )
-
-[node name="Monster9" parent="." instance=ExtResource( 61 )]
-position = Vector2( 2151, -80 )
-
-[node name="Monster10" parent="." instance=ExtResource( 61 )]
-position = Vector2( 2004, -487 )
 
 [connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
 [connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]

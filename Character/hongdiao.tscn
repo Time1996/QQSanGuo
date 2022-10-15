@@ -122,7 +122,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "move",
+"name": "run",
 "speed": 8.0
 } ]
 
@@ -340,7 +340,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "move" ]
+"values": [ "run" ]
 }
 
 [sub_resource type="RectangleShape2D" id=11]
@@ -447,7 +447,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Monster" type="KinematicBody2D" groups=["enemy"]]
+[node name="hongdiao" type="KinematicBody2D" groups=["enemy"]]
 collision_layer = 4
 collision_mask = 0
 input_pickable = true
@@ -463,8 +463,8 @@ exprience = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 3 )
 frames = SubResource( 46 )
-animation = "idle"
-frame = 1
+animation = "run"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -552,13 +552,13 @@ shape = SubResource( 11 )
 [node name="FCTmgr" parent="." instance=ExtResource( 38 )]
 
 [node name="floor_left" type="RayCast2D" parent="."]
-position = Vector2( 1, -7 )
+position = Vector2( 1, -4 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 collision_mask = 4
 
 [node name="floor_right" type="RayCast2D" parent="."]
-position = Vector2( 17, -7 )
+position = Vector2( 18, -4 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 collision_mask = 4

@@ -11,8 +11,8 @@ func _ready():
 
 func _on_TransPort_body_entered(body):
 #	load_scene = load("res://JiangLinXiJiao.tscn")
-	SceneChange.goto_scene(load_scene, self)
-#	get_tree().change_scene("res://JiangLinXiJiao.tscn")
+#	SceneChange.goto_scene("res://JiangLinXiJiao.tscn", self)
+	get_tree().change_scene("res://JiangLinXiJiao.tscn")
 	pass # Replace with function body.
 
 #
@@ -25,8 +25,8 @@ func _on_TransPort_body_entered(body):
 
 func _on_TransPort2_body_entered(body):
 #	load_scene = load("res://Scene/bajun.tscn")
-	SceneChange.goto_scene(load_scene, self)
-#	get_tree().change_scene("res://Scene/bajun.tscn")
+#	SceneChange.goto_scene("res://bajun.tscn", self)
+	get_tree().change_scene("res://Scene/bajun.tscn")
 	pass # Replace with function body.
 
 func _exit_tree():

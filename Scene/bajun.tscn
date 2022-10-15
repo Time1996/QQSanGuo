@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=2]
+[gd_scene load_steps=230 format=2]
 
 [ext_resource path="res://assets/map/bajun/16894-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/map/bajun/16878-1.png" type="Texture" id=2]
@@ -83,6 +83,11 @@
 [ext_resource path="res://Character/zhangsong.tscn" type="PackedScene" id=81]
 [ext_resource path="res://Character/liaofei.tscn" type="PackedScene" id=82]
 [ext_resource path="res://Character/shiyuanyinzhe.tscn" type="PackedScene" id=83]
+[ext_resource path="res://Character/xiaozhu.tscn" type="PackedScene" id=84]
+[ext_resource path="res://assets/map/14477-1.png" type="Texture" id=85]
+[ext_resource path="res://Character/xinfazhidaoshi.tscn" type="PackedScene" id=86]
+[ext_resource path="res://Character/shenwansan.tscn" type="PackedScene" id=87]
+[ext_resource path="res://Character/madai.tscn" type="PackedScene" id=88]
 [ext_resource path="res://assets/map/bajun/18317-1.png" type="Texture" id=120]
 [ext_resource path="res://assets/map/bajun/18316-1.png" type="Texture" id=121]
 [ext_resource path="res://assets/map/bajun/18340-1.png" type="Texture" id=122]
@@ -926,9 +931,6 @@ margin_left = 1752.0
 margin_top = -40.0
 margin_right = 1792.0
 rect_scale = Vector2( -1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="16896-8" type="Sprite" parent="TileMap/Control"]
 show_behind_parent = true
@@ -1027,16 +1029,19 @@ position = Vector2( -16, -328 )
 z_index = 2
 
 [node name="Sprite" parent="Steve/Control" index="0"]
-frame = 3
+frame = 1
 
 [node name="AnimatedSprite2" parent="Steve/Control" index="2"]
-frame = 5
+frame = 6
+
+[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
+frame = 2
 
 [node name="AnimatedSprite6" parent="Steve/Control" index="8"]
-frame = 7
+frame = 10
 
 [node name="AnimatedSprite4" parent="Steve/Control" index="9"]
-frame = 7
+frame = 0
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -690
@@ -1057,14 +1062,8 @@ parameters/playback = SubResource( 32 )
 anims/shade_in = SubResource( 33 )
 anims/shade_out = SubResource( 34 )
 
-[node name="fly_left" parent="Steve" index="18"]
-frame = 2
-
-[node name="fly_right" parent="Steve" index="19"]
-frame = 0
-
 [node name="recover" parent="Steve" index="20"]
-frame = 2
+frame = 10
 
 [node name="AnimatedSprite" parent="Steve" index="26"]
 frame = 0
@@ -1430,7 +1429,7 @@ rotation = 1.5708
 shape = SubResource( 36 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 4273.87, -746.469 )
+position = Vector2( 4163, -754 )
 rotation = 1.5708
 shape = SubResource( 36 )
 
@@ -1608,13 +1607,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 8
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 3
+frame = 14
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -1630,13 +1629,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 2
+frame = 13
 playing = true
 
 [node name="TransPort3" type="Area2D" parent="."]
@@ -1652,13 +1651,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 2
+frame = 13
 playing = true
 
 [node name="18336-1" type="Sprite" parent="."]
@@ -1771,7 +1770,7 @@ autoplay = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 83.3026, -351.236 )
 frames = SubResource( 63 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="NPC" parent="." instance=ExtResource( 46 )]
@@ -1799,10 +1798,10 @@ margin_right = 219.0
 margin_bottom = 702.0
 
 [node name="gushushangren" parent="." instance=ExtResource( 49 )]
-margin_left = 570.0
-margin_top = -381.0
-margin_right = 658.0
-margin_bottom = -259.0
+margin_left = 672.0
+margin_top = -384.0
+margin_right = 760.0
+margin_bottom = -262.0
 
 [node name="jiguanxiaoyao" parent="." instance=ExtResource( 51 )]
 margin_left = 946.0
@@ -1881,7 +1880,7 @@ texture = ExtResource( 76 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="jianyong"]
 material = SubResource( 67 )
 frames = SubResource( 68 )
-frame = 12
+frame = 9
 playing = true
 centered = false
 
@@ -1904,9 +1903,9 @@ margin_right = -328.0
 margin_bottom = -263.0
 
 [node name="liaofei" parent="." instance=ExtResource( 82 )]
-margin_left = 3093.0
+margin_left = 3314.0
 margin_top = 42.0
-margin_right = 3186.0
+margin_right = 3407.0
 margin_bottom = 153.0
 
 [node name="zhangsong" parent="." instance=ExtResource( 81 )]
@@ -1916,10 +1915,52 @@ margin_right = 1894.0
 margin_bottom = 152.0
 
 [node name="shiyuanyinzhe" parent="." instance=ExtResource( 83 )]
-margin_left = 3382.0
-margin_top = 35.0
-margin_right = 3461.0
-margin_bottom = 118.0
+margin_left = 3778.0
+margin_top = 31.0
+margin_right = 3876.0
+margin_bottom = 151.0
+
+[node name="xiaozhu" parent="." instance=ExtResource( 84 )]
+margin_left = 2303.0
+margin_top = 557.0
+margin_right = 2396.0
+margin_bottom = 668.0
+
+[node name="xinfazhidaoshi" parent="." instance=ExtResource( 86 )]
+margin_left = 3473.0
+margin_top = -308.0
+margin_right = 3543.0
+margin_bottom = -171.0
+
+[node name="shenwansan" parent="." instance=ExtResource( 87 )]
+margin_left = 3928.0
+margin_top = -277.0
+margin_right = 4021.0
+margin_bottom = -166.0
+
+[node name="14477-1" type="Sprite" parent="."]
+position = Vector2( 3470.5, -361.375 )
+scale = Vector2( 1.40116, 1.49051 )
+z_index = -1
+texture = ExtResource( 85 )
+
+[node name="14477-2" type="Sprite" parent="."]
+position = Vector2( 4021, -342 )
+scale = Vector2( 1.40116, 1.49051 )
+z_index = -3
+texture = ExtResource( 85 )
+
+[node name="14477-3" type="Sprite" parent="."]
+position = Vector2( 4208, -203 )
+scale = Vector2( 1.40116, 1.49051 )
+z_index = -3
+texture = ExtResource( 85 )
+
+[node name="madai" parent="." instance=ExtResource( 88 )]
+margin_left = 400.0
+margin_top = -402.0
+margin_right = 494.0
+margin_bottom = -266.0
 
 [connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
 [connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]

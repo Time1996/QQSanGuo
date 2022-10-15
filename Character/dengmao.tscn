@@ -419,7 +419,7 @@ states/move/position = Vector2( -806.758, 53 )
 transitions = [ "idle", "move", SubResource( 15 ), "idle", "attack1", SubResource( 16 ), "idle", "die", SubResource( 17 ), "idle", "idle_attack", SubResource( 18 ), "move", "die", SubResource( 20 ), "idle_attack", "die", SubResource( 21 ), "attack1", "die", SubResource( 22 ), "idle_attack", "attack1", SubResource( 28 ), "idle_attack", "move", SubResource( 29 ), "attack1", "idle_attack", SubResource( 30 ), "move", "idle_attack", SubResource( 31 ), "move", "attack1", SubResource( 32 ), "attack1", "move", SubResource( 33 ), "attack1", "idle", SubResource( 34 ), "idle_attack", "idle", SubResource( 35 ), "move", "idle", SubResource( 36 ), "idle", "injury", SubResource( 42 ), "move", "injury", SubResource( 43 ), "idle_attack", "injury", SubResource( 44 ), "injury", "idle_attack", SubResource( 45 ), "attack1", "injury", SubResource( 46 ), "injury", "die", SubResource( 47 ) ]
 start_node = "idle"
 end_node = "die"
-graph_offset = Vector2( -1399.76, -74.2123 )
+graph_offset = Vector2( -1399.76, -150.771 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=7]
 
@@ -445,7 +445,7 @@ shape = SubResource( 24 )
 material = SubResource( 40 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
+frame = 3
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

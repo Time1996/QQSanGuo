@@ -1,0 +1,238 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/DialogPanel.gd" type="Script" id=2]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=4]
+[ext_resource path="res://UI/name/name_right.png" type="Texture" id=5]
+[ext_resource path="res://UI/name/name_left.png" type="Texture" id=6]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_6.png" type="Texture" id=8]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_12.png" type="Texture" id=9]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_16.png" type="Texture" id=10]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_7.png" type="Texture" id=11]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_10.png" type="Texture" id=12]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_14.png" type="Texture" id=13]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_5.png" type="Texture" id=14]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_11.png" type="Texture" id=15]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_2.png" type="Texture" id=16]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_3.png" type="Texture" id=17]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_13.png" type="Texture" id=18]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_15.png" type="Texture" id=19]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_9.png" type="Texture" id=20]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_1.png" type="Texture" id=21]
+[ext_resource path="res://assets/map/bajun/npc/test/Sprite_8.png" type="Texture" id=22]
+[ext_resource path="res://UI/player_task/80358-1.png" type="Texture" id=23]
+
+[sub_resource type="GDScript" id=69]
+script/source = "extends Control
+
+
+func _ready():
+	pass # Replace with function body.
+
+
+func _on_NPC_mouse_entered():
+	$AnimatedSprite.material.set(\"shader_param/width\", 1)
+
+
+func _on_NPC_mouse_exited():
+	$AnimatedSprite.material.set(\"shader_param/width\", 0)
+
+
+func _on_shenwansan_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.doubleclick:
+			$DialogPanel.visible = true
+"
+
+[sub_resource type="DynamicFont" id=65]
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="Shader" id=66]
+code = "shader_type canvas_item;
+
+uniform float width:hint_range(0.0,30.0);
+uniform vec4 outline_color:hint_color;
+
+void fragment(){
+    float size = width * 1.0 / float(textureSize(TEXTURE,0).x);
+    vec4 sprite_color = texture(TEXTURE,UV);
+    float alpha = -8.0 * sprite_color.a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,-size)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,0)).a;
+    alpha += texture(TEXTURE,UV + vec2(size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(0.0,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,size)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,0.0)).a;
+    alpha += texture(TEXTURE,UV + vec2(-size,-size)).a;
+    vec4 final_color = mix(sprite_color,outline_color,clamp(alpha,0.0,1.0));
+    COLOR = vec4(final_color.rgb,clamp(abs(alpha) + sprite_color.a,0.0,1.0));
+} "
+
+[sub_resource type="ShaderMaterial" id=67]
+shader = SubResource( 66 )
+shader_param/width = 0.0
+shader_param/outline_color = Color( 0.992157, 1, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=68]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/font/PuHuiTi-Regular.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[node name="shenwansan" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -707.0
+margin_bottom = -489.0
+rect_min_size = Vector2( 93, 111 )
+script = SubResource( 69 )
+
+[node name="Name" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 114.0
+margin_right = -76.0
+margin_bottom = 31.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Name"]
+margin_right = 80.0
+margin_bottom = 19.0
+custom_constants/separation = 0
+
+[node name="left" type="TextureRect" parent="Name/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 19.0
+texture = ExtResource( 6 )
+
+[node name="middle" type="TextureRect" parent="Name/HBoxContainer"]
+self_modulate = Color( 1, 0.823529, 0.454902, 1 )
+margin_left = 10.0
+margin_right = 70.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 19 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Name/HBoxContainer/middle"]
+margin_top = -2.0
+margin_right = 61.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 1, 0.227451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 65 )
+text = "沈百万"
+align = 1
+
+[node name="right" type="TextureRect" parent="Name/HBoxContainer"]
+margin_left = 70.0
+margin_right = 80.0
+margin_bottom = 19.0
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 67 )
+position = Vector2( -12, 2 )
+frames = SubResource( 68 )
+frame = 1
+playing = true
+centered = false
+
+[node name="DialogPanel" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource( 2 )
+custom_dialog1 = "全三国每人给你捐一文钱，你就能变成下一个我。"
+custom_dialog2 = "快去吧。。。"
+
+[node name="Control" type="Control" parent="DialogPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="DialogPanel/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -210.0
+margin_right = 210.0
+margin_bottom = 369.0
+texture = ExtResource( 23 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogPanel/Control/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.0
+margin_top = 51.5
+margin_right = 190.0
+margin_bottom = 146.5
+
+[node name="Button" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_right = 366.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 1 )
+text = "对话"
+
+[node name="Button2" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_top = 66.0
+margin_right = 366.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+text = "取消"
+
+[node name="Label" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 42.0
+margin_right = 75.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "千货商"
+
+[node name="Label2" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 276.0
+margin_top = 42.0
+margin_right = 401.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 4 )
+text = "好感度：-100"
+
+[node name="Label3" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 93.0
+margin_right = 400.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 4 )
+text = "我是不想和你多废话的...."
+autowrap = true
+
+[connection signal="gui_input" from="." to="." method="_on_shenwansan_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_NPC_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_NPC_mouse_exited"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button" to="DialogPanel" method="_on_Button_pressed"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button2" to="DialogPanel" method="_on_Button2_pressed"]

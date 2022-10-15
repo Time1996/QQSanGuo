@@ -111,7 +111,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "walk",
+"name": "run",
 "speed": 8.0
 } ]
 
@@ -329,7 +329,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "move" ]
+"values": [ "run" ]
 }
 
 [sub_resource type="RectangleShape2D" id=11]
@@ -417,7 +417,7 @@ states/idle_attack/position = Vector2( 684, -58 )
 states/injury/node = SubResource( 15 )
 states/injury/position = Vector2( 457, 101 )
 states/run/node = SubResource( 16 )
-states/run/position = Vector2( 748, 398 )
+states/run/position = Vector2( 749, 398 )
 transitions = [ "idle", "die", SubResource( 17 ), "idle", "run", SubResource( 19 ), "injury", "idle", SubResource( 20 ), "run", "idle", SubResource( 22 ), "run", "injury", SubResource( 23 ), "idle", "injury", SubResource( 25 ), "injury", "idle_attack", SubResource( 35 ), "idle_attack", "injury", SubResource( 37 ), "idle_attack", "run", SubResource( 38 ), "idle_attack", "die", SubResource( 39 ), "injury", "die", SubResource( 40 ), "idle", "attack", SubResource( 18 ), "attack", "idle", SubResource( 21 ), "run", "attack", SubResource( 30 ), "attack", "idle_attack", SubResource( 34 ), "idle_attack", "attack", SubResource( 36 ), "injury", "attack", SubResource( 41 ), "attack", "injury", SubResource( 42 ), "idle_attack", "idle", SubResource( 43 ), "attack", "die", SubResource( 44 ), "run", "die", SubResource( 45 ) ]
 start_node = "idle"
 end_node = "die"
@@ -436,7 +436,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Monster" type="KinematicBody2D"]
+[node name="Snake" type="KinematicBody2D" groups=["enemy"]]
 collision_layer = 4
 collision_mask = 0
 input_pickable = true
@@ -446,7 +446,7 @@ SPEED = 100
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 3 )
 frames = SubResource( 4 )
-animation = "idle"
+animation = "run"
 frame = 2
 playing = true
 

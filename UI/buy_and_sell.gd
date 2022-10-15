@@ -2,11 +2,9 @@ extends Control
 
 var drag_position = null
 
-onready var backpack = get_parent().get_node("Inventory/ScrollContainer")
-
 func _ready():
-#	add_child(backpack)
 	self.visible = false
+	refresh()
 	pass
 
 func refresh():
@@ -19,7 +17,7 @@ func refresh():
 	
 	var a = 0
 	var b = 0
-	for i in $ScrollContainer/VBoxContainer.get_children():
+	for i in $player_pack/VBoxContainer.get_children():
 		b = 0
 		for j in PlayerInventory.NUM_INVENTORY_SLOTS:
 			if a==b:
@@ -52,7 +50,7 @@ func _on_TextureButton6_pressed():
 func clear_pack():
 	get_node("ScrollContainer2").money = 0
 	get_node("Label5").text = ""
-	for i in $ScrollContainer/VBoxContainer.get_children():
+	for i in $player_pack/VBoxContainer.get_children():
 		i.mouse_filter = MOUSE_FILTER_STOP
 	for i in $ScrollContainer2/VBoxContainer.get_children():
 		i.get_node("TextureRect").texture = null
@@ -66,7 +64,7 @@ func _on_TextureButton4_pressed():
 
 func _on_TextureButton5_pressed():
 	var userInterFace = find_parent("UserInterFace")
-	if $ScrollContainer.visible == true: #卖的界面
+	if $player_pack.visible == true: #卖的界面
 		for i in userInterFace.get_node("Inventory/ScrollContainer/VBoxContainer").get_children():
 			for j in get_node("ScrollContainer2/VBoxContainer").get_children():
 				if i.get_child_count() > 1:##因为自带一个PopupMenu
@@ -77,7 +75,7 @@ func _on_TextureButton5_pressed():
 	else:
 		for i in $ScrollContainer2/VBoxContainer.get_children():
 			if i.get_node("TextureRect").texture != null:
-				print(i.get_node("Label2").text," ",int(i.get_node("Label").text))
+#				print(i.get_node("Label2").text," ",int(i.get_node("Label").text))
 				PlayerInventory.add_item(i.get_node("Label2").text, int(i.get_node("Label").text))
 	print(get_node("ScrollContainer2").money)
 	find_parent("bajun").get_node("Steve").gain_money(get_node("ScrollContainer2").money, 0)
@@ -93,14 +91,14 @@ func pack_refresh():
 
 func _on_TextureButton3_pressed():
 #	clear_pack()
-	$ScrollContainer.visible = true
+	$player_pack.visible = true
 	$ScrollContainer3.visible = false
 	
 	pass # Replace with function body.
 
 func _on_TextureButton_pressed():
 #	clear_pack()
-	$ScrollContainer.visible = false
+	$player_pack.visible = false
 	$ScrollContainer3.visible = true
 	pass # Replace with function body.
 

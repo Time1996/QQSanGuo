@@ -35,9 +35,6 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 script = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0

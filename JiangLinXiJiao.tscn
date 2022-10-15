@@ -817,7 +817,7 @@ tile_data = PoolIntArray( 1179717, 11, 0, 1376371, 536870928, 0, 1376385, 536870
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 608.613, 447.219 )
 frames = SubResource( 2 )
-frame = 40
+frame = 11
 playing = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -847,13 +847,13 @@ shape = SubResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 5 )
-frame = 2
+frame = 10
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 6 )
-frame = 12
+frame = 5
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -869,13 +869,13 @@ shape = SubResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 5 )
-frame = 2
+frame = 10
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 6 )
-frame = 12
+frame = 5
 playing = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -897,19 +897,16 @@ position = Vector2( -250.439, 357.165 )
 z_index = 1
 
 [node name="Sprite" parent="Steve/Control" index="0"]
-frame = 3
+frame = 1
 
 [node name="AnimatedSprite2" parent="Steve/Control" index="2"]
-frame = 7
-
-[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
-frame = 4
+frame = 0
 
 [node name="AnimatedSprite6" parent="Steve/Control" index="8"]
 frame = 12
 
 [node name="AnimatedSprite4" parent="Steve/Control" index="9"]
-frame = 3
+frame = 2
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -495
@@ -921,16 +918,16 @@ tree_root = SubResource( 32 )
 parameters/playback = SubResource( 33 )
 
 [node name="fly_left" parent="Steve" index="18"]
-frame = 5
+frame = 6
 
 [node name="fly_right" parent="Steve" index="19"]
-frame = 3
+frame = 4
 
 [node name="recover" parent="Steve" index="20"]
-frame = 8
+frame = 3
 
 [node name="AnimatedSprite" parent="Steve" index="26"]
-frame = 2
+frame = 6
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -1027,26 +1024,26 @@ one_way_collision = true
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1093.58, 504.469 )
 frames = SubResource( 40 )
-frame = 12
+frame = 23
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1611.83, 256 )
 frames = SubResource( 41 )
-frame = 2
+frame = 13
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1641.33, 256 )
 frames = SubResource( 41 )
-frame = 1
+frame = 12
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1691.02, 256 )
 z_index = -98
 frames = SubResource( 41 )
-frame = 1
+frame = 12
 playing = true
 
 [node name="16638-1" type="Sprite" parent="StaticBody2D"]
@@ -1063,25 +1060,25 @@ texture = ExtResource( 132 )
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1756.75, 40 )
 frames = SubResource( 42 )
-frame = 16
+frame = 9
 playing = true
 
 [node name="AnimatedSprite7" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1926.06, -16.494 )
 frames = SubResource( 42 )
-frame = 6
+frame = 19
 playing = true
 
 [node name="AnimatedSprite8" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 2044.68, -16.494 )
 frames = SubResource( 42 )
-frame = 6
+frame = 19
 playing = true
 
 [node name="AnimatedSprite9" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 2197.41, 40 )
 frames = SubResource( 42 )
-frame = 16
+frame = 9
 playing = true
 
 [node name="19175-1" type="Sprite" parent="StaticBody2D"]
@@ -1110,33 +1107,33 @@ texture = ExtResource( 140 )
 [node name="AnimatedSprite10" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1817.24, 278 )
 frames = SubResource( 43 )
-frame = 12
+frame = 3
 playing = true
 
 [node name="AnimatedSprite11" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 2027.75, 278 )
 frames = SubResource( 43 )
-frame = 6
+frame = 14
 playing = true
 flip_h = true
 
 [node name="AnimatedSprite12" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 1789.24, 133.506 )
 frames = SubResource( 44 )
-frame = 13
+frame = 6
 playing = true
 flip_h = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 654, 176 )
 frames = SubResource( 45 )
-frame = 4
+frame = 17
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="StaticBody2D"]
 position = Vector2( 74.811, 570.396 )
 frames = SubResource( 46 )
-frame = 30
+frame = 28
 playing = true
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]

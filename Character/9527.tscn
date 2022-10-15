@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Character/NPC.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/name/name_middle.png" type="Texture" id=3]
 [ext_resource path="res://UI/name/name_right.png" type="Texture" id=4]
 [ext_resource path="res://UI/name/name_left.png" type="Texture" id=5]
-[ext_resource path="res://UI/DialogPanel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/DialogPanel.gd" type="Script" id=6]
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_6.png" type="Texture" id=7]
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_11.png" type="Texture" id=9]
@@ -37,6 +37,7 @@
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_19.png" type="Texture" id=35]
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_27.png" type="Texture" id=36]
 [ext_resource path="res://assets/map/bajun/npc/9527/Sprite_4.png" type="Texture" id=37]
+[ext_resource path="res://UI/player_task/80358-1.png" type="Texture" id=38]
 
 [sub_resource type="DynamicFont" id=65]
 outline_size = 1
@@ -76,6 +77,24 @@ animations = [ {
 "name": "default",
 "speed": 8.0
 } ]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/font/PuHuiTi-Regular.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
 
 [node name="9527" type="Control"]
 anchor_right = 1.0
@@ -135,13 +154,79 @@ texture = ExtResource( 4 )
 material = SubResource( 67 )
 position = Vector2( -43, -22 )
 frames = SubResource( 68 )
-frame = 24
+frame = 8
 playing = true
 centered = false
 
-[node name="DialogPanel" parent="." instance=ExtResource( 6 )]
+[node name="DialogPanel" type="CanvasLayer" parent="."]
 visible = false
+script = ExtResource( 6 )
+custom_dialog1 = "老子要着破锯子有锤子用！"
+custom_dialog2 = "还不如嘴啃呢。。。"
+
+[node name="Control" type="Control" parent="DialogPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="DialogPanel/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -210.0
+margin_right = 210.0
+margin_bottom = 369.0
+texture = ExtResource( 38 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogPanel/Control/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.0
+margin_top = 51.5
+margin_right = 190.0
+margin_bottom = 146.5
+
+[node name="Button" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_right = 366.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 1 )
+text = "对话"
+
+[node name="Button2" type="Button" parent="DialogPanel/Control/TextureRect/VBoxContainer"]
+margin_top = 66.0
+margin_right = 366.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+text = "取消"
+
+[node name="Label" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 42.0
+margin_right = 75.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "千货商"
+
+[node name="Label2" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 276.0
+margin_top = 42.0
+margin_right = 401.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 4 )
+text = "好感度：-100"
+
+[node name="Label3" type="Label" parent="DialogPanel/Control/TextureRect"]
+margin_left = 35.0
+margin_top = 93.0
+margin_right = 400.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 4 )
+text = "我是不想和你多废话的...."
+autowrap = true
 
 [connection signal="gui_input" from="." to="." method="_on_NPC_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_NPC_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_NPC_mouse_exited"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button" to="DialogPanel" method="_on_Button_pressed"]
+[connection signal="pressed" from="DialogPanel/Control/TextureRect/VBoxContainer/Button2" to="DialogPanel" method="_on_Button2_pressed"]

@@ -1,0 +1,444 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/player_inventory/main/67445-1.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxTexture" id=71]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 205, 34 )
+
+[sub_resource type="GDScript" id=70]
+script/source = "extends Panel
+
+var default_style = null
+var selected_style = null
+
+var default_tex = preload(\"res://UI/player_inventory/main/67445-1.png\")
+var selected_tex = preload(\"res://UI/player_inventory/main/67445-2.png\")
+var drag_item = preload(\"res://Item.tscn\").instance()
+
+var item = null
+var ItemClass = preload(\"res://Item.tscn\")
+var slot_index
+var slot_type
+
+enum SlotType{#第一个设置0 后面的自动递增+1
+	HOTBAR = 0,
+	INVENTORY,
+}
+func _ready():
+	slot_index = int(self.name.substr(self.name.length()-1, 1))
+	selected_style = StyleBoxTexture.new()
+	default_style = StyleBoxTexture.new()
+	
+	
+	default_style.texture = default_tex
+	selected_style.texture = selected_tex
+	
+	var nodes = get_parent()
+	self.connect(\"mouse_entered\", self, \"mouse_enter\")
+	self.connect(\"mouse_exited\", self, \"mouse_exit\")
+#	for i in nodes.get_children(): ## 这串代码会卡 不知道为什么
+#		i.connect(\"mouse_entered\", i, \"mouse_enter\")
+#		i.connect(\"mouse_exited\", i, \"mouse_exit\")
+	refresh_style()
+#	styleBox.texture = preload(\"res://UI/21804-1.png\")
+#	self.hint_tooltip = \"111\"
+	pass
+
+func _pressed():
+	get_node(\"Label\").text = \"\"
+	get_node(\"TextureRect\").texture = null
+	visible = false 
+
+func refresh_style():
+	yield(get_tree(),\"idle_frame\")
+	set('custom_styles/panel', default_style)
+	
+
+func initialize_item(item_name, item_quantity):
+	if item == null:##有BUG 每次重新打开会
+		item = ItemClass.instance()
+		item.scale *= 0.75
+		item.set_item(item_name, item_quantity)
+		add_child(item)
+	else:
+		item.set_item(item_name, item_quantity)
+		
+
+#func _input(event):
+#	if event is InputEventMouseButton:
+#		if event.button_index == BUTTON_RIGHT && event.pressed:
+#			get_parent().get_parent().get_parent().get_node(\"PopupMenu\").popup(
+#				get_global_mouse_position().x, get_global_mouse_position().y,
+#				110, 110
+#			)
+	
+func _make_custom_tooltip(for_text):
+	var label = Label.new()
+	var goods_data = \"123\"	# 物品数据
+	#label.text = print(goods_data, '\\t')
+	return label
+
+
+func mouse_enter():
+	set('custom_styles/panel', selected_style)
+	pass # Replace with function body.
+
+
+func mouse_exit():
+	set('custom_styles/panel', default_style)
+	pass # Replace with function body.
+
+func get_drag_data(position):
+	var data = {}
+	if get_node(\"TextureRect\").texture != null:
+		data[\"type\"] = \"player_pack\"
+		data[\"origin_texture\"] = get_node(\"TextureRect\").texture
+		data[\"origin_quantity\"] = get_node(\"Label\").text
+		data[\"origin_price\"] = 100
+		data[\"origin_path\"] = get_node(\"TextureRect\").get_path()
+		data[\"origin_type\"] = \"sell\"
+		data[\"item_name\"] = $Label2.text
+		print($Label2.text)
+	else:
+		data[\"origin_type\"] = null
+	return data
+
+func can_drop_data(position, data):
+	if data[\"type\"] == \"player_store\":
+		return true
+
+func drop_data(position, data):
+	if get_node(\"TextureRect\").texture == null or get_node(\"TextureRect\").texture == data[\"origin_texture\"]:
+		get_node(\"TextureRect\").texture = data[\"origin_texture\"]
+		get_node(\"Label\").text = str(data[\"origin_quantity\"])
+		get_node(\"Label2\").text = data[\"item_name\"]
+		visible = true
+		data[\"origin_path\"].texture = null
+	for i in get_parent().get_children():
+		if i.get_node(\"TextureRect\").texture != null:
+#				print(i.get_node(\"Label2\").text,\" \",int(i.get_node(\"Label\").text))
+			PlayerInventory.add_item(i.get_node(\"Label2\").text, int(i.get_node(\"Label\").text))
+
+func _on_TextureButton_pressed():
+	get_node(\"TextureRect\").texture = null
+	get_node(\"Label\").text = \"\"
+	self.visible = false
+	pass # Replace with function body.
+"
+
+[node name="player_pack" type="ScrollContainer"]
+margin_left = 33.0
+margin_top = 118.0
+margin_right = 284.0
+margin_bottom = 445.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 235.0
+margin_bottom = 440.0
+custom_constants/separation = 10
+
+[node name="Panel1" type="Panel" parent="VBoxContainer"]
+margin_right = 235.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel1"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel1"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel1"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="VBoxContainer"]
+margin_top = 50.0
+margin_right = 235.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel2"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel2"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel2"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="VBoxContainer"]
+margin_top = 100.0
+margin_right = 235.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel3"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel3"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel3"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="VBoxContainer"]
+margin_top = 150.0
+margin_right = 235.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel4"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel4"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel5" type="Panel" parent="VBoxContainer"]
+margin_top = 200.0
+margin_right = 235.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel5"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel5"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel5"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel6" type="Panel" parent="VBoxContainer"]
+margin_top = 250.0
+margin_right = 235.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel6"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel6"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel6"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel7" type="Panel" parent="VBoxContainer"]
+margin_top = 300.0
+margin_right = 235.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel7"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel7"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel7"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel8" type="Panel" parent="VBoxContainer"]
+margin_top = 350.0
+margin_right = 235.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel8"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel8"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel8"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel9" type="Panel" parent="VBoxContainer"]
+margin_top = 400.0
+margin_right = 235.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 235, 40 )
+custom_styles/panel = SubResource( 71 )
+script = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel9"]
+margin_top = 2.0
+margin_right = 37.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel9"]
+margin_left = 2.10224
+margin_top = 19.3406
+margin_right = 42.1022
+margin_bottom = 42.3406
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel9"]
+margin_left = 55.2182
+margin_top = 7.59529
+margin_right = 106.218
+margin_bottom = 34.5953
+__meta__ = {
+"_edit_use_anchors_": false
+}

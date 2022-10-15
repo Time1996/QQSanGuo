@@ -312,7 +312,7 @@ states/run/position = Vector2( -106, 133 )
 transitions = [ "idle", "run", SubResource( 24 ), "run", "idle", SubResource( 25 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 28 ), "jump", "idle", SubResource( 29 ), "jump", "clim", SubResource( 30 ), "clim", "jump", SubResource( 31 ), "idle", "clim", SubResource( 32 ), "clim", "idle", SubResource( 33 ), "idle", "die", SubResource( 34 ), "run", "attack", SubResource( 35 ), "run", "hhfl", SubResource( 36 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 39 ), "idle", "hhfl", SubResource( 40 ), "idle", "40", SubResource( 41 ), "40", "idle", SubResource( 42 ), "run", "40", SubResource( 43 ) ]
 start_node = "idle"
 end_node = "die"
-graph_offset = Vector2( -216.198, -196.33 )
+graph_offset = Vector2( -593.5, -196.33 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
@@ -969,6 +969,7 @@ rect_pivot_offset = Vector2( 26.3874, 28.3064 )
 material = SubResource( 2 )
 position = Vector2( 20, 12 )
 frames = ExtResource( 60 )
+frame = 2
 
 [node name="HitBox" type="Area2D" parent="Control/Sprite"]
 collision_layer = 2
@@ -994,6 +995,7 @@ position = Vector2( 24, 10 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 6 )
 animation = "accmulate"
+frame = 8
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
@@ -1027,6 +1029,7 @@ material = SubResource( 9 )
 position = Vector2( 169.748, 20.0399 )
 scale = Vector2( 1.85484, 1.2 )
 frames = SubResource( 10 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="Control"]
@@ -1035,7 +1038,7 @@ material = SubResource( 11 )
 position = Vector2( 271.105, 20 )
 scale = Vector2( 0.858924, 1.2 )
 frames = SubResource( 12 )
-frame = 8
+frame = 2
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
@@ -1043,7 +1046,7 @@ modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 13 )
 position = Vector2( 167.066, 19.8214 )
 frames = SubResource( 14 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="4" type="Sprite" parent="Control/AnimatedSprite4"]
@@ -1197,7 +1200,7 @@ material = SubResource( 58 )
 position = Vector2( -32.1353, 48.686 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="fly_right" type="AnimatedSprite" parent="."]
@@ -1206,7 +1209,6 @@ material = SubResource( 58 )
 position = Vector2( 42.9738, 48.6878 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 9
 playing = true
 flip_h = true
 
@@ -1215,7 +1217,7 @@ visible = false
 material = SubResource( 59 )
 position = Vector2( 9.51367, 3.56763 )
 frames = SubResource( 60 )
-frame = 10
+frame = 14
 playing = true
 
 [node name="BattleSound" type="AudioStreamPlayer" parent="."]
@@ -1303,7 +1305,7 @@ texture = ExtResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 9, -134 )
 frames = SubResource( 64 )
-frame = 17
+frame = 13
 playing = true
 
 [connection signal="health_updated" from="." to="." method="_on_Steve_health_updated"]

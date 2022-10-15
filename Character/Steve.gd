@@ -357,7 +357,7 @@ func closet_enemy(min_dist):
 			if enemy_array.has(i):
 				enemy_array.erase(i)
 	return
-			
+
 #	for i in enemies:
 #		if sqrt(pow(i.position.y-position.y, 2) + pow(i.position.x-position.x, 2)) == min_dist:
 #			#i.call_deferred("injury", 1)
@@ -396,6 +396,7 @@ func _on_HitBox_body_entered(body):
 			else:
 				body.call_deferred("injury", -int(temp_damage))
 		
+
 func _on_climb_body_entered(body):
 	monirable = 1
 	if cnt > 1 and Input.is_action_pressed("up") or Input.is_action_pressed("down"):
@@ -416,7 +417,7 @@ func _set_health(value):
 		emit_signal("health_updated", health, magic)
 		if health <= 0:
 			dead()
-			
+
 func dead():
 	state_machine.travel("die")
 	yield($Control/Sprite,"animation_finished")
@@ -519,8 +520,6 @@ func load_save_stats(stats): #需要保存的信息 目前是位置 属性
 	PlayerInventory.money = stats.stats.money
 	PlayerInventory.juntuan = stats.stats.juntuan
 	experience_pool = stats.stats.exprience
-
-
 
 
 func _on_speed_timeout():
