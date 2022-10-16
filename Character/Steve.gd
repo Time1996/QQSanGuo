@@ -69,7 +69,7 @@ func _ready():
 		i.visible = false
 		
 func init():
-	
+	cant_move = false
 	userInterface.update_text(PlayerInventory.level, PlayerInventory.max_health, PlayerInventory.max_magic,
 							 PlayerInventory.basic_damage, PlayerInventory.basic_defende,
 							 PlayerInventory.basic_shugong, PlayerInventory.basic_shufang,
@@ -315,6 +315,7 @@ func game_play(delta):
 	#Gravity
 	if state != 1:#不等于攀爬
 		velocity.y += 30
+		print(velocity)
 		velocity.x = SPEED * derection
 	else:
 		velocity.y = 300 * upOrDown
