@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://assets/map/19195-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/map/19194-1.png" type="Texture" id=2]
@@ -20,6 +20,42 @@
 [ext_resource path="res://19470-1.png" type="Texture" id=18]
 [ext_resource path="res://16898-1.png" type="Texture" id=19]
 [ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=20]
+[ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=21]
+[ext_resource path="res://UI/BaJunXiJiaoBackground.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/map/guyidaoguanai.gd" type="Script" id=23]
+[ext_resource path="res://assets/map/12685-3.png" type="Texture" id=24]
+[ext_resource path="res://assets/map/12685-5.png" type="Texture" id=25]
+[ext_resource path="res://assets/map/12685-10.png" type="Texture" id=26]
+[ext_resource path="res://assets/map/12684-2.png" type="Texture" id=27]
+[ext_resource path="res://assets/map/12684-9.png" type="Texture" id=28]
+[ext_resource path="res://assets/map/12685-1.png" type="Texture" id=29]
+[ext_resource path="res://assets/map/12685-8.png" type="Texture" id=30]
+[ext_resource path="res://assets/map/12684-3.png" type="Texture" id=31]
+[ext_resource path="res://assets/map/12685-7.png" type="Texture" id=32]
+[ext_resource path="res://assets/map/12684-11.png" type="Texture" id=33]
+[ext_resource path="res://assets/map/12684-13.png" type="Texture" id=34]
+[ext_resource path="res://assets/map/12684-14.png" type="Texture" id=35]
+[ext_resource path="res://assets/map/12685-14.png" type="Texture" id=36]
+[ext_resource path="res://assets/map/12684-5.png" type="Texture" id=37]
+[ext_resource path="res://assets/map/12685-11.png" type="Texture" id=38]
+[ext_resource path="res://assets/map/12684-4.png" type="Texture" id=39]
+[ext_resource path="res://assets/map/12685-13.png" type="Texture" id=40]
+[ext_resource path="res://assets/map/12684-15.png" type="Texture" id=41]
+[ext_resource path="res://assets/map/12684-1.png" type="Texture" id=42]
+[ext_resource path="res://assets/map/12685-6.png" type="Texture" id=43]
+[ext_resource path="res://assets/map/12684-8.png" type="Texture" id=44]
+[ext_resource path="res://assets/map/12685-12.png" type="Texture" id=45]
+[ext_resource path="res://assets/map/12685-15.png" type="Texture" id=46]
+[ext_resource path="res://assets/map/12684-12.png" type="Texture" id=47]
+[ext_resource path="res://assets/map/12684-10.png" type="Texture" id=48]
+[ext_resource path="res://assets/map/12684-6.png" type="Texture" id=49]
+[ext_resource path="res://assets/map/12685-4.png" type="Texture" id=50]
+[ext_resource path="res://assets/map/12685-9.png" type="Texture" id=51]
+[ext_resource path="res://assets/map/12684-7.png" type="Texture" id=52]
+[ext_resource path="res://assets/map/12685-2.png" type="Texture" id=53]
+[ext_resource path="res://Enemy/YiZhouQiangBin.tscn" type="PackedScene" id=54]
+[ext_resource path="res://YiZhouFuBin.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Enemy/YiZhouJianBin.tscn" type="PackedScene" id=56]
 
 [sub_resource type="TileSet" id=1]
 0/name = "16868-1.png 0"
@@ -335,28 +371,43 @@
 extents = Vector2( 658.75, 44.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 773, 44.5 )
+extents = Vector2( 773, 7.25 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 663.5, 44.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 711.25, 3.75 )
+
+[sub_resource type="RectangleShape2D" id=54]
 extents = Vector2( 711.25, 9.25 )
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 305.584, 9.25 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 1758.18, 10.2456 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 38.6759, 12.1789 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 370.125, 9.25 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 725.125, 44.5 )
+extents = Vector2( 725.125, 4.75 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 423, 44.5 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 322, 44.5 )
+extents = Vector2( 322, 7.75 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 453, 6.25 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 373.5, 4.125 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 370, 4.25 )
@@ -364,7 +415,164 @@ extents = Vector2( 370, 4.25 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 276.5, 4.25 )
 
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 139.125, 4.25 )
+
+[sub_resource type="GDScript" id=44]
+script/source = "extends Camera2D
+
+
+func _ready():
+	pass
+
+func _physics_process(delta):
+	offset_h = rand_range(-5, 5)
+	offset_v = rand_range(-5, 5)
+"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "40"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "clim"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "hhfl"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "injury"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachine" id=45]
+resource_local_to_scene = true
+states/40/node = SubResource( 15 )
+states/40/position = Vector2( 86.802, 320 )
+states/attack/node = SubResource( 16 )
+states/attack/position = Vector2( -254, 311 )
+states/clim/node = SubResource( 17 )
+states/clim/position = Vector2( 710, 39 )
+states/die/node = SubResource( 18 )
+states/die/position = Vector2( 540, -9 )
+states/hhfl/node = SubResource( 19 )
+states/hhfl/position = Vector2( -87.04, 311 )
+states/idle/node = SubResource( 20 )
+states/idle/position = Vector2( 218, 133 )
+states/injury/node = SubResource( 21 )
+states/injury/position = Vector2( 304.96, -59 )
+states/jump/node = SubResource( 22 )
+states/jump/position = Vector2( 601, 192 )
+states/run/node = SubResource( 23 )
+states/run/position = Vector2( -106, 133 )
+transitions = [ "idle", "run", SubResource( 24 ), "run", "idle", SubResource( 25 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 28 ), "jump", "idle", SubResource( 29 ), "jump", "clim", SubResource( 30 ), "clim", "jump", SubResource( 31 ), "idle", "clim", SubResource( 32 ), "clim", "idle", SubResource( 33 ), "idle", "die", SubResource( 34 ), "run", "attack", SubResource( 35 ), "run", "hhfl", SubResource( 36 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 39 ), "idle", "hhfl", SubResource( 40 ), "idle", "40", SubResource( 41 ), "40", "idle", SubResource( 42 ), "run", "40", SubResource( 43 ) ]
+start_node = "idle"
+end_node = "die"
+graph_offset = Vector2( -593.5, -196.33 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=46]
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 10, 118.375 )
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 10, 143.75 )
+
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 9.5, 122.875 )
+
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 10, 136.875 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 10, 136.875 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 10, 175.938 )
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 40, 16.5 )
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ ExtResource( 42 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 44 ), ExtResource( 28 ), ExtResource( 48 ), ExtResource( 33 ), ExtResource( 47 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=61]
+animations = [ {
+"frames": [ ExtResource( 29 ), ExtResource( 53 ), ExtResource( 24 ), ExtResource( 50 ), ExtResource( 25 ), ExtResource( 43 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 51 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="guyidaoguanai" type="Node2D"]
+script = ExtResource( 23 )
+
+[node name="UserInterFace" parent="." instance=ExtResource( 21 )]
 
 [node name="tree" type="Node2D" parent="."]
 position = Vector2( 2, 0 )
@@ -510,7 +718,7 @@ shape = SubResource( 2 )
 one_way_collision = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="collision/StaticBody2D"]
-position = Vector2( -940, 460 )
+position = Vector2( -940, 422.75 )
 shape = SubResource( 3 )
 one_way_collision = true
 
@@ -520,9 +728,44 @@ shape = SubResource( 4 )
 one_way_collision = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="collision/StaticBody2D"]
-position = Vector2( -2189.25, -727.25 )
+position = Vector2( -2189.25, -732.75 )
 shape = SubResource( 5 )
 one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( -2908, -1424 )
+rotation = 1.57079
+shape = SubResource( 54 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( -2973, -195 )
+rotation = 1.57079
+shape = SubResource( 54 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( 595, -1285 )
+rotation = 1.57079
+shape = SubResource( 54 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( 1086, -149 )
+rotation = 1.57079
+shape = SubResource( 54 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( 903, -862 )
+rotation = -0.00308577
+shape = SubResource( 55 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( -1156.22, -1936.35 )
+rotation = -0.00308577
+shape = SubResource( 56 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( -2943.36, -900.298 )
+rotation = -0.00308577
+shape = SubResource( 57 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="collision/StaticBody2D"]
 position = Vector2( -2392.13, -337 )
@@ -530,7 +773,7 @@ shape = SubResource( 6 )
 one_way_collision = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="collision/StaticBody2D"]
-position = Vector2( -895.875, -624 )
+position = Vector2( -895.875, -663.75 )
 shape = SubResource( 7 )
 one_way_collision = true
 
@@ -540,13 +783,18 @@ shape = SubResource( 8 )
 one_way_collision = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="collision/StaticBody2D"]
-position = Vector2( -42, -144 )
+position = Vector2( -42, -180.75 )
 shape = SubResource( 9 )
 one_way_collision = true
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="collision/StaticBody2D"]
 position = Vector2( -749, -87.25 )
 shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( 68.5, 226.875 )
+shape = SubResource( 47 )
 one_way_collision = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="collision/StaticBody2D"]
@@ -559,5 +807,256 @@ position = Vector2( -2110.5, 41 )
 shape = SubResource( 12 )
 one_way_collision = true
 
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( -215, 513 )
+shape = SubResource( 13 )
+one_way_collision = true
+
 [node name="Steve" parent="." instance=ExtResource( 20 )]
-position = Vector2( 681, 518 )
+position = Vector2( 784, 516 )
+
+[node name="AnimatedSprite2" parent="Steve/Control" index="2"]
+frame = 5
+
+[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
+frame = 4
+
+[node name="AnimatedSprite6" parent="Steve/Control" index="8"]
+frame = 1
+
+[node name="Camera2D" parent="Steve" index="1"]
+limit_left = -3111
+limit_top = -1313
+limit_right = 1349
+limit_bottom = 874
+script = SubResource( 44 )
+
+[node name="AnimationTree" parent="Steve" index="2"]
+tree_root = SubResource( 45 )
+parameters/playback = SubResource( 46 )
+
+[node name="fly_left" parent="Steve" index="18"]
+frame = 8
+
+[node name="fly_right" parent="Steve" index="19"]
+frame = 6
+
+[node name="recover" parent="Steve" index="20"]
+frame = 10
+
+[node name="AnimatedSprite" parent="Steve" index="26"]
+frame = 19
+
+[node name="climb" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="climb"]
+position = Vector2( 282, 334.625 )
+shape = SubResource( 58 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="climb"]
+position = Vector2( -42, -51.75 )
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="climb"]
+position = Vector2( 22.5, -451.875 )
+shape = SubResource( 50 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="climb"]
+position = Vector2( -2377, -607 )
+shape = SubResource( 51 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="climb"]
+position = Vector2( -2151, -216 )
+shape = SubResource( 52 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="climb"]
+position = Vector2( -1961, 209.063 )
+shape = SubResource( 53 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 22 )]
+
+[node name="TransPort" type="Area2D" parent="."]
+position = Vector2( 1060, 148 )
+z_index = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransPort"]
+position = Vector2( -136, 416.5 )
+z_index = 2
+shape = SubResource( 59 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
+position = Vector2( -136, 352 )
+frames = SubResource( 60 )
+frame = 10
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
+position = Vector2( -136, 416 )
+frames = SubResource( 61 )
+frame = 5
+playing = true
+
+[node name="TransPort2" type="Area2D" parent="."]
+position = Vector2( -2640, -1161 )
+z_index = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransPort2"]
+position = Vector2( -136, 416.5 )
+z_index = 2
+shape = SubResource( 59 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
+position = Vector2( -136, 352 )
+frames = SubResource( 60 )
+frame = 9
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
+position = Vector2( -136, 416 )
+frames = SubResource( 61 )
+frame = 4
+playing = true
+
+[node name="YiZhouQiangBin" parent="." instance=ExtResource( 54 )]
+position = Vector2( 263, 529 )
+
+[node name="YiZhouQiangBin2" parent="." instance=ExtResource( 54 )]
+position = Vector2( -81, 528 )
+
+[node name="YiZhouQiangBin3" parent="." instance=ExtResource( 54 )]
+position = Vector2( 115, 529 )
+
+[node name="YiZhouQiangBin4" parent="." instance=ExtResource( 54 )]
+position = Vector2( -491, 370 )
+
+[node name="YiZhouQiangBin5" parent="." instance=ExtResource( 54 )]
+position = Vector2( -728, 372 )
+
+[node name="YiZhouQiangBin6" parent="." instance=ExtResource( 54 )]
+position = Vector2( -1431, 372 )
+
+[node name="YiZhouQiangBin7" parent="." instance=ExtResource( 54 )]
+position = Vector2( -1202, 372 )
+
+[node name="YiZhouQiangBin8" parent="." instance=ExtResource( 54 )]
+position = Vector2( -1783, 469 )
+
+[node name="YiZhouQiangBin9" parent="." instance=ExtResource( 54 )]
+position = Vector2( -2020, 471 )
+
+[node name="YiZhouQiangBin10" parent="." instance=ExtResource( 54 )]
+position = Vector2( -2723, 471 )
+
+[node name="YiZhouQiangBin11" parent="." instance=ExtResource( 54 )]
+position = Vector2( -2494, 471 )
+
+[node name="YiZhouFuBin" parent="." instance=ExtResource( 55 )]
+position = Vector2( -215, -240 )
+
+[node name="YiZhouFuBin2" parent="." instance=ExtResource( 55 )]
+position = Vector2( -85, -242 )
+
+[node name="YiZhouFuBin3" parent="." instance=ExtResource( 55 )]
+position = Vector2( 70, -242 )
+
+[node name="YiZhouFuBin4" parent="." instance=ExtResource( 55 )]
+position = Vector2( -127, 171 )
+
+[node name="YiZhouFuBin5" parent="." instance=ExtResource( 55 )]
+position = Vector2( 3, 169 )
+
+[node name="YiZhouFuBin6" parent="." instance=ExtResource( 55 )]
+position = Vector2( 158, 169 )
+
+[node name="YiZhouFuBin7" parent="." instance=ExtResource( 55 )]
+position = Vector2( 0, -620 )
+
+[node name="YiZhouFuBin8" parent="." instance=ExtResource( 55 )]
+position = Vector2( 130, -622 )
+
+[node name="YiZhouFuBin9" parent="." instance=ExtResource( 55 )]
+position = Vector2( 285, -622 )
+
+[node name="YiZhouFuBin13" parent="." instance=ExtResource( 55 )]
+position = Vector2( -593, -144 )
+
+[node name="YiZhouFuBin14" parent="." instance=ExtResource( 55 )]
+position = Vector2( -438, -144 )
+
+[node name="YiZhouFuBin10" parent="." instance=ExtResource( 55 )]
+position = Vector2( -642, -723 )
+
+[node name="YiZhouFuBin11" parent="." instance=ExtResource( 55 )]
+position = Vector2( -512, -725 )
+
+[node name="YiZhouFuBin12" parent="." instance=ExtResource( 55 )]
+position = Vector2( -357, -725 )
+
+[node name="YiZhouJianBin" parent="." instance=ExtResource( 56 )]
+position = Vector2( -837, -710 )
+
+[node name="YiZhouJianBin2" parent="." instance=ExtResource( 56 )]
+position = Vector2( -962, -708 )
+
+[node name="YiZhouJianBin3" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1123, -708 )
+
+[node name="YiZhouJianBin4" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1315, -708 )
+
+[node name="YiZhouJianBin5" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1803, -783 )
+
+[node name="YiZhouJianBin6" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1928, -781 )
+
+[node name="YiZhouJianBin7" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2089, -781 )
+
+[node name="YiZhouJianBin8" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2281, -781 )
+
+[node name="YiZhouJianBin9" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1273, -69 )
+
+[node name="YiZhouJianBin10" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1398, -67 )
+
+[node name="YiZhouJianBin11" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1559, -67 )
+
+[node name="YiZhouJianBin12" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1751, -67 )
+
+[node name="YiZhouJianBin13" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2136, -388 )
+
+[node name="YiZhouJianBin14" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2261, -386 )
+
+[node name="YiZhouJianBin15" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2422, -386 )
+
+[node name="YiZhouJianBin16" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2614, -386 )
+
+[node name="YiZhouJianBin17" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1991, -5 )
+
+[node name="YiZhouJianBin18" parent="." instance=ExtResource( 56 )]
+position = Vector2( -2183, -5 )
+
+[node name="YiZhouJianBin19" parent="." instance=ExtResource( 56 )]
+position = Vector2( -830, -138 )
+
+[node name="YiZhouJianBin20" parent="." instance=ExtResource( 56 )]
+position = Vector2( -1022, -138 )
+
+[connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
+[connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]
+[connection signal="body_entered" from="TransPort" to="." method="_on_TransPort_body_entered"]
+[connection signal="body_entered" from="TransPort2" to="." method="_on_TransPort2_body_entered"]
+
+[editable path="Steve"]

@@ -141,13 +141,20 @@ func add_property(item_name):
 	if temp_item.AddEnergy != null:
 		gain_magic(int(temp_item.AddEnergy))
 
-func gain_speed():
+func gain_speed(num):
 	userInterface.get_node("Character/state/speed").visible = true
 	SPEED = 2 * 400
-	$speed.start(10)
+	$speed.start(num)
 	$fly_left.visible = true
 	$fly_right.visible = true
-	
+
+func gain_jump(num):
+	userInterface.get_node("Character/state/speed").visible = true
+	JUMP = -800 * 2
+	$speed.start(num)
+	$fly_left.visible = true
+	$fly_right.visible = true
+
 var str_amount
 func gain_recover(duration_time, amount):
 	userInterface.get_node("Character/state/recover").visible = true
@@ -156,10 +163,8 @@ func gain_recover(duration_time, amount):
 	$recover.visible = true
 #	yield($recover,"animation_finished")
 #	print("cure")
-	
 	str_amount = str(amount)
-	
-	
+
 func gain_health(value):
 	health += value
 	if health > PlayerInventory.max_health:
@@ -184,8 +189,6 @@ func _physics_process(delta):
 		move_to_target(delta)
 	else:
 		game_play(delta)
-
-
 
 
 func move_to_target(delta):
@@ -220,7 +223,6 @@ func move_to_target(delta):
 	velocity.y = 0
 	velocity = move_and_slide(velocity)
 #	yield(get_tree(), "idle_frame")
-
 
 func game_play(delta):
 	velocity.x = 0
@@ -280,8 +282,8 @@ func game_play(delta):
 					enemy_id.get_node("Sprite").visible = false
 #				enemy_id = null
 				closet_enemy(99999999)
-				for i in enemy_array:
-					print(i, " ", i.name)
+#				for i in enemy_array:
+#					print(i, " ", i.name)
 				enemy_id = enemy_array.back()
 #				print(enemy_id," ", enemy_id.name)
 				if enemy_id != null:
@@ -315,7 +317,6 @@ func game_play(delta):
 	#Gravity
 	if state != 1:#不等于攀爬
 		velocity.y += 30
-		print(velocity)
 		velocity.x = SPEED * derection
 	else:
 		velocity.y = 300 * upOrDown
@@ -529,6 +530,7 @@ func _on_speed_timeout():
 	$fly_left.visible = false
 	$fly_right.visible = false
 	SPEED = 400
+	JUMP = -800
 	pass # Replace with function body.
 
 
@@ -542,7 +544,6 @@ func _on_health_timeout():
 
 
 func _on_small_health_timeout():
-	print(str_amount)
 	gain_health(int(str_amount))
 	for i in str_amount.length():
 		get_node("Cure/"+str(i)).texture = load("res://EFECTIVE/digit/"+str_amount.substr(i,1)+".png")
@@ -557,5 +558,5 @@ func _on_small_health_timeout():
 
 
 func _on_pickableArea_mouse_entered():
-	print("FFCUUK")
 	pass # Replace with function body.
+

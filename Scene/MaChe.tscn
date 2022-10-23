@@ -1,0 +1,718 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/ParallaxBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/map/16868-1.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/16869-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/16870-1.png" type="Texture" id=6]
+[ext_resource path="res://ItemDrop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MUSIC/mache.ogg" type="AudioStream" id=8]
+
+[sub_resource type="TileSet" id=1]
+0/name = "16868-1.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 320, 160 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "16869-1.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 160 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "16870-1.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="GDScript" id=44]
+script/source = "extends Camera2D
+
+
+func _ready():
+	pass
+
+func _physics_process(delta):
+	offset_h = rand_range(-5, 5)
+	offset_v = rand_range(-5, 5)
+"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "40"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "clim"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "hhfl"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "injury"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachine" id=45]
+resource_local_to_scene = true
+states/40/node = SubResource( 15 )
+states/40/position = Vector2( 86.802, 320 )
+states/attack/node = SubResource( 16 )
+states/attack/position = Vector2( -254, 311 )
+states/clim/node = SubResource( 17 )
+states/clim/position = Vector2( 710, 39 )
+states/die/node = SubResource( 18 )
+states/die/position = Vector2( 540, -9 )
+states/hhfl/node = SubResource( 19 )
+states/hhfl/position = Vector2( -87.04, 311 )
+states/idle/node = SubResource( 20 )
+states/idle/position = Vector2( 218, 133 )
+states/injury/node = SubResource( 21 )
+states/injury/position = Vector2( 304.96, -59 )
+states/jump/node = SubResource( 22 )
+states/jump/position = Vector2( 601, 192 )
+states/run/node = SubResource( 23 )
+states/run/position = Vector2( -106, 133 )
+transitions = [ "idle", "run", SubResource( 24 ), "run", "idle", SubResource( 25 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 28 ), "jump", "idle", SubResource( 29 ), "jump", "clim", SubResource( 30 ), "clim", "jump", SubResource( 31 ), "idle", "clim", SubResource( 32 ), "clim", "idle", SubResource( 33 ), "idle", "die", SubResource( 34 ), "run", "attack", SubResource( 35 ), "run", "hhfl", SubResource( 36 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 39 ), "idle", "hhfl", SubResource( 40 ), "idle", "40", SubResource( 41 ), "40", "idle", SubResource( 42 ), "run", "40", SubResource( 43 ) ]
+start_node = "idle"
+end_node = "die"
+graph_offset = Vector2( -593.5, -196.33 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=46]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 91, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1429, 11 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 1298, 6 )
+
+[node name="MaChe" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( -1441797, 0, 0, -1441793, 0, 0, -1507325, 0, 0, -1507321, 0, 0, -1507317, 0, 0, -1507313, 0, 0, -1507309, 0, 0, -1507305, 0, 0, -1507301, 0, 0, -1507297, 0, 0, -1376256, 1, 0, -1376236, 1, 0, -1376222, 1, 0, -1245187, 1, 0, -1310708, 1, 0, -1245168, 1, 0, -1245149, 1, 0, -1114116, 1, 0, -1179618, 1, 0, -1048577, 1, 0, -1114095, 1, 0, -1048542, 1, 0, -983039, 1, 0, -983028, 1, 0, -983009, 1, 0, -851954, 1, 0, -851933, 1, 0, -786430, 1, 0, -786415, 1, 0, -720865, 1, 0, -589825, 1, 0, -655349, 1, 0, -655334, 1, 0, -589803, 1, 0, -589793, 1, 0, -458756, 1, 0, -524272, 1, 0, -458752, 1, 0, -458741, 1, 0, -458723, 1, 0, -327678, 1, 0, -327665, 1, 0, -262120, 1, 0, -131074, 1, 0, -196597, 1, 0, -65543, 1, 0, -131043, 1, 0, -65529, 1, 0, 26, 1, 0, 65537, 1, 0, 65565, 1, 0, 131080, 1, 0, 262139, 1, 0, 196638, 1, 0, 262147, 1, 0, 262156, 1, 0, 262167, 1, 0, 327714, 1, 0, 458751, 1, 0, 393226, 0, 0, 393229, 0, 0, 393246, 1, 0, 589817, 0, 0, 589821, 0, 0, 524288, 1, 0, 524291, 0, 0, 524294, 0, 0, 524296, 1, 0, 524299, 0, 0, 524303, 1, 0, 524305, 0, 0, 524309, 0, 0, 524313, 0, 0, 524317, 0, 0, 524321, 0, 0 )
+
+[node name="Steve" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1641, 478 )
+
+[node name="Sprite" parent="Steve/Control" index="0"]
+frame = 1
+
+[node name="AnimatedSprite2" parent="Steve/Control" index="2"]
+frame = 0
+
+[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
+frame = 5
+
+[node name="AnimatedSprite6" parent="Steve/Control" index="8"]
+frame = 12
+
+[node name="AnimatedSprite4" parent="Steve/Control" index="9"]
+frame = 7
+
+[node name="Camera2D" parent="Steve" index="1"]
+limit_left = -581
+limit_top = -2426
+limit_bottom = 844
+script = SubResource( 44 )
+
+[node name="AnimationTree" parent="Steve" index="2"]
+tree_root = SubResource( 45 )
+parameters/playback = SubResource( 46 )
+
+[node name="fly_left" parent="Steve" index="18"]
+frame = 9
+
+[node name="fly_right" parent="Steve" index="19"]
+frame = 7
+
+[node name="recover" parent="Steve" index="20"]
+frame = 13
+
+[node name="AnimatedSprite" parent="Steve" index="26"]
+frame = 0
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="UserInterFace" parent="." instance=ExtResource( 1 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -215, 233 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 41, 427 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 302, 297 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 163, 103 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 556, -22 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 622, 169 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 873, 298 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 752, 427 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 932, 427 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1057, 427 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1576, 296 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2029, 234 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2284, 361 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1770, 45 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1963, -88 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1641, -219 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1067, -281 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 806, -409 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 104, -409 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 41, -1048 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -88, -1242 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1132, -1178 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 998, -790 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2084, -921 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2349, -1178 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2084, -532 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1963, 103 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2029, 422 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1443, -532 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 812, -150 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 230, -281 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -18, -150 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -341, -88 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -154, -474 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 41, -603 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 236, -728 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 163, -921 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -154, -1113 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 102, -1302 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 873, -1242 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 873, -921 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 812, -603 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1132, -474 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1192, -728 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1192, -1048 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1385, -1302 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2029, -1113 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2284, -1302 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2284, -984 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2349, -790 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2092, -663 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1770, -603 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1963, -409 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 997, 553 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 996, -1430 )
+shape = SubResource( 47 )
+one_way_collision = true
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2435, -867 )
+rotation = -1.56932
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -438, -859 )
+rotation = -1.56932
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 997, -2304 )
+shape = SubResource( 3 )
+
+[node name="ItemDrop2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -300, 525 )
+
+[node name="ItemDrop3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -260, 525 )
+
+[node name="ItemDrop4" parent="." instance=ExtResource( 7 )]
+position = Vector2( -219, 527 )
+
+[node name="ItemDrop5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -188, 527 )
+
+[node name="ItemDrop6" parent="." instance=ExtResource( 7 )]
+position = Vector2( -154, 526 )
+
+[node name="ItemDrop8" parent="." instance=ExtResource( 7 )]
+position = Vector2( -285, -1468 )
+
+[node name="ItemDrop9" parent="." instance=ExtResource( 7 )]
+position = Vector2( -234, -1467 )
+
+[node name="ItemDrop10" parent="." instance=ExtResource( 7 )]
+position = Vector2( -180, -1468 )
+
+[node name="ItemDrop11" parent="." instance=ExtResource( 7 )]
+position = Vector2( -126, -1467 )
+
+[node name="ItemDrop12" parent="." instance=ExtResource( 7 )]
+position = Vector2( -71, -1467 )
+
+[node name="ItemDrop14" parent="." instance=ExtResource( 7 )]
+position = Vector2( -18, -1467 )
+
+[node name="ItemDrop15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 33, -1466 )
+
+[node name="ItemDrop16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 87, -1467 )
+
+[node name="ItemDrop17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 141, -1466 )
+
+[node name="ItemDrop18" parent="." instance=ExtResource( 7 )]
+position = Vector2( 196, -1466 )
+
+[node name="ItemDrop19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 254, -1467 )
+
+[node name="ItemDrop20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 305, -1466 )
+
+[node name="ItemDrop21" parent="." instance=ExtResource( 7 )]
+position = Vector2( 359, -1467 )
+
+[node name="ItemDrop22" parent="." instance=ExtResource( 7 )]
+position = Vector2( 413, -1466 )
+
+[node name="ItemDrop23" parent="." instance=ExtResource( 7 )]
+position = Vector2( 468, -1466 )
+
+[node name="ItemDrop25" parent="." instance=ExtResource( 7 )]
+position = Vector2( 529, -1468 )
+
+[node name="ItemDrop26" parent="." instance=ExtResource( 7 )]
+position = Vector2( 580, -1467 )
+
+[node name="ItemDrop27" parent="." instance=ExtResource( 7 )]
+position = Vector2( 634, -1468 )
+
+[node name="ItemDrop28" parent="." instance=ExtResource( 7 )]
+position = Vector2( 688, -1467 )
+
+[node name="ItemDrop29" parent="." instance=ExtResource( 7 )]
+position = Vector2( 743, -1467 )
+
+[node name="ItemDrop30" parent="." instance=ExtResource( 7 )]
+position = Vector2( 806, -1468 )
+
+[node name="ItemDrop31" parent="." instance=ExtResource( 7 )]
+position = Vector2( 857, -1467 )
+
+[node name="ItemDrop32" parent="." instance=ExtResource( 7 )]
+position = Vector2( 911, -1468 )
+
+[node name="ItemDrop33" parent="." instance=ExtResource( 7 )]
+position = Vector2( 965, -1467 )
+
+[node name="ItemDrop34" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1020, -1467 )
+
+[node name="ItemDrop36" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1082, -1468 )
+
+[node name="ItemDrop37" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1133, -1467 )
+
+[node name="ItemDrop38" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1187, -1468 )
+
+[node name="ItemDrop39" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1241, -1467 )
+
+[node name="ItemDrop40" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1296, -1467 )
+
+[node name="ItemDrop41" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1352, -1468 )
+
+[node name="ItemDrop42" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1403, -1467 )
+
+[node name="ItemDrop43" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1457, -1468 )
+
+[node name="ItemDrop44" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1511, -1467 )
+
+[node name="ItemDrop45" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1566, -1467 )
+
+[node name="ItemDrop47" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1621, -1467 )
+
+[node name="ItemDrop48" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1672, -1466 )
+
+[node name="ItemDrop49" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1726, -1467 )
+
+[node name="ItemDrop50" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1780, -1466 )
+
+[node name="ItemDrop51" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1835, -1466 )
+
+[node name="ItemDrop52" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1883, -1468 )
+
+[node name="ItemDrop53" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1934, -1467 )
+
+[node name="ItemDrop54" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1988, -1468 )
+
+[node name="ItemDrop55" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2042, -1467 )
+
+[node name="ItemDrop56" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2097, -1467 )
+
+[node name="ItemDrop58" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2146, -1468 )
+
+[node name="ItemDrop59" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2194, -1468 )
+
+[node name="ItemDrop60" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2246, -1468 )
+
+[node name="ItemDrop7" parent="." instance=ExtResource( 7 )]
+position = Vector2( -73, -3428 )
+
+[node name="ItemDrop13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 112, -3428 )
+
+[node name="ItemDrop24" parent="." instance=ExtResource( 7 )]
+position = Vector2( 479, -3428 )
+
+[node name="ItemDrop35" parent="." instance=ExtResource( 7 )]
+position = Vector2( 847, -3428 )
+
+[node name="ItemDrop46" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1213, -3428 )
+
+[node name="ItemDrop57" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1578, -3428 )
+
+[node name="ItemDrop68" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1949, -3428 )
+
+[node name="ItemDrop69" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1035, 399 )
+item_name = "速度"
+
+[node name="ItemDrop70" parent="." instance=ExtResource( 7 )]
+position = Vector2( 785, 394 )
+item_name = "速度"
+
+[node name="ItemDrop71" parent="." instance=ExtResource( 7 )]
+position = Vector2( 873, 262 )
+item_name = "跳跃"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[editable path="Steve"]

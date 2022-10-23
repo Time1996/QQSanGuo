@@ -12,7 +12,7 @@ func _ready():
 func _on_TransPort_body_entered(body):
 #	load_scene = load("res://JiangLinXiJiao.tscn")
 #	SceneChange.goto_scene("res://JiangLinXiJiao.tscn", self)
-	get_tree().change_scene("res://JiangLinXiJiao.tscn")
+	get_tree().change_scene("res://assets/map/guyidaoguanai.tscn")
 	pass # Replace with function body.
 
 #

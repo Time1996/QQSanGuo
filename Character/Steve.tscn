@@ -165,7 +165,7 @@
 [ext_resource path="res://ANIMATION/6C/js平A/Sprite_2.png" type="Texture" id=163]
 [ext_resource path="res://ANIMATION/6C/js平A/Sprite_3.png" type="Texture" id=164]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=98]
 code = "shader_type canvas_item;
 
 uniform float width:hint_range(0.0,30.0);
@@ -187,12 +187,12 @@ void fragment(){
     COLOR = vec4(final_color.rgb,clamp(abs(alpha) + sprite_color.a,0.0,1.0));
 } "
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+[sub_resource type="ShaderMaterial" id=99]
+shader = SubResource( 98 )
 shader_param/width = 0.0
 shader_param/outline_color = Color( 0.996078, 1, 0, 1 )
 
-[sub_resource type="SpriteFrames" id=65]
+[sub_resource type="SpriteFrames" id=100]
 animations = [ {
 "frames": [ ExtResource( 141 ), ExtResource( 161 ) ],
 "loop": true,
@@ -235,13 +235,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=101]
 extents = Vector2( 60, 40 )
 
-[sub_resource type="CanvasItemMaterial" id=4]
+[sub_resource type="CanvasItemMaterial" id=102]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=103]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
@@ -249,7 +249,7 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=104]
 animations = [ {
 "frames": [ ExtResource( 57 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 41 ), ExtResource( 46 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 39 ), ExtResource( 49 ) ],
 "loop": true,
@@ -257,10 +257,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CanvasItemMaterial" id=7]
+[sub_resource type="CanvasItemMaterial" id=105]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=106]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 24 ), ExtResource( 26 ) ],
 "loop": true,
@@ -268,10 +268,10 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[sub_resource type="CanvasItemMaterial" id=9]
+[sub_resource type="CanvasItemMaterial" id=107]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=108]
 animations = [ {
 "frames": [ ExtResource( 66 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 74 ), ExtResource( 71 ), ExtResource( 73 ) ],
 "loop": true,
@@ -279,10 +279,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CanvasItemMaterial" id=11]
+[sub_resource type="CanvasItemMaterial" id=109]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=97]
 animations = [ {
 "frames": [ ExtResource( 78 ), ExtResource( 85 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 90 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 80 ), ExtResource( 84 ), ExtResource( 87 ), ExtResource( 81 ), ExtResource( 88 ), ExtResource( 89 ) ],
 "loop": true,
@@ -290,10 +290,10 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[sub_resource type="CanvasItemMaterial" id=13]
+[sub_resource type="CanvasItemMaterial" id=110]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=111]
 animations = [ {
 "frames": [ ExtResource( 62 ), ExtResource( 64 ), ExtResource( 30 ), ExtResource( 63 ), ExtResource( 61 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 70 ) ],
 "loop": true,
@@ -301,36 +301,36 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=75]
 animation = "40"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=76]
 animation = "attack"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=77]
 animation = "clim"
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=78]
 animation = "die"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
+[sub_resource type="AnimationNodeAnimation" id=48]
 animation = "hhfl"
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=49]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=50]
 animation = "injury"
 
-[sub_resource type="AnimationNodeAnimation" id=22]
+[sub_resource type="AnimationNodeAnimation" id=51]
 animation = "jump"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=79]
 animation = "run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+[sub_resource type="AnimationNodeStateMachineTransition" id=80]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+[sub_resource type="AnimationNodeStateMachineTransition" id=81]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
@@ -338,23 +338,23 @@ animation = "run"
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+[sub_resource type="AnimationNodeStateMachineTransition" id=82]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+[sub_resource type="AnimationNodeStateMachineTransition" id=83]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+[sub_resource type="AnimationNodeStateMachineTransition" id=84]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+[sub_resource type="AnimationNodeStateMachineTransition" id=87]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+[sub_resource type="AnimationNodeStateMachineTransition" id=88]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+[sub_resource type="AnimationNodeStateMachineTransition" id=89]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+[sub_resource type="AnimationNodeStateMachineTransition" id=90]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=37]
 
@@ -362,48 +362,48 @@ auto_advance = true
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+[sub_resource type="AnimationNodeStateMachineTransition" id=91]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+[sub_resource type="AnimationNodeStateMachineTransition" id=92]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+[sub_resource type="AnimationNodeStateMachineTransition" id=93]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+[sub_resource type="AnimationNodeStateMachineTransition" id=94]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+[sub_resource type="AnimationNodeStateMachineTransition" id=95]
 
-[sub_resource type="AnimationNodeStateMachine" id=44]
+[sub_resource type="AnimationNodeStateMachine" id=67]
 resource_local_to_scene = true
-states/40/node = SubResource( 15 )
+states/40/node = SubResource( 75 )
 states/40/position = Vector2( 86.802, 320 )
-states/attack/node = SubResource( 16 )
+states/attack/node = SubResource( 76 )
 states/attack/position = Vector2( -254, 311 )
-states/clim/node = SubResource( 17 )
+states/clim/node = SubResource( 77 )
 states/clim/position = Vector2( 710, 39 )
-states/die/node = SubResource( 18 )
+states/die/node = SubResource( 78 )
 states/die/position = Vector2( 540, -9 )
-states/hhfl/node = SubResource( 19 )
+states/hhfl/node = SubResource( 48 )
 states/hhfl/position = Vector2( -87.04, 311 )
-states/idle/node = SubResource( 20 )
+states/idle/node = SubResource( 49 )
 states/idle/position = Vector2( 218, 133 )
-states/injury/node = SubResource( 21 )
+states/injury/node = SubResource( 50 )
 states/injury/position = Vector2( 304.96, -59 )
-states/jump/node = SubResource( 22 )
+states/jump/node = SubResource( 51 )
 states/jump/position = Vector2( 601, 192 )
-states/run/node = SubResource( 23 )
+states/run/node = SubResource( 79 )
 states/run/position = Vector2( -106, 133 )
-transitions = [ "idle", "run", SubResource( 24 ), "run", "idle", SubResource( 25 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 28 ), "jump", "idle", SubResource( 29 ), "jump", "clim", SubResource( 30 ), "clim", "jump", SubResource( 31 ), "idle", "clim", SubResource( 32 ), "clim", "idle", SubResource( 33 ), "idle", "die", SubResource( 34 ), "run", "attack", SubResource( 35 ), "run", "hhfl", SubResource( 36 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 39 ), "idle", "hhfl", SubResource( 40 ), "idle", "40", SubResource( 41 ), "40", "idle", SubResource( 42 ), "run", "40", SubResource( 43 ) ]
+transitions = [ "idle", "run", SubResource( 80 ), "run", "idle", SubResource( 81 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 82 ), "jump", "idle", SubResource( 83 ), "jump", "clim", SubResource( 84 ), "clim", "jump", SubResource( 85 ), "idle", "clim", SubResource( 86 ), "clim", "idle", SubResource( 87 ), "idle", "die", SubResource( 88 ), "run", "attack", SubResource( 89 ), "run", "hhfl", SubResource( 90 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 91 ), "idle", "hhfl", SubResource( 92 ), "idle", "40", SubResource( 93 ), "40", "idle", SubResource( 94 ), "run", "40", SubResource( 95 ) ]
 start_node = "idle"
 end_node = "die"
 graph_offset = Vector2( -593.5, -196.33 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=45]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=68]
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=112]
 length = 1.2
 step = 0.01
 tracks/0/type = "value"
@@ -572,7 +572,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0.57 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 12 ) ]
+"values": [ SubResource( 97 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("Control/AnimatedSprite6:playing")
@@ -611,7 +611,7 @@ tracks/16/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=113]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite/chibang:position")
@@ -662,7 +662,7 @@ tracks/3/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=114]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
 tracks/0/interp = 1
@@ -736,7 +736,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=115]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
 tracks/0/interp = 1
@@ -774,7 +774,7 @@ tracks/2/keys = {
 "values": [ Vector2( -243.75, -108.75 ) ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=116]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
 tracks/0/interp = 1
@@ -812,7 +812,7 @@ tracks/2/keys = {
 "values": [ "die" ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=117]
 tracks/0/type = "value"
 tracks/0/path = NodePath("HBoxContainer:rect_position")
 tracks/0/interp = 1
@@ -850,7 +850,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=118]
 length = 0.8
 step = 0.01
 tracks/0/type = "value"
@@ -1010,7 +1010,7 @@ tracks/12/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=119]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
@@ -1061,7 +1061,7 @@ tracks/3/keys = {
 "values": [ "injury" ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=120]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
@@ -1100,7 +1100,7 @@ tracks/2/keys = {
 "values": [ Vector2( -223.75, -111.25 ) ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=121]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
 tracks/0/interp = 1
@@ -1150,7 +1150,7 @@ tracks/3/keys = {
 "values": [ "run" ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=122]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
@@ -1165,20 +1165,20 @@ tracks/0/keys = {
 "values": [ "yinyuejianwu" ]
 }
 
-[sub_resource type="CapsuleShape2D" id=56]
+[sub_resource type="CapsuleShape2D" id=123]
 radius = 4.90596
 height = 81.6411
 
-[sub_resource type="RectangleShape2D" id=57]
+[sub_resource type="RectangleShape2D" id=124]
 extents = Vector2( 48, 56 )
 
-[sub_resource type="CanvasItemMaterial" id=58]
+[sub_resource type="CanvasItemMaterial" id=125]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id=59]
+[sub_resource type="CanvasItemMaterial" id=126]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=60]
+[sub_resource type="SpriteFrames" id=127]
 animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 51 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
 "loop": true,
@@ -1186,7 +1186,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="Animation" id=61]
+[sub_resource type="Animation" id=128]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cure:visible")
 tracks/0/interp = 1
@@ -1224,10 +1224,10 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=62]
+[sub_resource type="CanvasItemMaterial" id=129]
 blend_mode = 1
 
-[sub_resource type="ParticlesMaterial" id=63]
+[sub_resource type="ParticlesMaterial" id=130]
 flag_disable_z = true
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
@@ -1238,7 +1238,7 @@ radial_accel = 100.0
 tangential_accel = 100.0
 damping = 100.0
 
-[sub_resource type="SpriteFrames" id=64]
+[sub_resource type="SpriteFrames" id=131]
 animations = [ {
 "frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 102 ), ExtResource( 120 ), ExtResource( 110 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 109 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 100 ), ExtResource( 121 ), ExtResource( 107 ), ExtResource( 118 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 108 ), ExtResource( 114 ), ExtResource( 106 ), ExtResource( 103 ), ExtResource( 122 ), ExtResource( 101 ), ExtResource( 117 ), ExtResource( 119 ) ],
 "loop": true,
@@ -1261,16 +1261,16 @@ margin_bottom = 20.0
 rect_pivot_offset = Vector2( 26.3874, 28.3064 )
 
 [node name="Sprite" parent="Control" instance=ExtResource( 2 )]
-material = SubResource( 2 )
+material = SubResource( 99 )
 position = Vector2( 20, 12 )
 frames = ExtResource( 60 )
-frame = 1
+frame = 3
 
 [node name="chibang" type="AnimatedSprite" parent="Control/Sprite"]
 show_behind_parent = true
 position = Vector2( -320, -58.75 )
 scale = Vector2( 1.25, 1.25 )
-frames = SubResource( 65 )
+frames = SubResource( 100 )
 animation = "climb"
 playing = true
 centered = false
@@ -1281,15 +1281,15 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Sprite/HitBox"]
 position = Vector2( 120, 10 )
-shape = SubResource( 3 )
+shape = SubResource( 101 )
 disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Control"]
 visible = false
-material = SubResource( 4 )
+material = SubResource( 102 )
 position = Vector2( -72, 0 )
 scale = Vector2( 0.67, 1 )
-frames = SubResource( 5 )
+frames = SubResource( 103 )
 frame = 8
 playing = true
 
@@ -1297,16 +1297,16 @@ playing = true
 visible = false
 position = Vector2( 24, 10 )
 scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 6 )
+frames = SubResource( 104 )
 animation = "accmulate"
-frame = 5
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
 visible = false
-material = SubResource( 7 )
+material = SubResource( 105 )
 position = Vector2( 25.2441, 25.2441 )
-frames = SubResource( 8 )
+frames = SubResource( 106 )
 frame = 7
 
 [node name="1" type="Sprite" parent="Control"]
@@ -1329,27 +1329,28 @@ texture = ExtResource( 55 )
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 9 )
+material = SubResource( 107 )
 position = Vector2( 169.748, 20.0399 )
 scale = Vector2( 1.85484, 1.2 )
-frames = SubResource( 10 )
+frames = SubResource( 108 )
+frame = 3
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 11 )
+material = SubResource( 109 )
 position = Vector2( 271.105, 20 )
 scale = Vector2( 0.858924, 1.2 )
-frames = SubResource( 12 )
-frame = 8
+frames = SubResource( 97 )
+frame = 4
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 13 )
+material = SubResource( 110 )
 position = Vector2( 167.066, 19.8214 )
-frames = SubResource( 14 )
-frame = 3
+frames = SubResource( 111 )
+frame = 6
 playing = true
 
 [node name="4" type="Sprite" parent="Control/AnimatedSprite4"]
@@ -1362,29 +1363,29 @@ texture = ExtResource( 65 )
 drag_margin_h_enabled = false
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 44 )
+tree_root = SubResource( 67 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 45 )
+parameters/playback = SubResource( 68 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
-anims/40 = SubResource( 46 )
-anims/RESET = SubResource( 66 )
-anims/attack = SubResource( 47 )
-anims/clim = SubResource( 48 )
-anims/die = SubResource( 49 )
-anims/experience = SubResource( 50 )
-anims/hhfl = SubResource( 51 )
+anims/40 = SubResource( 112 )
+anims/RESET = SubResource( 113 )
+anims/attack = SubResource( 114 )
+anims/clim = SubResource( 115 )
+anims/die = SubResource( 116 )
+anims/experience = SubResource( 117 )
+anims/hhfl = SubResource( 118 )
 anims/idle = ExtResource( 3 )
-anims/injury = SubResource( 52 )
-anims/jump = SubResource( 53 )
-anims/run = SubResource( 54 )
-anims/yinxuejianwu = SubResource( 55 )
+anims/injury = SubResource( 119 )
+anims/jump = SubResource( 120 )
+anims/run = SubResource( 121 )
+anims/yinxuejianwu = SubResource( 122 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 8 )
-shape = SubResource( 56 )
+shape = SubResource( 123 )
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -1396,7 +1397,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickableArea"]
-shape = SubResource( 57 )
+shape = SubResource( 124 )
 
 [node name="self_heal" type="Timer" parent="."]
 autostart = true
@@ -1500,35 +1501,35 @@ texture = ExtResource( 28 )
 
 [node name="fly_left" type="AnimatedSprite" parent="."]
 visible = false
-material = SubResource( 58 )
+material = SubResource( 125 )
 position = Vector2( -32.1353, 48.686 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="fly_right" type="AnimatedSprite" parent="."]
 visible = false
-material = SubResource( 58 )
+material = SubResource( 125 )
 position = Vector2( 42.9738, 48.6878 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 9
+frame = 5
 playing = true
 flip_h = true
 
 [node name="recover" type="AnimatedSprite" parent="."]
 visible = false
-material = SubResource( 59 )
+material = SubResource( 126 )
 position = Vector2( 9.51367, 3.56763 )
-frames = SubResource( 60 )
-frame = 12
+frames = SubResource( 127 )
+frame = 4
 playing = true
 
 [node name="BattleSound" type="AudioStreamPlayer" parent="."]
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-anims/cure = SubResource( 61 )
+anims/cure = SubResource( 128 )
 
 [node name="Cure" type="HBoxContainer" parent="."]
 margin_left = -1.0
@@ -1587,30 +1588,30 @@ margin_bottom = 40.0
 
 [node name="Particles2D" type="Particles2D" parent="."]
 visible = false
-material = SubResource( 62 )
+material = SubResource( 129 )
 position = Vector2( 8, 0 )
 emitting = false
 amount = 1
 lifetime = 10.0
 fract_delta = false
-process_material = SubResource( 63 )
+process_material = SubResource( 130 )
 texture = ExtResource( 5 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
 visible = false
-material = SubResource( 62 )
+material = SubResource( 129 )
 position = Vector2( 8, 0 )
 emitting = false
 amount = 1
 lifetime = 10.0
 fract_delta = false
-process_material = SubResource( 63 )
+process_material = SubResource( 130 )
 texture = ExtResource( 77 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 9, -134 )
-frames = SubResource( 64 )
-frame = 31
+frames = SubResource( 131 )
+frame = 6
 playing = true
 
 [connection signal="health_updated" from="." to="." method="_on_Steve_health_updated"]

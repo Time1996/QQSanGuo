@@ -462,7 +462,7 @@ exprience = 2
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 3 )
 frames = SubResource( 46 )
-animation = "run"
+animation = "idle"
 frame = 3
 playing = true
 
@@ -553,13 +553,11 @@ shape = SubResource( 11 )
 position = Vector2( -9, 5 )
 enabled = true
 cast_to = Vector2( 0, 42 )
-collision_mask = 4
 
 [node name="floor_right" type="RayCast2D" parent="."]
 position = Vector2( 7, 5 )
 enabled = true
 cast_to = Vector2( 0, 42 )
-collision_mask = 4
 
 [node name="Tween" type="Tween" parent="."]
 

@@ -3,7 +3,7 @@ extends KinematicBody2D
 const ACCELERATION = 460
 const MAX_SPEED = 300
 var velocity = Vector2.ZERO
-var item_name
+export var item_name = "五级翅膀男"
 
 onready var show_item = preload("res://UI/item_drop/show_item/show_item.tscn").instance()
 
@@ -14,7 +14,7 @@ var being_picked_up = false
 func _ready():
 	randomize()
 	var name_set = jsonData.item_data.keys()
-	item_name = name_set[int(randi()%name_set.size())]
+#	item_name = name_set[int(randi()%name_set.size())]
 	$Sprite.animation = item_name
 	print(item_name)
 
@@ -30,10 +30,15 @@ func _physics_process(delta): ##物理效果
 			##if item is effect:
 #			player.gain_speed()
 			##else:
-			PlayerInventory.add_item(item_name, 1) ##加入包里
-			get_tree().get_root().get_node("Level1/UserInterFace/show_item/Control/texture").texture = load("res://UI/item_icons/" + item_name + ".png")
-			get_tree().get_root().get_node("Level1/UserInterFace/show_item/Control/name").text = item_name
-			get_tree().get_root().get_node("Level1/UserInterFace/show_item/AnimationPlayer").play("show")
+			if item_name == "跳跃":
+				get_tree().current_scene.get_node("Steve").gain_jump(30)
+			elif item_name == "速度":
+				get_tree().current_scene.get_node("Steve").gain_speed(30)
+			else:
+				PlayerInventory.add_item(item_name, 1) ##加入包里
+				get_tree().current_scene.get_node("UserInterFace/show_item/Control/texture").texture = load("res://UI/item_icons/" + item_name + ".png")
+				get_tree().current_scene.get_node("UserInterFace/show_item/Control/name").text = item_name
+				get_tree().current_scene.get_node("UserInterFace/show_item/AnimationPlayer").play("show")
 			queue_free()
 		
 	velocity = move_and_slide(velocity, Vector2.UP)

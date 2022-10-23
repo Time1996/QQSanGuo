@@ -126,6 +126,7 @@ func attack():
 	yield($AnimatedSprite,"animation_finished")
 	
 func check_border():##边缘检测 目前是检测左右两边 返回正确方向
+	
 	if !($floor_left.is_colliding()):
 		direction = Vector2.RIGHT
 	if !($floor_right.is_colliding()):
@@ -135,7 +136,7 @@ func check_border():##边缘检测 目前是检测左右两边 返回正确方�
 func move(delta):
 	state_machine.travel("run")
 	direction = check_border()
-	
+	print(direction)
 	if direction == Vector2.RIGHT:
 		$AnimatedSprite.flip_h = false
 	else:

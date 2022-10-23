@@ -89,9 +89,13 @@ func update_slot_visual(slot_index, item_name, new_quantity):
 		slot = get_tree().get_root().get_node("bajun/UserInterFace/Inventory/ScrollContainer/VBoxContainer/Panel" + str(slot_index + 1))
 	elif get_tree().get_root().has_node("JiangLinXiJiao"):
 		slot = get_tree().get_root().get_node("JiangLinXiJiao/UserInterFace/Inventory/ScrollContainer/VBoxContainer/Panel" + str(slot_index + 1))
-	
-	if slot.item != null and slot.get_child_count() > 0:
-		slot.item.set_item(item_name, new_quantity)
+	elif get_tree().get_root().has_node("guyidaoguanai"):
+		slot = get_tree().get_root().get_node("guyidaoguanai/UserInterFace/Inventory/ScrollContainer/VBoxContainer/Panel" + str(slot_index + 1))
+	elif get_tree().get_root().has_node("MaChe"):
+		slot = get_tree().get_root().get_node("MaChe/UserInterFace/Inventory/ScrollContainer/VBoxContainer/Panel" + str(slot_index + 1))
+	if slot.item != null:
+		if slot.get_child_count() > 0:
+			slot.item.set_item(item_name, new_quantity)
 	else:
 		slot.initialize_item(item_name, new_quantity)
 

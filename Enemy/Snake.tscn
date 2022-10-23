@@ -446,8 +446,8 @@ SPEED = 100
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 3 )
 frames = SubResource( 4 )
-animation = "run"
-frame = 2
+animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -540,13 +540,11 @@ shape = SubResource( 11 )
 position = Vector2( -8, -8 )
 enabled = true
 cast_to = Vector2( 0, 42 )
-collision_mask = 4
 
 [node name="floor_right" type="RayCast2D" parent="."]
 position = Vector2( 8, -8 )
 enabled = true
 cast_to = Vector2( 0, 42 )
-collision_mask = 4
 
 [node name="Tween" type="Tween" parent="."]
 
