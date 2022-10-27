@@ -447,7 +447,6 @@ SPEED = 100
 material = SubResource( 3 )
 frames = SubResource( 4 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -537,12 +536,12 @@ shape = SubResource( 11 )
 [node name="FCTmgr" parent="." instance=ExtResource( 30 )]
 
 [node name="floor_left" type="RayCast2D" parent="."]
-position = Vector2( -8, -8 )
+position = Vector2( -7, 8 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 
 [node name="floor_right" type="RayCast2D" parent="."]
-position = Vector2( 8, -8 )
+position = Vector2( 9, 8 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 

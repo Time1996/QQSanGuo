@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://UserInterFace.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/map/16870-1.png" type="Texture" id=6]
 [ext_resource path="res://ItemDrop.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MUSIC/mache.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/map/14315-1.png" type="Texture" id=9]
+[ext_resource path="res://Scene/MaChe.gd" type="Script" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "16868-1.png 0"
@@ -174,14 +176,21 @@ extents = Vector2( 91, 10 )
 extents = Vector2( 1429, 11 )
 
 [sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 1298, 6 )
+extents = Vector2( 275, 6 )
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 438.5, 10.0007 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 187.5, 2.5 )
 
 [node name="MaChe" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 format = 1
-tile_data = PoolIntArray( -1441797, 0, 0, -1441793, 0, 0, -1507325, 0, 0, -1507321, 0, 0, -1507317, 0, 0, -1507313, 0, 0, -1507309, 0, 0, -1507305, 0, 0, -1507301, 0, 0, -1507297, 0, 0, -1376256, 1, 0, -1376236, 1, 0, -1376222, 1, 0, -1245187, 1, 0, -1310708, 1, 0, -1245168, 1, 0, -1245149, 1, 0, -1114116, 1, 0, -1179618, 1, 0, -1048577, 1, 0, -1114095, 1, 0, -1048542, 1, 0, -983039, 1, 0, -983028, 1, 0, -983009, 1, 0, -851954, 1, 0, -851933, 1, 0, -786430, 1, 0, -786415, 1, 0, -720865, 1, 0, -589825, 1, 0, -655349, 1, 0, -655334, 1, 0, -589803, 1, 0, -589793, 1, 0, -458756, 1, 0, -524272, 1, 0, -458752, 1, 0, -458741, 1, 0, -458723, 1, 0, -327678, 1, 0, -327665, 1, 0, -262120, 1, 0, -131074, 1, 0, -196597, 1, 0, -65543, 1, 0, -131043, 1, 0, -65529, 1, 0, 26, 1, 0, 65537, 1, 0, 65565, 1, 0, 131080, 1, 0, 262139, 1, 0, 196638, 1, 0, 262147, 1, 0, 262156, 1, 0, 262167, 1, 0, 327714, 1, 0, 458751, 1, 0, 393226, 0, 0, 393229, 0, 0, 393246, 1, 0, 589817, 0, 0, 589821, 0, 0, 524288, 1, 0, 524291, 0, 0, 524294, 0, 0, 524296, 1, 0, 524299, 0, 0, 524303, 1, 0, 524305, 0, 0, 524309, 0, 0, 524313, 0, 0, 524317, 0, 0, 524321, 0, 0 )
+tile_data = PoolIntArray( -1441797, 0, 0, -1441793, 0, 0, -1507317, 0, 0, -1507313, 0, 0, -1507301, 0, 0, -1507297, 0, 0, -1376256, 1, 0, -1376236, 1, 0, -1376222, 1, 0, -1245187, 1, 0, -1310708, 1, 0, -1245168, 1, 0, -1245149, 1, 0, -1114116, 1, 0, -1179618, 1, 0, -1048577, 1, 0, -1114095, 1, 0, -1048542, 1, 0, -983039, 1, 0, -983028, 1, 0, -983009, 1, 0, -851954, 1, 0, -851933, 1, 0, -786430, 1, 0, -786415, 1, 0, -720865, 1, 0, -589825, 1, 0, -655349, 1, 0, -655334, 1, 0, -589803, 1, 0, -589793, 1, 0, -458756, 1, 0, -524272, 1, 0, -458752, 1, 0, -458741, 1, 0, -458723, 1, 0, -327678, 1, 0, -327665, 1, 0, -262120, 1, 0, -131074, 1, 0, -196597, 1, 0, -65543, 1, 0, -131043, 1, 0, -65529, 1, 0, 26, 1, 0, 65537, 1, 0, 65565, 1, 0, 131080, 1, 0, 262139, 1, 0, 196638, 1, 0, 262147, 1, 0, 262156, 1, 0, 262167, 1, 0, 327714, 1, 0, 458751, 1, 0, 393226, 0, 0, 393229, 0, 0, 393246, 1, 0, 589817, 0, 0, 589821, 0, 0, 524288, 1, 0, 524291, 0, 0, 524294, 0, 0, 524296, 1, 0, 524299, 0, 0, 524303, 1, 0, 524305, 0, 0, 524309, 0, 0, 524313, 0, 0, 524317, 0, 0, 524321, 0, 0 )
 
 [node name="Steve" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1641, 478 )
@@ -190,16 +199,16 @@ position = Vector2( 1641, 478 )
 frame = 1
 
 [node name="AnimatedSprite2" parent="Steve/Control" index="2"]
-frame = 0
+frame = 3
 
 [node name="AnimatedSprite5" parent="Steve/Control" index="7"]
-frame = 5
+frame = 4
 
 [node name="AnimatedSprite6" parent="Steve/Control" index="8"]
-frame = 12
+frame = 9
 
 [node name="AnimatedSprite4" parent="Steve/Control" index="9"]
-frame = 7
+frame = 0
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -581
@@ -212,13 +221,13 @@ tree_root = SubResource( 45 )
 parameters/playback = SubResource( 46 )
 
 [node name="fly_left" parent="Steve" index="18"]
-frame = 9
+frame = 2
 
 [node name="fly_right" parent="Steve" index="19"]
-frame = 7
+frame = 0
 
 [node name="recover" parent="Steve" index="20"]
-frame = 13
+frame = 11
 
 [node name="AnimatedSprite" parent="Steve" index="26"]
 frame = 0
@@ -501,9 +510,34 @@ position = Vector2( 997, 553 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D46" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 996, -1430 )
+position = Vector2( -27, -1430 )
 shape = SubResource( 47 )
 one_way_collision = true
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 997, -1430 )
+shape = SubResource( 47 )
+one_way_collision = true
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2027, -1430 )
+shape = SubResource( 47 )
+one_way_collision = true
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1742, -1859 )
+rotation = -1.57079
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 254, -1861.5 )
+rotation = -1.57079
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 716, -1865 )
+rotation = -1.57079
+shape = SubResource( 49 )
 
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 2435, -867 )
@@ -564,36 +598,6 @@ position = Vector2( 141, -1466 )
 [node name="ItemDrop18" parent="." instance=ExtResource( 7 )]
 position = Vector2( 196, -1466 )
 
-[node name="ItemDrop19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 254, -1467 )
-
-[node name="ItemDrop20" parent="." instance=ExtResource( 7 )]
-position = Vector2( 305, -1466 )
-
-[node name="ItemDrop21" parent="." instance=ExtResource( 7 )]
-position = Vector2( 359, -1467 )
-
-[node name="ItemDrop22" parent="." instance=ExtResource( 7 )]
-position = Vector2( 413, -1466 )
-
-[node name="ItemDrop23" parent="." instance=ExtResource( 7 )]
-position = Vector2( 468, -1466 )
-
-[node name="ItemDrop25" parent="." instance=ExtResource( 7 )]
-position = Vector2( 529, -1468 )
-
-[node name="ItemDrop26" parent="." instance=ExtResource( 7 )]
-position = Vector2( 580, -1467 )
-
-[node name="ItemDrop27" parent="." instance=ExtResource( 7 )]
-position = Vector2( 634, -1468 )
-
-[node name="ItemDrop28" parent="." instance=ExtResource( 7 )]
-position = Vector2( 688, -1467 )
-
-[node name="ItemDrop29" parent="." instance=ExtResource( 7 )]
-position = Vector2( 743, -1467 )
-
 [node name="ItemDrop30" parent="." instance=ExtResource( 7 )]
 position = Vector2( 806, -1468 )
 
@@ -621,44 +625,17 @@ position = Vector2( 1187, -1468 )
 [node name="ItemDrop39" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1241, -1467 )
 
-[node name="ItemDrop40" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1296, -1467 )
-
-[node name="ItemDrop41" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1352, -1468 )
-
-[node name="ItemDrop42" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1403, -1467 )
-
-[node name="ItemDrop43" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1457, -1468 )
-
-[node name="ItemDrop44" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1511, -1467 )
-
-[node name="ItemDrop45" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1566, -1467 )
-
-[node name="ItemDrop47" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1621, -1467 )
-
-[node name="ItemDrop48" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1672, -1466 )
-
-[node name="ItemDrop49" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1726, -1467 )
-
-[node name="ItemDrop50" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1780, -1466 )
-
-[node name="ItemDrop51" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1835, -1466 )
-
 [node name="ItemDrop52" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1883, -1468 )
 
 [node name="ItemDrop53" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1934, -1467 )
+
+[node name="ItemDrop61" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1786, -1468 )
+
+[node name="ItemDrop62" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1837, -1467 )
 
 [node name="ItemDrop54" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1988, -1468 )
@@ -714,5 +691,16 @@ item_name = "跳跃"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="14315-1" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 1196, 181 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1198, 148 )
+shape = SubResource( 48 )
+one_way_collision = true
 
 [editable path="Steve"]

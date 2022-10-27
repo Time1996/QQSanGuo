@@ -98,6 +98,8 @@ func injury(num, crit=false):
 
 func die():
 	var num = int(rand_range(2, 7))
+	if player:
+		player.temp_enemy = null
 	for i in num:
 		Drop()
 	state_machine.travel("die")
@@ -110,25 +112,31 @@ func attack():
 	if player and velocity == Vector2(0, 0):
 #		print("攻击")
 		state_machine.travel("attack1")
+
+func dengmao_hit():
+	player.dengmao_hit()
+		
+func attack_damage():
+	if player:
 		var num = int(rand_range(1, 4))
 		for i in num:
-			var crit = rand_range(0, 1)
-			var temp_damage = damage
-			if crit < 0.5:
-				temp_damage *= rand_range(1.2, 2)
-				player.injury(-int(temp_damage), true)
-				var offset = Vector2()
-				offset.x = rand_range(-15, 15)
-				offset.y = rand_range(-15, 15)
-				var newpos = get_parent().get_node("Steve/Camera2D").get_position()
-				var oldpos = newpos
-				newpos += offset
-				get_parent().get_node("Steve/Camera2D").set_position(newpos)
-				yield(get_tree().create_timer(0.18),"timeout")
-				get_parent().get_node("Steve/Camera2D").set_position(oldpos)
-				yield(get_tree().create_timer(0.18),"timeout")
-			else:
-				player.injury(-int(temp_damage))
+				var crit = rand_range(0, 1)
+				var temp_damage = damage
+				if crit < 0.5:
+					temp_damage *= rand_range(1.2, 2)
+					player.injury(-int(temp_damage), true)
+					var offset = Vector2()
+					offset.x = rand_range(-15, 15)
+					offset.y = rand_range(-15, 15)
+					var newpos = get_parent().get_node("Steve/Camera2D").get_position()
+					var oldpos = newpos
+					newpos += offset
+					get_parent().get_node("Steve/Camera2D").set_position(newpos)
+					yield(get_tree().create_timer(0.18),"timeout")
+					get_parent().get_node("Steve/Camera2D").set_position(oldpos)
+					yield(get_tree().create_timer(0.18),"timeout")
+				else:
+					player.injury(-int(temp_damage))
 
 func _on_player_detect_body_entered(body):
 	print("玩家进入")
@@ -139,7 +147,7 @@ func _on_player_detect_body_entered(body):
 func _on_player_detect_body_exited(body):
 	print("玩家退出")
 	player = null
-	$normal_timer.start(5)
+#	$normal_timer.start(5)
 
 
 func _on_combat_timer_timeout():

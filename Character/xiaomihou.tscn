@@ -463,7 +463,7 @@ exprience = 2
 material = SubResource( 3 )
 frames = SubResource( 46 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -484,7 +484,6 @@ anims/target = ExtResource( 3 )
 autostart = true
 
 [node name="HealthBar" parent="." instance=ExtResource( 17 )]
-visible = false
 margin_left = -24.0
 margin_top = -48.0
 margin_right = -24.0
@@ -550,12 +549,12 @@ shape = SubResource( 11 )
 [node name="FCTmgr" parent="." instance=ExtResource( 2 )]
 
 [node name="floor_left" type="RayCast2D" parent="."]
-position = Vector2( -9, 5 )
+position = Vector2( -12, 13 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 
 [node name="floor_right" type="RayCast2D" parent="."]
-position = Vector2( 7, 5 )
+position = Vector2( 12, 13 )
 enabled = true
 cast_to = Vector2( 0, 42 )
 

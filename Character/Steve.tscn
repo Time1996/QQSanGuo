@@ -1,18 +1,14 @@
-[gd_scene load_steps=231 format=2]
+[gd_scene load_steps=281 format=2]
 
 [ext_resource path="res://Character/Steve.gd" type="Script" id=1]
 [ext_resource path="res://Character/Sprite.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ANIMATION/idle.tres" type="Animation" id=3]
-[ext_resource path="res://ANIMATION/6C/Sprite_4.png" type="Texture" id=4]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_5.png" type="Texture" id=4]
 [ext_resource path="res://EFECTIVE/383-1.png" type="Texture" id=5]
 [ext_resource path="res://EFECTIVE/js/digit/435-1.png" type="Texture" id=6]
-[ext_resource path="res://ANIMATION/6C/Sprite_3.png" type="Texture" id=7]
-[ext_resource path="res://EFECTIVE/js/2/232-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_6.png" type="Texture" id=7]
 [ext_resource path="res://EFECTIVE/level_up/446-1.png" type="Texture" id=9]
 [ext_resource path="res://EFECTIVE/level_up/446-2.png" type="Texture" id=10]
-[ext_resource path="res://EFECTIVE/js/2/232-3.png" type="Texture" id=11]
-[ext_resource path="res://EFECTIVE/js/2/232-4.png" type="Texture" id=12]
-[ext_resource path="res://EFECTIVE/js/2/232-5.png" type="Texture" id=13]
 [ext_resource path="res://EFECTIVE/level_up/446-6.png" type="Texture" id=14]
 [ext_resource path="res://EFECTIVE/level_up/446-5.png" type="Texture" id=15]
 [ext_resource path="res://EFECTIVE/level_up/446-7.png" type="Texture" id=16]
@@ -38,27 +34,17 @@
 [ext_resource path="res://EFECTIVE/state/187-14.png" type="Texture" id=36]
 [ext_resource path="res://EFECTIVE/state/187-15.png" type="Texture" id=37]
 [ext_resource path="res://EFECTIVE/state/187-5.png" type="Texture" id=38]
-[ext_resource path="res://EFECTIVE/js/306-9.png" type="Texture" id=39]
 [ext_resource path="res://EFECTIVE/state/187-7.png" type="Texture" id=40]
-[ext_resource path="res://EFECTIVE/js/306-4.png" type="Texture" id=41]
 [ext_resource path="res://EFECTIVE/state/187-8.png" type="Texture" id=42]
 [ext_resource path="res://EFECTIVE/state/187-9.png" type="Texture" id=43]
 [ext_resource path="res://EFECTIVE/state/187-10.png" type="Texture" id=44]
 [ext_resource path="res://EFECTIVE/state/187-6.png" type="Texture" id=45]
-[ext_resource path="res://EFECTIVE/js/306-5.png" type="Texture" id=46]
 [ext_resource path="res://EFECTIVE/state/187-11.png" type="Texture" id=47]
 [ext_resource path="res://FCTmgr.tscn" type="PackedScene" id=48]
-[ext_resource path="res://EFECTIVE/js/306-10.png" type="Texture" id=49]
-[ext_resource path="res://EFECTIVE/js/306-3.png" type="Texture" id=50]
 [ext_resource path="res://EFECTIVE/state/187-12.png" type="Texture" id=51]
-[ext_resource path="res://EFECTIVE/js/306-7.png" type="Texture" id=52]
-[ext_resource path="res://EFECTIVE/js/306-2.png" type="Texture" id=53]
 [ext_resource path="res://ANIMATION/hffl/effect/475-2.png" type="Texture" id=54]
 [ext_resource path="res://ANIMATION/hffl/effect/481-5.png" type="Texture" id=55]
-[ext_resource path="res://EFECTIVE/js/306-6.png" type="Texture" id=56]
-[ext_resource path="res://EFECTIVE/js/306-1.png" type="Texture" id=57]
 [ext_resource path="res://ANIMATION/hffl/effect/481-3.png" type="Texture" id=58]
-[ext_resource path="res://EFECTIVE/js/306-8.png" type="Texture" id=59]
 [ext_resource path="res://ANIMATION/steve.tres" type="SpriteFrames" id=60]
 [ext_resource path="res://EFECTIVE/js/40/279-5.png" type="Texture" id=61]
 [ext_resource path="res://EFECTIVE/js/40/279-1.png" type="Texture" id=62]
@@ -122,48 +108,110 @@
 [ext_resource path="res://UI/妹妹1/Sprite_11.png" type="Texture" id=120]
 [ext_resource path="res://UI/妹妹1/Sprite_20.png" type="Texture" id=121]
 [ext_resource path="res://UI/妹妹1/Sprite_29.png" type="Texture" id=122]
-[ext_resource path="res://ANIMATION/6C/Sprite_1.png" type="Texture" id=123]
-[ext_resource path="res://ANIMATION/6C/Sprite_2.png" type="Texture" id=124]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_8.png" type="Texture" id=125]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_4.png" type="Texture" id=126]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_3.png" type="Texture" id=127]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_2.png" type="Texture" id=128]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_7.png" type="Texture" id=129]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_6.png" type="Texture" id=130]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_3.png" type="Texture" id=131]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_8.png" type="Texture" id=132]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_4.png" type="Texture" id=133]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_5.png" type="Texture" id=134]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_1.png" type="Texture" id=135]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_1.png" type="Texture" id=136]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_2.png" type="Texture" id=137]
-[ext_resource path="res://ANIMATION/6C/walk/Sprite_5.png" type="Texture" id=138]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_6.png" type="Texture" id=139]
-[ext_resource path="res://ANIMATION/6C/run/Sprite_7.png" type="Texture" id=140]
-[ext_resource path="res://ANIMATION/6C/climb/22179-1.png" type="Texture" id=141]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_1.png" type="Texture" id=142]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_6.png" type="Texture" id=143]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_4.png" type="Texture" id=144]
-[ext_resource path="res://ANIMATION/6C/jump/22178-1.png" type="Texture" id=145]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_5.png" type="Texture" id=146]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_1.png" type="Texture" id=147]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_7.png" type="Texture" id=148]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_9.png" type="Texture" id=149]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_2.png" type="Texture" id=150]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_6.png" type="Texture" id=151]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_10.png" type="Texture" id=152]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_11.png" type="Texture" id=153]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_12.png" type="Texture" id=154]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_13.png" type="Texture" id=155]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_14.png" type="Texture" id=156]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_4.png" type="Texture" id=157]
-[ext_resource path="res://ANIMATION/6C/injury/22177-1.png" type="Texture" id=158]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_8.png" type="Texture" id=159]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_3.png" type="Texture" id=160]
-[ext_resource path="res://ANIMATION/6C/climb/22179-2.png" type="Texture" id=161]
-[ext_resource path="res://ANIMATION/6C/die/Sprite_5.png" type="Texture" id=162]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_2.png" type="Texture" id=163]
-[ext_resource path="res://ANIMATION/6C/js平A/Sprite_3.png" type="Texture" id=164]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_7.png" type="Texture" id=123]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_1.png" type="Texture" id=124]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_2.png" type="Texture" id=125]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_4.png" type="Texture" id=126]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_3.png" type="Texture" id=127]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_26.png" type="Texture" id=128]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_33.png" type="Texture" id=129]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_34.png" type="Texture" id=130]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_11.png" type="Texture" id=131]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_23.png" type="Texture" id=132]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_21.png" type="Texture" id=133]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_10.png" type="Texture" id=134]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_17.png" type="Texture" id=135]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_32.png" type="Texture" id=136]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_9.png" type="Texture" id=137]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_19.png" type="Texture" id=138]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_8.png" type="Texture" id=139]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_27.png" type="Texture" id=140]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_22.png" type="Texture" id=141]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_12.png" type="Texture" id=142]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_24.png" type="Texture" id=143]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_74.png" type="Texture" id=144]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_29.png" type="Texture" id=145]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_77.png" type="Texture" id=146]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_40.png" type="Texture" id=147]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_41.png" type="Texture" id=148]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_38.png" type="Texture" id=149]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_13.png" type="Texture" id=150]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_79.png" type="Texture" id=151]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_75.png" type="Texture" id=152]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_76.png" type="Texture" id=153]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_39.png" type="Texture" id=154]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_43.png" type="Texture" id=155]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_78.png" type="Texture" id=156]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_30.png" type="Texture" id=157]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_14.png" type="Texture" id=158]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_42.png" type="Texture" id=159]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_20.png" type="Texture" id=160]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_31.png" type="Texture" id=161]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_25.png" type="Texture" id=162]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_44.png" type="Texture" id=163]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_67.png" type="Texture" id=164]
+[ext_resource path="res://assets/ui/75150-1.png" type="Texture" id=165]
+[ext_resource path="res://assets/ui/75151-1.png" type="Texture" id=166]
+[ext_resource path="res://assets/ui/75152-1.png" type="Texture" id=167]
+[ext_resource path="res://assets/ui/24988-1.png" type="Texture" id=168]
+[ext_resource path="res://assets/ui/24989-1.png" type="Texture" id=169]
+[ext_resource path="res://assets/ui/24991-1.png" type="Texture" id=170]
+[ext_resource path="res://assets/ui/24990-1.png" type="Texture" id=171]
+[ext_resource path="res://Character/HuanZhuangDongHuaMuBan.tres" type="SpriteFrames" id=172]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_16.png" type="Texture" id=173]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_15.png" type="Texture" id=174]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_18.png" type="Texture" id=175]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_28.png" type="Texture" id=176]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_69.png" type="Texture" id=177]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_70.png" type="Texture" id=178]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_68.png" type="Texture" id=179]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_72.png" type="Texture" id=180]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_66.png" type="Texture" id=181]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_71.png" type="Texture" id=182]
+[ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_73.png" type="Texture" id=183]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_75.png" type="Texture" id=184]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_68.png" type="Texture" id=185]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_78.png" type="Texture" id=186]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_66.png" type="Texture" id=187]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_70.png" type="Texture" id=188]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_73.png" type="Texture" id=189]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_74.png" type="Texture" id=190]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_67.png" type="Texture" id=191]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_69.png" type="Texture" id=192]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_71.png" type="Texture" id=193]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_76.png" type="Texture" id=194]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_72.png" type="Texture" id=195]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_79.png" type="Texture" id=196]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_77.png" type="Texture" id=197]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_42.png" type="Texture" id=198]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_43.png" type="Texture" id=199]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_44.png" type="Texture" id=200]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_39.png" type="Texture" id=201]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_38.png" type="Texture" id=202]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_40.png" type="Texture" id=203]
+[ext_resource path="res://assets/换装系统/头/女生初始大眼睛/Sprite_41.png" type="Texture" id=204]
+[ext_resource path="res://UI/name/name_middle.png" type="Texture" id=205]
+[ext_resource path="res://assets/font/PuHuiTi-Regular.otf" type="DynamicFontData" id=206]
+[ext_resource path="res://EFECTIVE/injury/278-1.png" type="Texture" id=207]
+[ext_resource path="res://EFECTIVE/injury/278-5.png" type="Texture" id=208]
+[ext_resource path="res://EFECTIVE/injury/278-10.png" type="Texture" id=209]
+[ext_resource path="res://EFECTIVE/injury/278-4.png" type="Texture" id=210]
+[ext_resource path="res://EFECTIVE/injury/278-6.png" type="Texture" id=211]
+[ext_resource path="res://EFECTIVE/injury/278-2.png" type="Texture" id=212]
+[ext_resource path="res://EFECTIVE/injury/278-8.png" type="Texture" id=213]
+[ext_resource path="res://EFECTIVE/injury/278-3.png" type="Texture" id=214]
+[ext_resource path="res://EFECTIVE/injury/278-7.png" type="Texture" id=215]
+[ext_resource path="res://EFECTIVE/injury/278-9.png" type="Texture" id=216]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_3.png" type="Texture" id=217]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_8.png" type="Texture" id=218]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_5.png" type="Texture" id=219]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_2.png" type="Texture" id=220]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_4.png" type="Texture" id=221]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_6.png" type="Texture" id=222]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_1.png" type="Texture" id=223]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_7.png" type="Texture" id=224]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_10.png" type="Texture" id=225]
+[ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_9.png" type="Texture" id=226]
 
 [sub_resource type="Shader" id=98]
 code = "shader_type canvas_item;
@@ -192,68 +240,110 @@ shader = SubResource( 98 )
 shader_param/width = 0.0
 shader_param/outline_color = Color( 0.996078, 1, 0, 1 )
 
-[sub_resource type="SpriteFrames" id=100]
+[sub_resource type="RectangleShape2D" id=101]
+extents = Vector2( 60, 40 )
+
+[sub_resource type="SpriteFrames" id=137]
 animations = [ {
-"frames": [ ExtResource( 141 ), ExtResource( 161 ) ],
+"frames": [ ExtResource( 223 ), ExtResource( 220 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 219 ), ExtResource( 222 ), ExtResource( 224 ), ExtResource( 218 ), ExtResource( 226 ), ExtResource( 225 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=132]
+animations = [ {
+"frames": [ ExtResource( 140 ), ExtResource( 176 ) ],
 "loop": true,
 "name": "climb",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 142 ), ExtResource( 150 ), ExtResource( 160 ), ExtResource( 157 ), ExtResource( 162 ), ExtResource( 143 ) ],
+"frames": [ ExtResource( 145 ), ExtResource( 157 ), ExtResource( 161 ), ExtResource( 136 ), ExtResource( 129 ), ExtResource( 130 ) ],
 "loop": true,
 "name": "die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 147 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 144 ), ExtResource( 146 ), ExtResource( 151 ), ExtResource( 148 ), ExtResource( 159 ), ExtResource( 149 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ) ],
+"frames": [ ExtResource( 181 ), ExtResource( 164 ), ExtResource( 179 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 183 ), ExtResource( 144 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 146 ), ExtResource( 156 ), ExtResource( 151 ), ExtResource( 149 ), ExtResource( 154 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 159 ), ExtResource( 155 ), ExtResource( 163 ) ],
 "loop": false,
 "name": "hffl",
-"speed": 12.0
+"speed": 28.0
 }, {
-"frames": [ ExtResource( 123 ), ExtResource( 124 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 124 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 126 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 158 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 123 ), ExtResource( 139 ) ],
+"loop": true,
+"name": "idle_attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ) ],
 "loop": true,
 "name": "injury",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 145 ) ],
+"frames": [ ExtResource( 128 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 135 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ), ExtResource( 134 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 132 ) ],
+"frames": [ ExtResource( 135 ), ExtResource( 175 ), ExtResource( 138 ), ExtResource( 160 ), ExtResource( 133 ), ExtResource( 141 ), ExtResource( 132 ), ExtResource( 143 ) ],
 "loop": true,
 "name": "run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 136 ), ExtResource( 137 ), ExtResource( 131 ), ExtResource( 133 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 129 ), ExtResource( 125 ) ],
+"frames": [ ExtResource( 137 ), ExtResource( 134 ), ExtResource( 131 ), ExtResource( 142 ), ExtResource( 150 ), ExtResource( 158 ), ExtResource( 174 ), ExtResource( 173 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=101]
-extents = Vector2( 60, 40 )
-
-[sub_resource type="CanvasItemMaterial" id=102]
-blend_mode = 1
-
-[sub_resource type="SpriteFrames" id=103]
+[sub_resource type="SpriteFrames" id=133]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 140 ), ExtResource( 176 ) ],
 "loop": true,
-"name": "e2",
-"speed": 14.0
-} ]
-
-[sub_resource type="SpriteFrames" id=104]
-animations = [ {
-"frames": [ ExtResource( 57 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 41 ), ExtResource( 46 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 39 ), ExtResource( 49 ) ],
+"name": "climb",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 145 ), ExtResource( 157 ), ExtResource( 161 ), ExtResource( 136 ), ExtResource( 129 ), ExtResource( 130 ) ],
 "loop": true,
-"name": "accmulate",
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 187 ), ExtResource( 191 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 188 ), ExtResource( 193 ), ExtResource( 195 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 184 ), ExtResource( 194 ), ExtResource( 197 ), ExtResource( 186 ), ExtResource( 196 ), ExtResource( 202 ), ExtResource( 201 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ) ],
+"loop": false,
+"name": "hffl",
+"speed": 28.0
+}, {
+"frames": [ ExtResource( 124 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 126 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 123 ), ExtResource( 139 ) ],
+"loop": true,
+"name": "idle_attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ) ],
+"loop": true,
+"name": "injury",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 128 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 135 ), ExtResource( 175 ), ExtResource( 138 ), ExtResource( 160 ), ExtResource( 133 ), ExtResource( 141 ), ExtResource( 132 ), ExtResource( 143 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 137 ), ExtResource( 134 ), ExtResource( 131 ), ExtResource( 142 ), ExtResource( 150 ), ExtResource( 158 ), ExtResource( 174 ), ExtResource( 173 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -379,23 +469,23 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachine" id=67]
 resource_local_to_scene = true
 states/40/node = SubResource( 75 )
-states/40/position = Vector2( 86.802, 320 )
+states/40/position = Vector2( 204.802, 293 )
 states/attack/node = SubResource( 76 )
 states/attack/position = Vector2( -254, 311 )
 states/clim/node = SubResource( 77 )
-states/clim/position = Vector2( 710, 39 )
+states/clim/position = Vector2( 660, 31 )
 states/die/node = SubResource( 78 )
-states/die/position = Vector2( 540, -9 )
+states/die/position = Vector2( 599, -59 )
 states/hhfl/node = SubResource( 48 )
-states/hhfl/position = Vector2( -87.04, 311 )
+states/hhfl/position = Vector2( -9.04, 311 )
 states/idle/node = SubResource( 49 )
-states/idle/position = Vector2( 218, 133 )
+states/idle/position = Vector2( 249, 60 )
 states/injury/node = SubResource( 50 )
 states/injury/position = Vector2( 304.96, -59 )
 states/jump/node = SubResource( 51 )
-states/jump/position = Vector2( 601, 192 )
+states/jump/position = Vector2( 660, 242 )
 states/run/node = SubResource( 79 )
-states/run/position = Vector2( -106, 133 )
+states/run/position = Vector2( -209, 75 )
 transitions = [ "idle", "run", SubResource( 80 ), "run", "idle", SubResource( 81 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 82 ), "jump", "idle", SubResource( 83 ), "jump", "clim", SubResource( 84 ), "clim", "jump", SubResource( 85 ), "idle", "clim", SubResource( 86 ), "clim", "idle", SubResource( 87 ), "idle", "die", SubResource( 88 ), "run", "attack", SubResource( 89 ), "run", "hhfl", SubResource( 90 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 91 ), "idle", "hhfl", SubResource( 92 ), "idle", "40", SubResource( 93 ), "40", "idle", SubResource( 94 ), "run", "40", SubResource( 95 ) ]
 start_node = "idle"
 end_node = "die"
@@ -413,10 +503,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.18 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Control/Sprite:frame")
@@ -610,6 +700,32 @@ tracks/16/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/17/type = "method"
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0.2, 0.51, 0.61, 0.71, 0.81 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [ null ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+} ]
+}
 
 [sub_resource type="Animation" id=113]
 length = 0.001
@@ -661,8 +777,69 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/Sprite/SkillAnimations/PingA:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "default" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/SkillAnimations/PingA:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/Sprite/SkillAnimations/PingA:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/Sprite/SkillAnimations/PingA:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=114]
+length = 0.9
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
 tracks/0/interp = 1
@@ -670,7 +847,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.2, 0.4 ),
+"times": PoolRealArray( 0.1, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -682,58 +859,87 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1.03527 ),
 "update": 1,
 "values": [ "attack" ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Control/AnimatedSprite:visible")
+tracks/2/path = NodePath("Control/Sprite:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.2, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Control/AnimatedSprite2:visible")
+tracks/3/path = NodePath("Control/Sprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ 0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Control/Sprite:playing")
+tracks/4/path = NodePath("Control/Sprite/SkillAnimations/PingA:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ 0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Control/Sprite:frame")
+tracks/5/path = NodePath("Control/Sprite/SkillAnimations/PingA:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.2 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.1, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/SkillAnimations/PingA:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+} ]
 }
 
 [sub_resource type="Animation" id=115]
@@ -1009,6 +1215,26 @@ tracks/12/keys = {
 "update": 1,
 "values": [ 0 ]
 }
+tracks/13/type = "method"
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+} ]
+}
 
 [sub_resource type="Animation" id=119]
 length = 0.5
@@ -1172,6 +1398,11 @@ height = 81.6411
 [sub_resource type="RectangleShape2D" id=124]
 extents = Vector2( 48, 56 )
 
+[sub_resource type="DynamicFont" id=134]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 206 )
+
 [sub_resource type="CanvasItemMaterial" id=125]
 blend_mode = 1
 
@@ -1246,6 +1477,17 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="CanvasItemMaterial" id=136]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=135]
+animations = [ {
+"frames": [ ExtResource( 207 ), ExtResource( 212 ), ExtResource( 214 ), ExtResource( 210 ), ExtResource( 208 ), ExtResource( 211 ), ExtResource( 215 ), ExtResource( 213 ), ExtResource( 216 ), ExtResource( 209 ), ExtResource( 207 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
 [node name="Steve" type="KinematicBody2D" groups=["Persist"]]
 collision_layer = 2
 input_pickable = true
@@ -1264,13 +1506,13 @@ rect_pivot_offset = Vector2( 26.3874, 28.3064 )
 material = SubResource( 99 )
 position = Vector2( 20, 12 )
 frames = ExtResource( 60 )
-frame = 3
 
 [node name="chibang" type="AnimatedSprite" parent="Control/Sprite"]
+visible = false
 show_behind_parent = true
 position = Vector2( -320, -58.75 )
 scale = Vector2( 1.25, 1.25 )
-frames = SubResource( 100 )
+frames = ExtResource( 172 )
 animation = "climb"
 playing = true
 centered = false
@@ -1284,22 +1526,27 @@ position = Vector2( 120, 10 )
 shape = SubResource( 101 )
 disabled = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Control"]
+[node name="SkillAnimations" type="Node2D" parent="Control/Sprite"]
+
+[node name="PingA" type="AnimatedSprite" parent="Control/Sprite/SkillAnimations"]
+position = Vector2( 96.25, 2.5 )
+scale = Vector2( 1.54255, 1.54255 )
+frames = SubResource( 137 )
+
+[node name="body" type="AnimatedSprite" parent="Control"]
 visible = false
-material = SubResource( 102 )
-position = Vector2( -72, 0 )
-scale = Vector2( 0.67, 1 )
-frames = SubResource( 103 )
-frame = 8
+position = Vector2( 24, 35 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 132 )
+animation = "hffl"
+frame = 20
 playing = true
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Control"]
-visible = false
-position = Vector2( 24, 10 )
-scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 104 )
-animation = "accmulate"
-frame = 4
+[node name="head" type="AnimatedSprite" parent="Control/body"]
+position = Vector2( 0, -22.5 )
+frames = SubResource( 133 )
+animation = "hffl"
+frame = 20
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
@@ -1316,7 +1563,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 58 )
 
 [node name="3" type="Sprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 0.974603, 0.9014, 0.986555, 0.380953 )
 position = Vector2( 115.595, 8.59454 )
 scale = Vector2( 1.4, 1.8 )
 texture = ExtResource( 54 )
@@ -1328,33 +1575,33 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 55 )
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.723404 )
 material = SubResource( 107 )
 position = Vector2( 169.748, 20.0399 )
 scale = Vector2( 1.85484, 1.2 )
 frames = SubResource( 108 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.596774 )
 material = SubResource( 109 )
 position = Vector2( 271.105, 20 )
 scale = Vector2( 0.858924, 1.2 )
 frames = SubResource( 97 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.671875 )
 material = SubResource( 110 )
 position = Vector2( 167.066, 19.8214 )
 frames = SubResource( 111 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="4" type="Sprite" parent="Control/AnimatedSprite4"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.606557 )
 position = Vector2( -41.7352, -16.2008 )
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 65 )
@@ -1384,6 +1631,7 @@ anims/run = SubResource( 121 )
 anims/yinxuejianwu = SubResource( 122 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 8 )
 shape = SubResource( 123 )
 
@@ -1393,6 +1641,7 @@ shape = SubResource( 123 )
 position = Vector2( 8, -40 )
 
 [node name="pickableArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 8
 collision_mask = 8
 
@@ -1421,70 +1670,93 @@ texture = ExtResource( 6 )
 
 [node name="1" type="TextureRect" parent="HBoxContainer"]
 margin_left = 62.0
-margin_right = 73.0
+margin_right = 62.0
 margin_bottom = 40.0
 
 [node name="2" type="TextureRect" parent="HBoxContainer"]
-margin_left = 74.0
-margin_right = 85.0
+margin_left = 63.0
+margin_right = 63.0
 margin_bottom = 40.0
 
 [node name="3" type="TextureRect" parent="HBoxContainer"]
-margin_left = 86.0
-margin_right = 97.0
+margin_left = 64.0
+margin_right = 64.0
 margin_bottom = 40.0
 
 [node name="4" type="TextureRect" parent="HBoxContainer"]
-margin_left = 98.0
-margin_right = 109.0
+margin_left = 65.0
+margin_right = 65.0
 margin_bottom = 40.0
 
 [node name="5" type="TextureRect" parent="HBoxContainer"]
-margin_left = 110.0
-margin_right = 121.0
+margin_left = 66.0
+margin_right = 66.0
 margin_bottom = 40.0
 
 [node name="6" type="TextureRect" parent="HBoxContainer"]
-margin_left = 122.0
-margin_right = 133.0
+margin_left = 67.0
+margin_right = 67.0
 margin_bottom = 40.0
 
 [node name="7" type="TextureRect" parent="HBoxContainer"]
-margin_left = 134.0
-margin_right = 145.0
+margin_left = 68.0
+margin_right = 68.0
 margin_bottom = 40.0
 
 [node name="8" type="TextureRect" parent="HBoxContainer"]
-margin_left = 146.0
-margin_right = 157.0
+margin_left = 69.0
+margin_right = 69.0
 margin_bottom = 40.0
 
 [node name="9" type="TextureRect" parent="HBoxContainer"]
-margin_left = 158.0
-margin_right = 169.0
+margin_left = 70.0
+margin_right = 70.0
 margin_bottom = 40.0
 
 [node name="level_up" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 27 )
-
-[node name="contry" type="TextureRect" parent="."]
-margin_left = -72.2267
-margin_top = 46.8283
-margin_right = -32.2267
-margin_bottom = 86.8283
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="name" type="Label" parent="."]
 margin_left = -30.7013
 margin_top = 56.0633
 margin_right = 61.2987
 margin_bottom = 79.0633
+custom_fonts/font = SubResource( 134 )
 text = "Super赛亚宁"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Sprite" type="Sprite" parent="name"]
+position = Vector2( -106.299, 10.4367 )
+texture = ExtResource( 165 )
+
+[node name="Sprite2" type="Sprite" parent="name"]
+position = Vector2( -82.2984, 10.4367 )
+texture = ExtResource( 166 )
+
+[node name="Sprite3" type="Sprite" parent="name"]
+position = Vector2( -58.9997, 10.5 )
+texture = ExtResource( 167 )
+
+[node name="Sprite4" type="Sprite" parent="name"]
+position = Vector2( -41.2984, 10.9367 )
+texture = ExtResource( 168 )
+
+[node name="Sprite5" type="Sprite" parent="name"]
+position = Vector2( -30.9997, 10.5 )
+texture = ExtResource( 169 )
+
+[node name="Sprite6" type="Sprite" parent="name"]
+position = Vector2( -7.9997, 10.5 )
+texture = ExtResource( 170 )
+
+[node name="Sprite7" type="Sprite" parent="name"]
+position = Vector2( -20.2984, 10.9367 )
+texture = ExtResource( 171 )
+
+[node name="NameMiddle" type="Sprite" parent="name"]
+show_behind_parent = true
+position = Vector2( 46.2013, 12.1867 )
+scale = Vector2( 3.57692, 1.14706 )
+texture = ExtResource( 205 )
 
 [node name="speed" type="Timer" parent="."]
 
@@ -1505,7 +1777,7 @@ material = SubResource( 125 )
 position = Vector2( -32.1353, 48.686 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="fly_right" type="AnimatedSprite" parent="."]
@@ -1514,7 +1786,7 @@ material = SubResource( 125 )
 position = Vector2( 42.9738, 48.6878 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 5
+frame = 2
 playing = true
 flip_h = true
 
@@ -1523,7 +1795,7 @@ visible = false
 material = SubResource( 126 )
 position = Vector2( 9.51367, 3.56763 )
 frames = SubResource( 127 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="BattleSound" type="AudioStreamPlayer" parent="."]
@@ -1532,10 +1804,11 @@ playing = true
 anims/cure = SubResource( 128 )
 
 [node name="Cure" type="HBoxContainer" parent="."]
+visible = false
 margin_left = -1.0
-margin_top = -56.0
+margin_top = -66.0
 margin_right = 168.0
-margin_bottom = -16.0
+margin_bottom = -26.0
 custom_constants/separation = -5
 
 [node name="0" type="TextureRect" parent="Cure"]
@@ -1609,10 +1882,16 @@ process_material = SubResource( 130 )
 texture = ExtResource( 77 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 9, -134 )
 frames = SubResource( 131 )
-frame = 6
+frame = 12
 playing = true
+
+[node name="dengmao" type="AnimatedSprite" parent="."]
+material = SubResource( 136 )
+position = Vector2( 0, -26 )
+frames = SubResource( 135 )
 
 [connection signal="health_updated" from="." to="." method="_on_Steve_health_updated"]
 [connection signal="body_entered" from="Control/Sprite/HitBox" to="." method="_on_HitBox_body_entered"]

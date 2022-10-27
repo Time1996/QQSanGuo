@@ -51,6 +51,8 @@ func init():
 	$HealthBar/HealthBar.max_value = max_health
 	$HealthBar/HealthBar.value = health
 	$Sprite.visible = false
+	$floor_left.enabled = true
+	$floor_right.enabled = true
 	randomize()
 	
 func _ready():
@@ -102,7 +104,6 @@ func move_to_player(delta):
 	if state == COMBAT:
 		state_machine.travel("run")
 		var dist = player.position.x - position.x
-		print(dist)
 		velocity.y = 0
 		if dist < 0:
 			$AnimatedSprite.flip_h = true
@@ -114,7 +115,6 @@ func move_to_player(delta):
 		velocity = move_and_slide(velocity)
 		
 func attack():
-	print("攻击")
 	first_attack = false
 	$attack.play()
 	var crit = rand_range(0, 1)
@@ -126,7 +126,7 @@ func attack():
 	yield($AnimatedSprite,"animation_finished")
 	
 func check_border():##边缘检测 目前是检测左右两边 返回正确方向
-	
+
 	if !($floor_left.is_colliding()):
 		direction = Vector2.RIGHT
 	if !($floor_right.is_colliding()):
@@ -136,7 +136,6 @@ func check_border():##边缘检测 目前是检测左右两边 返回正确方�
 func move(delta):
 	state_machine.travel("run")
 	direction = check_border()
-	print(direction)
 	if direction == Vector2.RIGHT:
 		$AnimatedSprite.flip_h = false
 	else:
@@ -209,6 +208,8 @@ func Drop():
 func dead():
 	print("死前状态", state)
 	state = DIE
+	if player:
+		player.temp_enemy = null
 	state_machine.travel("die")
 	
 	if $deathAndInjury.playing == false:

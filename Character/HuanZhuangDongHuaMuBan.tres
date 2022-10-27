@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" load_steps=45 format=2]
+
+[ext_resource path="res://ANIMATION/6C/climb/22179-2.png" type="Texture" id=1]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_4.png" type="Texture" id=2]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_3.png" type="Texture" id=3]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_5.png" type="Texture" id=4]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_6.png" type="Texture" id=5]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_1.png" type="Texture" id=6]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_3.png" type="Texture" id=7]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_5.png" type="Texture" id=8]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_5.png" type="Texture" id=9]
+[ext_resource path="res://ANIMATION/6C/jump/22178-1.png" type="Texture" id=10]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_8.png" type="Texture" id=11]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_4.png" type="Texture" id=12]
+[ext_resource path="res://ANIMATION/6C/climb/22179-1.png" type="Texture" id=13]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_2.png" type="Texture" id=14]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_6.png" type="Texture" id=15]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_1.png" type="Texture" id=16]
+[ext_resource path="res://ANIMATION/6C/injury/22177-1.png" type="Texture" id=17]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_2.png" type="Texture" id=18]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_7.png" type="Texture" id=19]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_14.png" type="Texture" id=20]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_4.png" type="Texture" id=21]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_4.png" type="Texture" id=22]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_2.png" type="Texture" id=23]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_3.png" type="Texture" id=24]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_12.png" type="Texture" id=25]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_10.png" type="Texture" id=26]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_3.png" type="Texture" id=27]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_8.png" type="Texture" id=28]
+[ext_resource path="res://ANIMATION/6C/Sprite_1.png" type="Texture" id=29]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_9.png" type="Texture" id=30]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_6.png" type="Texture" id=31]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_11.png" type="Texture" id=32]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_7.png" type="Texture" id=33]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_7.png" type="Texture" id=34]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_1.png" type="Texture" id=35]
+[ext_resource path="res://ANIMATION/6C/run/Sprite_5.png" type="Texture" id=36]
+[ext_resource path="res://ANIMATION/6C/Sprite_2.png" type="Texture" id=37]
+[ext_resource path="res://ANIMATION/6C/walk/Sprite_1.png" type="Texture" id=38]
+[ext_resource path="res://ANIMATION/6C/die/Sprite_2.png" type="Texture" id=39]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_6.png" type="Texture" id=40]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_13.png" type="Texture" id=41]
+[ext_resource path="res://ANIMATION/6C/js平A/Sprite_8.png" type="Texture" id=42]
+[ext_resource path="res://ANIMATION/6C/Sprite_3.png" type="Texture" id=43]
+[ext_resource path="res://ANIMATION/6C/Sprite_4.png" type="Texture" id=44]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "climb",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 39 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 9 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 42 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 41 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "hffl",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "injury",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 18 ), ExtResource( 27 ), ExtResource( 2 ), ExtResource( 36 ), ExtResource( 5 ), ExtResource( 33 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 14 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 4 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]

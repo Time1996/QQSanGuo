@@ -398,7 +398,7 @@ extents = Vector2( 370.125, 9.25 )
 extents = Vector2( 725.125, 4.75 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 423, 44.5 )
+extents = Vector2( 423, 6.75 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 322, 7.75 )
@@ -533,7 +533,7 @@ graph_offset = Vector2( -593.5, -196.33 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
 [sub_resource type="RectangleShape2D" id=58]
-extents = Vector2( 10, 118.375 )
+extents = Vector2( 11, 108.375 )
 
 [sub_resource type="RectangleShape2D" id=49]
 extents = Vector2( 10, 143.75 )
@@ -778,7 +778,7 @@ shape = SubResource( 7 )
 one_way_collision = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="collision/StaticBody2D"]
-position = Vector2( 181, -523 )
+position = Vector2( 182, -565 )
 shape = SubResource( 8 )
 one_way_collision = true
 
@@ -815,14 +815,11 @@ one_way_collision = true
 [node name="Steve" parent="." instance=ExtResource( 20 )]
 position = Vector2( 784, 516 )
 
-[node name="AnimatedSprite2" parent="Steve/Control" index="2"]
-frame = 5
+[node name="Sprite" parent="Steve/Control" index="0"]
+frame = 0
 
-[node name="AnimatedSprite5" parent="Steve/Control" index="7"]
-frame = 4
-
-[node name="AnimatedSprite6" parent="Steve/Control" index="8"]
-frame = 1
+[node name="AnimatedSprite4" parent="Steve/Control" index="10"]
+frame = 7
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -3111
@@ -835,22 +832,22 @@ script = SubResource( 44 )
 tree_root = SubResource( 45 )
 parameters/playback = SubResource( 46 )
 
-[node name="fly_left" parent="Steve" index="18"]
-frame = 8
-
-[node name="fly_right" parent="Steve" index="19"]
+[node name="fly_left" parent="Steve" index="17"]
 frame = 6
 
-[node name="recover" parent="Steve" index="20"]
-frame = 10
+[node name="fly_right" parent="Steve" index="18"]
+frame = 4
 
-[node name="AnimatedSprite" parent="Steve" index="26"]
-frame = 19
+[node name="recover" parent="Steve" index="19"]
+frame = 0
+
+[node name="AnimatedSprite" parent="Steve" index="25"]
+frame = 16
 
 [node name="climb" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="climb"]
-position = Vector2( 282, 334.625 )
+position = Vector2( 283, 324.625 )
 shape = SubResource( 58 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="climb"]
@@ -888,13 +885,12 @@ shape = SubResource( 59 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 60 )
-frame = 10
+frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 61 )
-frame = 5
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -910,13 +906,13 @@ shape = SubResource( 59 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 60 )
-frame = 9
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 61 )
-frame = 4
+frame = 14
 playing = true
 
 [node name="YiZhouQiangBin" parent="." instance=ExtResource( 54 )]

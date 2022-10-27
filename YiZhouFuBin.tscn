@@ -447,8 +447,7 @@ SPEED = 100
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 3 )
 frames = SubResource( 46 )
-animation = "run"
-frame = 1
+animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -469,10 +468,10 @@ anims/target = ExtResource( 17 )
 autostart = true
 
 [node name="HealthBar" parent="." instance=ExtResource( 16 )]
-margin_left = -29.0
-margin_top = -30.0
-margin_right = -29.0
-margin_bottom = -30.0
+margin_left = -28.0
+margin_top = -22.0
+margin_right = -28.0
+margin_bottom = -22.0
 
 [node name="Name" type="Control" parent="."]
 anchor_right = 1.0

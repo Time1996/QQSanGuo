@@ -1,9 +1,14 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Character/Steve.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Character/dengmao.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/caodi.tscn" type="PackedScene" id=3]
-[ext_resource path="res://UI/BaJunXiJiaoBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/map/9009-1.png" type="Texture" id=4]
+[ext_resource path="res://assets/map/9011-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/map/9023-1.png" type="Texture" id=6]
+[ext_resource path="res://assets/map/9024-1.png" type="Texture" id=7]
+[ext_resource path="res://assets/map/jianglinxi/8997-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/map/9010-1.png" type="Texture" id=9]
 [ext_resource path="res://MUSIC/bajun(shu).ogg" type="AudioStream" id=13]
 [ext_resource path="res://assets/map/12685-4.png" type="Texture" id=27]
 [ext_resource path="res://assets/map/12685-14.png" type="Texture" id=28]
@@ -219,10 +224,83 @@ unique_name_in_owner = true
 [node name="Tile OneWay" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( -2293758, 4, 0, -2228185, 6, 0, -1900554, 16, 0, -1900545, 15, 0, -1966080, 7, 0, -1966072, 16, 0, -1835028, 8, 0, -1835027, 0, 0, -1835019, 1, 0, -1835015, 0, 0, -1900544, 1, 0, -1900539, 0, 0, -1834991, 16, 0, -1834974, 15, 0, -1834970, 14, 0, -1834963, 16, 0, -1703947, 2, 0, -1769467, 2, 0, -1769462, 0, 0, -1769454, 0, 0, -1769446, 0, 0, -1769438, 1, 0, -1769433, 0, 0, -1769429, 7, 0, -1638361, 2, 0, -1507321, 6, 0, -1507318, 6, 0, -1441780, 4, 0, -1441740, 6, 0, -1441733, 6, 0, -1376195, 4, 0, -1179626, 13, 0, -1114106, 14, 0, -1114099, 14, 0, -1114073, 13, 0, -983043, 8, 0, -983042, 0, 0, -1048573, 7, 0, -1048570, 1, 0, -1048566, 0, 0, -1048558, 0, 0, -1048519, 17, 0, -983026, 1, 0, -983024, 8, 0, -983016, 0, 0, -983008, 0, 0, -982999, 0, 0, -982991, 1, 0, -982986, 0, 0, -982981, 0, 0, -982979, 7, 0, -982974, 8, 0, -917494, 2, 0, -917467, 1, 0, -851949, 2, 0, -851914, 2, 0, -786390, 2, 0, -262126, 3, 0, -131082, 10, 0, -65551, 8, 0, -65550, 0, 0, -65543, 1, 0, -65539, 0, 0, -131071, 7, 0, -131020, 0, 0, -131013, 1, 0, -131010, 0, 0, -131003, 8, 0, -65483, 11, 0, 65534, 2, 0, 38, 0, 0, 40, 7, 0, 46, 0, 0, 65580, 1, 0, 131124, 2, 0, 327689, 6, 0, 655368, 13, 0, 655392, 9, 0, 720900, 11, 0, 720901, 12, 0, 720905, 10, 0, 720906, 12, 0, 720926, 11, 0, 720928, 8, 0, 851959, 0, 0, 851967, 0, 0, 786439, 1, 0, 786444, 0, 0, 786452, 1, 0, 786457, 0, 0, 786464, 1, 0, 786468, 0, 0, 786474, 0, 0, 852026, 20, 0, 917515, 2, 0, 917536, 2, 0, 983099, 13, 0, 1114166, 0, 0, 1114168, 0, 0, 1114176, 0, 0, 1114183, 0, 0, 1114191, 12, 0, 1179712, 12, 0 )
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 10, 0 )
+
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
+show_behind_parent = true
+scale = Vector2( 2, 2 )
+motion_scale = Vector2( 0.2, 0.2 )
+motion_offset = Vector2( 0, -40 )
+motion_mirroring = Vector2( 800, 600 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/sky"]
+z_index = 1
+texture = ExtResource( 8 )
+centered = false
+
+[node name="cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 2236.5, 774 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 448, -160 )
+z_index = 1
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/cloud"]
+z_index = 1
+texture = ExtResource( 6 )
+centered = false
+
+[node name="mountain" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 32, 352 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1185, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/mountain"]
+texture = ExtResource( 4 )
+
+[node name="mountain2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 640, 416 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1543.5, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/mountain2"]
+texture = ExtResource( 5 )
+
+[node name="mountain3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 80, 384 )
+scale = Vector2( 1, 1.2 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, -120 )
+motion_mirroring = Vector2( 1120, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/mountain3"]
+position = Vector2( 0, -106.667 )
+scale = Vector2( 1, 1.73059 )
+texture = ExtResource( 9 )
+centered = false
 
 [node name="wall_floor" type="StaticBody2D" parent="."]
-collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="wall_floor"]
@@ -419,13 +497,13 @@ shape = SubResource( 23 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 24 )
-frame = 10
+frame = 9
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 25 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -441,13 +519,13 @@ shape = SubResource( 26 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 27 )
-frame = 10
+frame = 9
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 28 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="Battle" type="AudioStreamPlayer" parent="."]
@@ -474,7 +552,7 @@ script = ExtResource( 64 )
 monster = "Snake"
 
 [node name="2_4" type="Position2D" parent="Spawner_Snake"]
-position = Vector2( 1609.76, 378.885 )
+position = Vector2( 812, 386 )
 script = ExtResource( 64 )
 monster = "Snake"
 
@@ -617,6 +695,7 @@ texture = ExtResource( 68 )
 
 [node name="dengmao" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2170, 500 )
+hp = 2000
 
 [connection signal="body_entered" from="climb" to="Steve" method="_on_climb_body_entered"]
 [connection signal="body_exited" from="climb" to="Steve" method="_on_climb_body_exited"]

@@ -45,7 +45,7 @@ text = "江陵西郊"
 margin_right = 40.0
 margin_bottom = 23.0
 custom_fonts/font = SubResource( 2 )
-text = "你想传送去哪儿？"
+text = "你想坐车去哪儿？"
 
 [node name="Button1" type="Button" parent="Control/Panel"]
 anchor_left = 1.0

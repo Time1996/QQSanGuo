@@ -57,8 +57,6 @@ func _ready():
 #	print(position)
 	randomize()
 	init()
-	$Control/AnimatedSprite.visible = false
-	$Control/AnimatedSprite2.visible = false
 	state_machine = $AnimationTree.get("parameters/playback")
 	$HBoxContainer.visible = false
 	$Cure.visible = false
@@ -384,20 +382,28 @@ func _on_climb_body_exited(body):
 func _on_Timer_timeout():
 	attacking = 0
 
+var temp_enemy = null
+
 func _on_HitBox_body_entered(body):
 	if !(body is KinematicBody2D):
 		print("fuck that's not enemy!")
 	if body.is_in_group("enemy"):
-		var num = int(rand_range(1, 5))
-		for i in num:
-			var temp_damage = basic_damage
-			var factor = rand_range(0, 1)
-			if factor <= 0.5:
-				temp_damage *= rand_range(1.2, 2)
-				body.call_deferred("injury", -int(temp_damage), true)  ##对敌造成汇总伤害 自身基础+技能+装备\
-			else:
-				body.call_deferred("injury", -int(temp_damage))
+		temp_enemy = body
 		
+
+func attack_damage():
+#	var num = int(rand_range(1, 5))
+
+	if temp_enemy:
+		var temp_damage = PlayerInventory.basic_damage
+		var factor = rand_range(0, 1)
+		if factor <= 0.2:
+			temp_damage *= rand_range(1.2, 2)
+			temp_enemy.call_deferred("injury", -int(temp_damage), true)  ##对敌造成汇总伤害 自身基础+技能+装备\
+		else:
+			temp_enemy.call_deferred("injury", -int(temp_damage))
+#		for i in num:
+			
 
 func _on_climb_body_entered(body):
 	monirable = 1
@@ -409,7 +415,6 @@ func _on_climb_body_entered(body):
 
 func _on_Steve_injury():
 	health -= 10
-	
 	pass # Replace with function body.
 
 func _set_health(value):
@@ -434,7 +439,6 @@ func _on_Steve_health_updated(value, crit = false):
 	state_machine.travel("injury")
 	$FCTmgr.show_value(value, crit)
 	get_parent().get_node("UserInterFace").emit_signal("health_updated",health, magic)
-	yield($Control/AnimatedSprite,"animation_finished")
 	pass # Replace with function body.
 
 
@@ -471,7 +475,7 @@ func attack():
 		get_node("BattleSound").stream = load("res://MUSIC/js/hhfl.wav")
 		state_machine.travel("hhfl")
 	elif key_state == 'A':
-		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		get_node("BattleSound").stream = load("res://MUSIC/js/A.wav")
 		state_machine.travel("attack")
 	elif key_state == 'D':
 		state_machine.travel("40")
@@ -560,3 +564,12 @@ func _on_small_health_timeout():
 func _on_pickableArea_mouse_entered():
 	pass # Replace with function body.
 
+func canot_move():
+	cant_move = true
+	
+func can_move():
+	cant_move = false
+
+func dengmao_hit():
+	$dengmao.frame = 0
+	$dengmao.playing = true

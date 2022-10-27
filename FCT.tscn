@@ -20,9 +20,6 @@ script = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 custom_constants/separation = -1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="1" type="TextureRect" parent="HBoxContainer"]
 margin_right = 15.0
