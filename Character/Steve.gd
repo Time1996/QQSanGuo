@@ -471,19 +471,37 @@ func attack():
 #		state_machine.travel(skill.skill_name)
 #		get_node("BattleSound").stream = load("res://MUSIC/js/"+skill.skill_name+".wav")
 #		skill_damage = skill.caculate(basic_damage, defend)
-	if key_state == 'W':
+	var skill_time = 0.8
+	var skill_damage = 0
+	if key_state == 'S':
 		get_node("BattleSound").stream = load("res://MUSIC/js/hhfl.wav")
 		state_machine.travel("hhfl")
+		skill_time = 0.8
+#		skill_damage = 
 	elif key_state == 'A':
 		get_node("BattleSound").stream = load("res://MUSIC/js/A.wav")
 		state_machine.travel("attack")
-	elif key_state == 'D':
+		skill_time = 0.9
+	elif key_state == 'R':
 		state_machine.travel("40")
+		skill_time = 1.2
 		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+	elif key_state == 'W':
+		state_machine.travel("yinxuejianwu")
+		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		skill_time = 0.7
+	elif key_state == 'D':
+		state_machine.travel("luodiji")
+		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		skill_time = 1.2
+	elif key_state == 'F':
+		state_machine.travel("10")
+		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		skill_time = 1.2
 	get_node("BattleSound").play()
 #	yield($AnimationPlayer,"animation_finished")
 #	attacking = 0
-	$Timer.start(0.8)
+	$Timer.start(skill_time)
 
 func _on_self_heal_timeout():
 	health += 4 ##每秒回复4点生命

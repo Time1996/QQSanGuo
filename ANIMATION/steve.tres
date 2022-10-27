@@ -70,19 +70,24 @@
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
+"frames": [ ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ) ],
+"loop": false,
+"name": "10",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 55 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 45 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ) ],
+"loop": false,
+"name": "40",
+"speed": 28.0
 }, {
 "frames": [ ExtResource( 24 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 35 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "attack",
 "speed": 14.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "injury",
+"frames": [ ExtResource( 13 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "clim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 23 ), ExtResource( 31 ) ],
@@ -90,33 +95,38 @@ animations = [ {
 "name": "die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 35 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 67 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 61 ), ExtResource( 63 ) ],
+"loop": false,
+"name": "hhfl",
+"speed": 28.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 32 ) ],
 "loop": true,
-"name": "walk",
-"speed": 14.0
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "injury",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 55 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 45 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 44 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 27 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 27 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 59 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 55 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 45 ) ],
 "loop": false,
-"name": "40",
-"speed": 28.0
+"name": "luodiji",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 14.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 42 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 39 ), ExtResource( 40 ) ],
 "loop": false,
 "name": "yinyuejianwu",
 "speed": 14.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 35 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 67 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 61 ), ExtResource( 63 ) ],
-"loop": false,
-"name": "hhfl",
-"speed": 28.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 17 ) ],
-"loop": false,
-"name": "clim",
-"speed": 5.0
 } ]

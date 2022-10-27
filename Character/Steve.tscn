@@ -1,4 +1,4 @@
-[gd_scene load_steps=281 format=2]
+[gd_scene load_steps=324 format=2]
 
 [ext_resource path="res://Character/Steve.gd" type="Script" id=1]
 [ext_resource path="res://Character/Sprite.tscn" type="PackedScene" id=2]
@@ -7,8 +7,12 @@
 [ext_resource path="res://EFECTIVE/383-1.png" type="Texture" id=5]
 [ext_resource path="res://EFECTIVE/js/digit/435-1.png" type="Texture" id=6]
 [ext_resource path="res://assets/换装系统/身体/熊猫/Sprite_6.png" type="Texture" id=7]
+[ext_resource path="res://EFECTIVE/js/技能特效/饮血剑舞特效/130-1.png" type="Texture" id=8]
 [ext_resource path="res://EFECTIVE/level_up/446-1.png" type="Texture" id=9]
 [ext_resource path="res://EFECTIVE/level_up/446-2.png" type="Texture" id=10]
+[ext_resource path="res://EFECTIVE/js/技能特效/25技能特效/20-1.png" type="Texture" id=11]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-4.png" type="Texture" id=12]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-1.png" type="Texture" id=13]
 [ext_resource path="res://EFECTIVE/level_up/446-6.png" type="Texture" id=14]
 [ext_resource path="res://EFECTIVE/level_up/446-5.png" type="Texture" id=15]
 [ext_resource path="res://EFECTIVE/level_up/446-7.png" type="Texture" id=16]
@@ -34,17 +38,27 @@
 [ext_resource path="res://EFECTIVE/state/187-14.png" type="Texture" id=36]
 [ext_resource path="res://EFECTIVE/state/187-15.png" type="Texture" id=37]
 [ext_resource path="res://EFECTIVE/state/187-5.png" type="Texture" id=38]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-6.png" type="Texture" id=39]
 [ext_resource path="res://EFECTIVE/state/187-7.png" type="Texture" id=40]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-7.png" type="Texture" id=41]
 [ext_resource path="res://EFECTIVE/state/187-8.png" type="Texture" id=42]
 [ext_resource path="res://EFECTIVE/state/187-9.png" type="Texture" id=43]
 [ext_resource path="res://EFECTIVE/state/187-10.png" type="Texture" id=44]
 [ext_resource path="res://EFECTIVE/state/187-6.png" type="Texture" id=45]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-2.png" type="Texture" id=46]
 [ext_resource path="res://EFECTIVE/state/187-11.png" type="Texture" id=47]
 [ext_resource path="res://FCTmgr.tscn" type="PackedScene" id=48]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-3.png" type="Texture" id=49]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/74-5.png" type="Texture" id=50]
 [ext_resource path="res://EFECTIVE/state/187-12.png" type="Texture" id=51]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/Sprite_3.png" type="Texture" id=52]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/Sprite_2.png" type="Texture" id=53]
 [ext_resource path="res://ANIMATION/hffl/effect/475-2.png" type="Texture" id=54]
 [ext_resource path="res://ANIMATION/hffl/effect/481-5.png" type="Texture" id=55]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/Sprite_4.png" type="Texture" id=56]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/Sprite_1.png" type="Texture" id=57]
 [ext_resource path="res://ANIMATION/hffl/effect/481-3.png" type="Texture" id=58]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/Sprite_5.png" type="Texture" id=59]
 [ext_resource path="res://ANIMATION/steve.tres" type="SpriteFrames" id=60]
 [ext_resource path="res://EFECTIVE/js/40/279-5.png" type="Texture" id=61]
 [ext_resource path="res://EFECTIVE/js/40/279-1.png" type="Texture" id=62]
@@ -212,6 +226,11 @@
 [ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_7.png" type="Texture" id=224]
 [ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_10.png" type="Texture" id=225]
 [ext_resource path="res://EFECTIVE/js/技能特效/平A特效/Sprite_9.png" type="Texture" id=226]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/16-1.png" type="Texture" id=227]
+[ext_resource path="res://EFECTIVE/js/技能特效/一朵云/192-1.png" type="Texture" id=228]
+[ext_resource path="res://EFECTIVE/js/技能特效/10技能特效/385-1.png" type="Texture" id=229]
+[ext_resource path="res://EFECTIVE/js/技能特效/10技能特效/130-1.png" type="Texture" id=230]
+[ext_resource path="res://EFECTIVE/js/技能特效/10技能特效/20-1.png" type="Texture" id=231]
 
 [sub_resource type="Shader" id=98]
 code = "shader_type canvas_item;
@@ -250,6 +269,51 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 } ]
+
+[sub_resource type="CanvasItemMaterial" id=142]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=143]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=144]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=145]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=146]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 46 ), ExtResource( 49 ), ExtResource( 12 ), ExtResource( 50 ), ExtResource( 39 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="SpriteFrames" id=147]
+animations = [ {
+"frames": [ ExtResource( 57 ), ExtResource( 53 ), ExtResource( 52 ), ExtResource( 56 ), ExtResource( 59 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=148]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=155]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=156]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=157]
+blend_mode = 1
 
 [sub_resource type="SpriteFrames" id=132]
 animations = [ {
@@ -391,6 +455,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AnimationNodeAnimation" id=158]
+animation = "10"
+
 [sub_resource type="AnimationNodeAnimation" id=75]
 animation = "40"
 
@@ -415,8 +482,14 @@ animation = "injury"
 [sub_resource type="AnimationNodeAnimation" id=51]
 animation = "jump"
 
+[sub_resource type="AnimationNodeAnimation" id=150]
+animation = "luodiji"
+
 [sub_resource type="AnimationNodeAnimation" id=79]
 animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=138]
+animation = "yinxuejianwu"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=80]
 
@@ -466,32 +539,206 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=95]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=139]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=140]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=141]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=151]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=152]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=153]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=159]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=160]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=161]
+switch_mode = 2
+auto_advance = true
+
 [sub_resource type="AnimationNodeStateMachine" id=67]
 resource_local_to_scene = true
+states/10/node = SubResource( 158 )
+states/10/position = Vector2( -519.5, 311 )
 states/40/node = SubResource( 75 )
-states/40/position = Vector2( 204.802, 293 )
+states/40/position = Vector2( 73.802, 311 )
 states/attack/node = SubResource( 76 )
-states/attack/position = Vector2( -254, 311 )
+states/attack/position = Vector2( -172, 311 )
 states/clim/node = SubResource( 77 )
-states/clim/position = Vector2( 660, 31 )
+states/clim/position = Vector2( 580, -7 )
 states/die/node = SubResource( 78 )
-states/die/position = Vector2( 599, -59 )
+states/die/position = Vector2( 580, -69 )
 states/hhfl/node = SubResource( 48 )
-states/hhfl/position = Vector2( -9.04, 311 )
+states/hhfl/position = Vector2( -40.04, 311 )
 states/idle/node = SubResource( 49 )
-states/idle/position = Vector2( 249, 60 )
+states/idle/position = Vector2( 123, 40 )
 states/injury/node = SubResource( 50 )
-states/injury/position = Vector2( 304.96, -59 )
+states/injury/position = Vector2( 590.96, -146 )
 states/jump/node = SubResource( 51 )
-states/jump/position = Vector2( 660, 242 )
+states/jump/position = Vector2( 580, 76 )
+states/luodiji/node = SubResource( 150 )
+states/luodiji/position = Vector2( -341.5, 311 )
 states/run/node = SubResource( 79 )
-states/run/position = Vector2( -209, 75 )
-transitions = [ "idle", "run", SubResource( 80 ), "run", "idle", SubResource( 81 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 82 ), "jump", "idle", SubResource( 83 ), "jump", "clim", SubResource( 84 ), "clim", "jump", SubResource( 85 ), "idle", "clim", SubResource( 86 ), "clim", "idle", SubResource( 87 ), "idle", "die", SubResource( 88 ), "run", "attack", SubResource( 89 ), "run", "hhfl", SubResource( 90 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 91 ), "idle", "hhfl", SubResource( 92 ), "idle", "40", SubResource( 93 ), "40", "idle", SubResource( 94 ), "run", "40", SubResource( 95 ) ]
+states/run/position = Vector2( -191, 40 )
+states/yinxuejianwu/node = SubResource( 138 )
+states/yinxuejianwu/position = Vector2( 250.5, 311 )
+transitions = [ "idle", "run", SubResource( 80 ), "run", "idle", SubResource( 81 ), "idle", "attack", SubResource( 26 ), "attack", "idle", SubResource( 27 ), "idle", "jump", SubResource( 82 ), "jump", "idle", SubResource( 83 ), "jump", "clim", SubResource( 84 ), "clim", "jump", SubResource( 85 ), "idle", "clim", SubResource( 86 ), "clim", "idle", SubResource( 87 ), "idle", "die", SubResource( 88 ), "run", "attack", SubResource( 89 ), "run", "hhfl", SubResource( 90 ), "idle", "injury", SubResource( 37 ), "injury", "idle", SubResource( 38 ), "hhfl", "idle", SubResource( 91 ), "idle", "hhfl", SubResource( 92 ), "idle", "40", SubResource( 93 ), "40", "idle", SubResource( 94 ), "run", "40", SubResource( 95 ), "run", "yinxuejianwu", SubResource( 139 ), "idle", "yinxuejianwu", SubResource( 140 ), "yinxuejianwu", "idle", SubResource( 141 ), "run", "luodiji", SubResource( 151 ), "idle", "luodiji", SubResource( 152 ), "luodiji", "idle", SubResource( 153 ), "run", "10", SubResource( 159 ), "idle", "10", SubResource( 160 ), "10", "idle", SubResource( 161 ) ]
 start_node = "idle"
 end_node = "die"
-graph_offset = Vector2( -593.5, -196.33 )
+graph_offset = Vector2( -593.5, 25.47 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=68]
+
+[sub_resource type="Animation" id=154]
+resource_name = "10"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "10" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Sprite:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.2, 0.2, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Sprite:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/Sprite/SkillAnimations/10-1:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/Sprite/SkillAnimations/10-2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/SkillAnimations/10-3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/Sprite/SkillAnimations/10-3:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/Sprite/SkillAnimations/10-3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 178, 8.75 ), Vector2( 198, 8.75 ), Vector2( 178, 8.75 ), Vector2( 198, 8.75 ), Vector2( 178, 8.75 ), Vector2( 208, 8.75 ) ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.2, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+}, {
+"args": [  ],
+"method": "attack_damage"
+} ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=112]
 length = 1.2
@@ -836,6 +1083,282 @@ tracks/8/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Control/Sprite:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "idle" ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/Sprite:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control/Sprite:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 198.75, 8.75 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu2:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu2:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:playing")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:frame")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4 ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Control/Sprite/SkillAnimations/luodiji3:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Control/Sprite/SkillAnimations/luodiji4:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Control/Sprite:speed_scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Control/Sprite/SkillAnimations/10-1:scale")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("Control/Sprite/SkillAnimations/10-2:scale")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("Control/Sprite/SkillAnimations/10-3:visible")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("Control/Sprite/SkillAnimations/10-3:self_modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("Control/Sprite/SkillAnimations/10-3:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 178, 8.75 ) ]
 }
 
 [sub_resource type="Animation" id=114]
@@ -1326,6 +1849,168 @@ tracks/2/keys = {
 "values": [ Vector2( -223.75, -111.25 ) ]
 }
 
+[sub_resource type="Animation" id=149]
+resource_name = "luodiji"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "luodiji" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Sprite:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/Sprite/SkillAnimations/luodiji3:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+} ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/Sprite/SkillAnimations/luodiji1:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control/Sprite/SkillAnimations/luodiji4:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control/Sprite/SkillAnimations/luodiji2:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [sub_resource type="Animation" id=121]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
@@ -1377,7 +2062,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=122]
-length = 0.8
+length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/Sprite:animation")
 tracks/0/interp = 1
@@ -1389,6 +2074,128 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "yinyuejianwu" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Sprite:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Sprite/HitBox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 198.75, 8.75 ), Vector2( 218.75, 8.75 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Control/Sprite/SkillAnimations/yinxuejianwu2:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_damage"
+} ]
 }
 
 [sub_resource type="CapsuleShape2D" id=123]
@@ -1533,6 +2340,58 @@ position = Vector2( 96.25, 2.5 )
 scale = Vector2( 1.54255, 1.54255 )
 frames = SubResource( 137 )
 
+[node name="yinxuejianwu" type="AnimatedSprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 142 )
+position = Vector2( 198.75, 8.75 )
+scale = Vector2( 1.76953, 1 )
+frames = SubResource( 143 )
+
+[node name="yinxuejianwu2" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 144 )
+position = Vector2( 40, 13.75 )
+texture = ExtResource( 11 )
+
+[node name="luodiji1" type="AnimatedSprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 145 )
+position = Vector2( 43.75, 8.75 )
+frames = SubResource( 146 )
+
+[node name="luodiji2" type="AnimatedSprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 145 )
+position = Vector2( 170, 10 )
+scale = Vector2( 1.28358, 1.28358 )
+frames = SubResource( 147 )
+frame = 4
+playing = true
+
+[node name="luodiji3" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+visible = false
+material = SubResource( 148 )
+position = Vector2( 43.75, 7.5 )
+texture = ExtResource( 227 )
+
+[node name="luodiji4" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+visible = false
+material = SubResource( 148 )
+position = Vector2( 43.75, 7.5 )
+texture = ExtResource( 228 )
+
+[node name="10-1" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 155 )
+position = Vector2( 71.25, 8.75 )
+texture = ExtResource( 229 )
+
+[node name="10-2" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 156 )
+position = Vector2( 65, 6.25 )
+texture = ExtResource( 231 )
+
+[node name="10-3" type="Sprite" parent="Control/Sprite/SkillAnimations"]
+material = SubResource( 157 )
+position = Vector2( 178, 8.75 )
+scale = Vector2( 1.39844, 1 )
+texture = ExtResource( 230 )
+
 [node name="body" type="AnimatedSprite" parent="Control"]
 visible = false
 position = Vector2( 24, 35 )
@@ -1563,7 +2422,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 58 )
 
 [node name="3" type="Sprite" parent="Control"]
-modulate = Color( 0.974603, 0.9014, 0.986555, 0.380953 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 115.595, 8.59454 )
 scale = Vector2( 1.4, 1.8 )
 texture = ExtResource( 54 )
@@ -1575,7 +2434,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 55 )
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0.723404 )
+modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 107 )
 position = Vector2( 169.748, 20.0399 )
 scale = Vector2( 1.85484, 1.2 )
@@ -1584,24 +2443,24 @@ frame = 5
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0.596774 )
+modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 109 )
 position = Vector2( 271.105, 20 )
 scale = Vector2( 0.858924, 1.2 )
 frames = SubResource( 97 )
-frame = 1
-playing = true
-
-[node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0.671875 )
-material = SubResource( 110 )
-position = Vector2( 167.066, 19.8214 )
-frames = SubResource( 111 )
 frame = 8
 playing = true
 
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 110 )
+position = Vector2( 167.066, 19.8214 )
+frames = SubResource( 111 )
+frame = 2
+playing = true
+
 [node name="4" type="Sprite" parent="Control/AnimatedSprite4"]
-modulate = Color( 1, 1, 1, 0.606557 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -41.7352, -16.2008 )
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 65 )
@@ -1617,6 +2476,7 @@ parameters/playback = SubResource( 68 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
+anims/10 = SubResource( 154 )
 anims/40 = SubResource( 112 )
 anims/RESET = SubResource( 113 )
 anims/attack = SubResource( 114 )
@@ -1627,6 +2487,7 @@ anims/hhfl = SubResource( 118 )
 anims/idle = ExtResource( 3 )
 anims/injury = SubResource( 119 )
 anims/jump = SubResource( 120 )
+anims/luodiji = SubResource( 149 )
 anims/run = SubResource( 121 )
 anims/yinxuejianwu = SubResource( 122 )
 
@@ -1777,7 +2638,6 @@ material = SubResource( 125 )
 position = Vector2( -32.1353, 48.686 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 4
 playing = true
 
 [node name="fly_right" type="AnimatedSprite" parent="."]
@@ -1786,7 +2646,7 @@ material = SubResource( 125 )
 position = Vector2( 42.9738, 48.6878 )
 scale = Vector2( 0.431948, 0.34901 )
 frames = ExtResource( 29 )
-frame = 2
+frame = 8
 playing = true
 flip_h = true
 
@@ -1795,7 +2655,7 @@ visible = false
 material = SubResource( 126 )
 position = Vector2( 9.51367, 3.56763 )
 frames = SubResource( 127 )
-frame = 3
+frame = 14
 playing = true
 
 [node name="BattleSound" type="AudioStreamPlayer" parent="."]
@@ -1804,7 +2664,6 @@ playing = true
 anims/cure = SubResource( 128 )
 
 [node name="Cure" type="HBoxContainer" parent="."]
-visible = false
 margin_left = -1.0
 margin_top = -66.0
 margin_right = 168.0
@@ -1885,7 +2744,7 @@ texture = ExtResource( 77 )
 visible = false
 position = Vector2( 9, -134 )
 frames = SubResource( 131 )
-frame = 12
+frame = 27
 playing = true
 
 [node name="dengmao" type="AnimatedSprite" parent="."]

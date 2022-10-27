@@ -1038,20 +1038,11 @@ texture = ExtResource( 175 )
 position = Vector2( -17, -320 )
 z_index = 2
 
-[node name="Sprite" parent="Steve/Control" index="0"]
+[node name="AnimatedSprite6" parent="Steve/Control" index="7"]
+frame = 5
+
+[node name="AnimatedSprite4" parent="Steve/Control" index="8"]
 frame = 2
-
-[node name="AnimatedSprite2" parent="Steve/Control" index="3"]
-frame = 4
-
-[node name="AnimatedSprite5" parent="Steve/Control" index="8"]
-frame = 2
-
-[node name="AnimatedSprite6" parent="Steve/Control" index="9"]
-frame = 2
-
-[node name="AnimatedSprite4" parent="Steve/Control" index="10"]
-frame = 1
 
 [node name="Camera2D" parent="Steve" index="1"]
 limit_left = -690
@@ -1073,16 +1064,13 @@ anims/shade_in = SubResource( 33 )
 anims/shade_out = SubResource( 34 )
 
 [node name="fly_left" parent="Steve" index="17"]
-frame = 8
+frame = 1
 
 [node name="fly_right" parent="Steve" index="18"]
-frame = 6
-
-[node name="recover" parent="Steve" index="19"]
-frame = 11
+frame = 9
 
 [node name="AnimatedSprite" parent="Steve" index="25"]
-frame = 13
+frame = 16
 
 [node name="13314-1" type="Sprite" parent="."]
 position = Vector2( 1794.91, 505.544 )
@@ -1628,13 +1616,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 13
+frame = 14
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 8
+frame = 9
 playing = true
 
 [node name="TransPort2" type="Area2D" parent="."]
@@ -1650,13 +1638,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 12
+frame = 13
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort2"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 7
+frame = 8
 playing = true
 
 [node name="TransPort3" type="Area2D" parent="."]
@@ -1672,13 +1660,13 @@ shape = SubResource( 60 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 352 )
 frames = SubResource( 61 )
-frame = 12
+frame = 13
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TransPort3"]
 position = Vector2( -136, 416 )
 frames = SubResource( 62 )
-frame = 7
+frame = 8
 playing = true
 
 [node name="18336-1" type="Sprite" parent="."]
@@ -1791,7 +1779,7 @@ autoplay = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 83.3026, -351.236 )
 frames = SubResource( 63 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="NPC" parent="." instance=ExtResource( 46 )]
@@ -1901,7 +1889,7 @@ texture = ExtResource( 76 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="jianyong"]
 material = SubResource( 67 )
 frames = SubResource( 68 )
-frame = 1
+frame = 3
 playing = true
 centered = false
 
