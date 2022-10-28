@@ -6,27 +6,27 @@
 [ext_resource path="res://assets/skill_icon/js/19768-4.png" type="Texture" id=4]
 [ext_resource path="res://assets/skill_icon/js/19770-1.png" type="Texture" id=5]
 [ext_resource path="res://assets/skill_icon/js/19768-3.png" type="Texture" id=6]
-[ext_resource path="res://assets/skill_icon/js/19772-3.png" type="Texture" id=7]
+[ext_resource path="res://assets/skill_icon/js/19774-2.png" type="Texture" id=7]
 [ext_resource path="res://assets/skill_icon/js/19768-1.png" type="Texture" id=8]
 [ext_resource path="res://assets/skill_icon/js/19769-1.png" type="Texture" id=9]
-[ext_resource path="res://assets/skill_icon/js/19773-2.png" type="Texture" id=10]
+[ext_resource path="res://assets/skill_icon/js/19774-3.png" type="Texture" id=10]
 [ext_resource path="res://assets/skill_icon/js/19768-2.png" type="Texture" id=11]
 [ext_resource path="res://assets/skill_icon/js/19771-3.png" type="Texture" id=12]
-[ext_resource path="res://assets/skill_icon/js/19773-1.png" type="Texture" id=13]
+[ext_resource path="res://assets/skill_icon/js/19774-4.png" type="Texture" id=13]
 [ext_resource path="res://assets/skill_icon/js/19771-2.png" type="Texture" id=14]
-[ext_resource path="res://assets/skill_icon/js/19772-2.png" type="Texture" id=15]
+[ext_resource path="res://assets/skill_icon/js/19782-2.png" type="Texture" id=15]
 [ext_resource path="res://assets/skill_icon/js/19771-4.png" type="Texture" id=16]
 [ext_resource path="res://assets/skill_icon/js/19771-1.png" type="Texture" id=17]
 [ext_resource path="res://assets/skill_icon/js/19770-4.png" type="Texture" id=18]
 [ext_resource path="res://assets/skill_icon/js/19770-3.png" type="Texture" id=19]
-[ext_resource path="res://assets/skill_icon/js/19772-4.png" type="Texture" id=20]
+[ext_resource path="res://assets/skill_icon/js/19782-3.png" type="Texture" id=20]
 [ext_resource path="res://assets/skill_icon/js/19770-2.png" type="Texture" id=21]
 [ext_resource path="res://assets/skill_icon/js/19769-3.png" type="Texture" id=22]
 [ext_resource path="res://assets/skill_icon/js/19769-4.png" type="Texture" id=23]
-[ext_resource path="res://assets/skill_icon/js/19772-1.png" type="Texture" id=24]
-[ext_resource path="res://assets/skill_icon/js/19773-4.png" type="Texture" id=25]
+[ext_resource path="res://assets/skill_icon/js/19782-4.png" type="Texture" id=24]
+[ext_resource path="res://assets/skill_icon/js/19782-1.png" type="Texture" id=25]
 [ext_resource path="res://assets/skill_icon/js/19769-2.png" type="Texture" id=26]
-[ext_resource path="res://assets/skill_icon/js/19773-3.png" type="Texture" id=27]
+[ext_resource path="res://assets/skill_icon/js/19774-1.png" type="Texture" id=27]
 [ext_resource path="res://exprience.gd" type="Script" id=28]
 [ext_resource path="res://assets/skill_icon/js/19779-3.png" type="Texture" id=29]
 [ext_resource path="res://assets/skill_icon/js/19779-4.png" type="Texture" id=30]
@@ -96,9 +96,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -544.0
 script = ExtResource( 28 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -32.8721
@@ -106,9 +103,6 @@ margin_top = -33.782
 margin_right = 767.128
 margin_bottom = 21.218
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 modulate = Color( 1, 1, 1, 0.580392 )
@@ -119,9 +113,6 @@ margin_bottom = 18.3071
 rounded = true
 texture_progress = ExtResource( 2 )
 nine_patch_stretch = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 12.6088
@@ -130,9 +121,6 @@ margin_right = 45.6088
 margin_bottom = 25.3024
 custom_colors/font_color = Color( 1, 0.976471, 0.196078, 1 )
 custom_fonts/font = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 381.0
@@ -190,10 +178,10 @@ margin_right = 161.9
 margin_bottom = 30.0
 rect_min_size = Vector2( 29.9, 29 )
 shortcut = SubResource( 11 )
-texture_normal = ExtResource( 24 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 15 )
-texture_disabled = ExtResource( 20 )
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 24 )
 
 [node name="shortcut6" type="TextureButton" parent="HBoxContainer"]
 margin_left = 165.0
@@ -201,10 +189,10 @@ margin_right = 194.9
 margin_bottom = 30.0
 rect_min_size = Vector2( 29.9, 29 )
 shortcut = SubResource( 13 )
-texture_normal = ExtResource( 13 )
-texture_pressed = ExtResource( 10 )
-texture_hover = ExtResource( 27 )
-texture_disabled = ExtResource( 25 )
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 13 )
 
 [node name="shortcut7" type="TextureButton" parent="HBoxContainer"]
 margin_left = 198.0
@@ -241,9 +229,6 @@ margin_top = -11.7218
 margin_right = 435.742
 margin_bottom = 11.2782
 text = "S"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label4" type="Label" parent="."]
 margin_left = 457.681
@@ -251,9 +236,6 @@ margin_top = -11.7218
 margin_right = 468.681
 margin_bottom = 11.2782
 text = "D"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label5" type="Label" parent="."]
 margin_left = 491.016
@@ -261,9 +243,6 @@ margin_top = -11.7218
 margin_right = 502.016
 margin_bottom = 11.2782
 text = "F"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label6" type="Label" parent="."]
 margin_left = 523.558
@@ -271,9 +250,6 @@ margin_top = -11.7218
 margin_right = 534.558
 margin_bottom = 11.2782
 text = "Q"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label7" type="Label" parent="."]
 margin_left = 556.893
@@ -281,9 +257,6 @@ margin_top = -11.7218
 margin_right = 567.893
 margin_bottom = 11.2782
 text = "W"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label8" type="Label" parent="."]
 margin_left = 589.038
@@ -291,9 +264,6 @@ margin_top = -11.7218
 margin_right = 600.038
 margin_bottom = 11.2782
 text = "E"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label9" type="Label" parent="."]
 margin_left = 622.374
@@ -301,9 +271,6 @@ margin_top = -11.7218
 margin_right = 633.374
 margin_bottom = 11.2782
 text = "R"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Control" type="Control" parent="."]
 margin_left = 50.0

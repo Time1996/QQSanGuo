@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yinxuejianwu.wav-1916863f7c2568f0e4aae3ba14398e8e.sample"
+
+[deps]
+
+source_file="res://EFECTIVE/js/技能特效/yinxuejianwu.wav"
+dest_files=[ "res://.import/yinxuejianwu.wav-1916863f7c2568f0e4aae3ba14398e8e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

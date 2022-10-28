@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yinxuejianwu.wav-ed02f8248028dfb7deb8c537da4fbddf.sample"
+
+[deps]
+
+source_file="res://MUSIC/js/yinxuejianwu.wav"
+dest_files=[ "res://.import/yinxuejianwu.wav-ed02f8248028dfb7deb8c537da4fbddf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

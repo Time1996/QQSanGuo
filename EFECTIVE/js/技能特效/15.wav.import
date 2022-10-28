@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/15.wav-e1403096ca0764b18fdf2690ef1762eb.sample"
+
+[deps]
+
+source_file="res://EFECTIVE/js/技能特效/15.wav"
+dest_files=[ "res://.import/15.wav-e1403096ca0764b18fdf2690ef1762eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

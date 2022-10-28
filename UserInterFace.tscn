@@ -94,6 +94,9 @@ margin_left = 32.7134
 margin_top = -19.902
 margin_right = 832.713
 margin_bottom = 36.0979
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="player_skill" parent="." instance=ExtResource( 10 )]
 visible = false

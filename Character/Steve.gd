@@ -67,6 +67,9 @@ func _ready():
 		i.visible = false
 		
 func init():
+	var node = get_node("Control/Sprite/SkillAnimations").get_children()
+	for i in node:
+		i.visible = false
 	cant_move = false
 	userInterface.update_text(PlayerInventory.level, PlayerInventory.max_health, PlayerInventory.max_magic,
 							 PlayerInventory.basic_damage, PlayerInventory.basic_defende,
@@ -484,20 +487,28 @@ func attack():
 		skill_time = 0.9
 	elif key_state == 'R':
 		state_machine.travel("40")
-		skill_time = 1.2
+		skill_time = 1.5
 		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
-	elif key_state == 'W':
+	elif key_state == 'Q':
 		state_machine.travel("yinxuejianwu")
-		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		get_node("BattleSound").stream = load("res://MUSIC/js/yinxuejianwu.wav")
 		skill_time = 0.7
 	elif key_state == 'D':
 		state_machine.travel("luodiji")
-		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
+		get_node("BattleSound").stream = load("res://MUSIC/js/luodiji.wav")
 		skill_time = 1.2
 	elif key_state == 'F':
 		state_machine.travel("10")
-		get_node("BattleSound").stream = load("res://MUSIC/js/40.wav")
-		skill_time = 1.2
+		get_node("BattleSound").stream = load("res://MUSIC/js/10.wav")
+		skill_time = 1.4
+	elif key_state == 'W':
+		state_machine.travel("45")
+		get_node("BattleSound").stream = load("res://MUSIC/js/45.wav")
+		skill_time = 2.5
+	elif key_state == 'E':
+		state_machine.travel("25")
+		get_node("BattleSound").stream = load("res://MUSIC/js/25.wav")
+		skill_time = 1.4
 	get_node("BattleSound").play()
 #	yield($AnimationPlayer,"animation_finished")
 #	attacking = 0
